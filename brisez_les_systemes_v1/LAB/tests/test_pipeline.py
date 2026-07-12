@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from common import elo_band, fen4, load_manifest, parse_pgn_games  # noqa: E402
 from maia3_profile import fen6, normalized_entropy, position_from_fixed_prefix, set_position_from_record  # noqa: E402
+from score_candidates import build_scorecards  # noqa: E402
 from validate_course import validate  # noqa: E402
 
 
@@ -91,6 +92,51 @@ class MaiaPositionTests(unittest.TestCase):
         legal = {move.uci() for move in engine.board.legal_moves}
         self.assertEqual(fen4(engine.board), fen4(rec["fen_after_key_move"]))
         self.assertTrue({"e2e4", "d2d4", "c2c4"}.isdisjoint(legal))
+
+
+class ScorecardGateTests(unittest.TestCase):
+    def test_scorecards_expose_separate_gates_and_do_not_sum_duplicate_response_totals(self):
+        df = build_scorecards(
+            COURSE/"DATA/core_40_index.csv",
+            COURSE/"DATA/stockfish_v1_500k.csv",
+            COURSE/"DATA/maia3_79m_evaluated_corrected.csv",
+            COURSE/"DATA/lichess_test_expanded.csv",
+            COURSE/"DATA/lichess_test_expanded_evaluated.csv",
+        )
+        required = {
+            "evidence_status",
+            "engine_gate",
+            "empirical_sample_gate",
+            "maia_status",
+            "editorial_recommendation",
+            "empirical_total_after_key",
+            "empirical_groups_observed",
+            "empirical_elo_bands_observed",
+            "empirical_speeds_observed",
+        }
+        self.assertTrue(required <= set(df.columns))
+        ld = pd.read_csv(COURSE/"DATA/lichess_test_expanded.csv")
+        expected = (
+            ld[ld["position_role"] == "after_key"]
+            .drop_duplicates(["line_id", "elo_min", "elo_max", "speed", "split"])
+            .groupby("line_id")["total_positions"]
+            .sum()
+        )
+        for line_id, total in expected.items():
+            got = int(df.loc[df["line_id"] == line_id, "empirical_total_after_key"].iloc[0])
+            self.assertEqual(got, int(total), line_id)
+
+    def test_engine_reject_is_never_editorial_review_ready(self):
+        df = build_scorecards(
+            COURSE/"DATA/core_40_index.csv",
+            COURSE/"DATA/stockfish_v1_500k.csv",
+            COURSE/"DATA/maia3_79m_evaluated_corrected.csv",
+            COURSE/"DATA/lichess_test_expanded.csv",
+            COURSE/"DATA/lichess_test_expanded_evaluated.csv",
+        )
+        rejected = df[df["engine_gate"] == "REJECT"]
+        self.assertTrue(len(rejected) > 0)
+        self.assertFalse((rejected["editorial_recommendation"] == "EDITORIAL_REVIEW_READY").any())
 
 
 class CourseTests(unittest.TestCase):

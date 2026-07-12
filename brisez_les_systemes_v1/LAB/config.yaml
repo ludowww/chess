@@ -42,6 +42,18 @@ lichess:
 scoring:
   response_error_threshold_cp: 40
   severe_error_threshold_cp: 100
+  engine_gate_cp:
+    pass_max: 25
+    review_max: 50
+  empirical_sample_gate:
+    insufficient_total_max: 29
+    limited_total_min: 30
+    supported_total_min: 100
+    supported_min_groups: 3
+    supported_group_min_positions: 10
+    strong_total_min: 200
+    strong_min_groups: 3
+    strong_group_min_positions: 30
   publish_minimums:
     engine_max_loss_cp: 50
     empirical_position_sample: 200
