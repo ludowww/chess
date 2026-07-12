@@ -1,0 +1,125 @@
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-03"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+
+{ OBJECTIF — Gagner de l’espace et chasser le cavalier au lieu de récupérer immédiatement le pion. PROBLÈME HUMAIN — Les Blancs attendent ...e6 ; ...d4 inverse la question et force une décision. PLAN NOIR — Après Nb1, jouer ...e5 ; après Na4, préparer ...Qa5+. REPÈRE — Un pion pris sur l’aile peut être payé par un tempo au centre. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. dxc5 d4
+{ Poussée contre-intuitive : les Noirs gagnent du temps sur le cavalier et reportent la récupération du pion. POSITION-CLÉ — Gagner de l’espace et chasser le cavalier au lieu de récupérer immédiatement le pion. Pourquoi c’est inconfortable : Les Blancs attendent ...e6 ; ...d4 inverse la question et force une décision. Plan pratique : Après Nb1, jouer ...e5 ; après Na4, préparer ...Qa5+. À retenir : Un pion pris sur l’aile peut être payé par un tempo au centre. }
+5. Nb1 Nc6 6. Nf3 e5 7. Bxe5 Bxc5 8. Bxf6 Qxf6 9. g3 Bf5 10. a3 O-O-O 11. Bg2
+g5 12. O-O
+{ BILAN — Ligne JOB-03, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-04"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+
+{ OBJECTIF — Exploiter immédiatement le cavalier éloigné et le roi au centre. PROBLÈME HUMAIN — Le joueur connaît la menace Nc7+ mais oublie que son cavalier c3 ne peut plus bloquer Qa5+. PLAN NOIR — Après Nc3, prendre d4 ou jouer ...Na6 selon la tactique. REPÈRE — Nb5 sans c3 disponible appelle ...Qa5+. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. Nb5 Qa5+
+{ POSITION-CLÉ — Exploiter immédiatement le cavalier éloigné et le roi au centre. Pourquoi c’est inconfortable : Le joueur connaît la menace Nc7+ mais oublie que son cavalier c3 ne peut plus bloquer Qa5+. Plan pratique : Après Nc3, prendre d4 ou jouer ...Na6 selon la tactique. À retenir : Nb5 sans c3 disponible appelle ...Qa5+. }
+5. Nc3 cxd4 6. Qxd4 Nc6 7. Qa4 Qxa4 8. Nxa4 e5 9. Bd2 Nb4 10. Bxb4 Bxb4+ 11. c3
+Bd6
+{ BILAN — Ligne JOB-04, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-13"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Avancé"]
+[LineType "critique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+
+{ OBJECTIF — Retirer le défenseur du centre avant d’utiliser l’échec a5. PROBLÈME HUMAIN — Les Blancs retrouvent Nb5, mais leur coordination a changé après l’échange en e2. PLAN NOIR — Calculer cxd4 et e5 ; ne pas défendre c7 passivement. REPÈRE — Le motif ...Qa5+ reste vivant tant que Nc3 ne peut interposer. NIVEAU — Avancé. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Bg4
+{ Développement avec question concrète : clouage, contrôle de e2/d1 et frein au plan e4. }
+5. Be2 Bxe2 6. Ngxe2 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 7. Nb5
+Qa5+
+{ POSITION-CLÉ — Retirer le défenseur du centre avant d’utiliser l’échec a5. Pourquoi c’est inconfortable : Les Blancs retrouvent Nb5, mais leur coordination a changé après l’échange en e2. Plan pratique : Calculer cxd4 et e5 ; ne pas défendre c7 passivement. À retenir : Le motif ...Qa5+ reste vivant tant que Nc3 ne peut interposer. }
+8. Nec3 Rc8 9. dxc5 a6 10. a4 h6 11. Nd4 Qxc5 12. O-O e6 13. Nce2 Nxd4
+{ BILAN — Ligne JOB-13, piste Avancé. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "TOR-06"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+
+{ OBJECTIF — Échanger la pièce active puis gagner le centre avec tempo. PROBLÈME HUMAIN — Nbd2 suppose que le cavalier e4 doit reculer ; il oublie l’échange favorable. PLAN NOIR — Après ...e5, développer ...Nc6 et viser d4. REPÈRE — Quand le cavalier d2 reprend en g5, le centre e5 devient libre. NIVEAU — Essentiel. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. Nbd2 Nxg5 5. Nxg5 e5
+{ POSITION-CLÉ — Échanger la pièce active puis gagner le centre avec tempo. Pourquoi c’est inconfortable : Nbd2 suppose que le cavalier e4 doit reculer ; il oublie l’échange favorable. Plan pratique : Après ...e5, développer ...Nc6 et viser d4. À retenir : Quand le cavalier d2 reprend en g5, le centre e5 devient libre. }
+6. Ngf3 e4 7. Ng1 c5 8. c3 cxd4 9. cxd4 Nc6 10. e3 Qb6 11. Qb3
+{ BILAN — Ligne TOR-06, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "VER-03"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+
+{ OBJECTIF — Utiliser le même pattern que contre le Jobava. PROBLÈME HUMAIN — Les Blancs prennent sur c5 en s’attendant à ...e6. PLAN NOIR — Chasser le cavalier, jouer ...e5 et récupérer c5 plus tard. REPÈRE — Nc3 + prise en c5 = vérifie toujours ...d4. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bg5 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. dxc5 d4
+{ Poussée contre-intuitive : les Noirs gagnent du temps sur le cavalier et reportent la récupération du pion. POSITION-CLÉ — Utiliser le même pattern que contre le Jobava. Pourquoi c’est inconfortable : Les Blancs prennent sur c5 en s’attendant à ...e6. Plan pratique : Chasser le cavalier, jouer ...e5 et récupérer c5 plus tard. À retenir : Nc3 + prise en c5 = vérifie toujours ...d4. }
+5. Bxf6 gxf6 6. Nb1 Bf5 7. Nf3 Nc6 8. e3 dxe3 9. Qxd8+ Rxd8 10. fxe3 Bh6
+{ BILAN — Ligne VER-03, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*

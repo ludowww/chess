@@ -1,0 +1,98 @@
+{
+  "course": "Brisez les systèmes !",
+  "version": "1.0.0-rc1",
+  "generated_on": "2026-07-12",
+  "core_lines": 40,
+  "essential_lines": 20,
+  "library_lines": 88,
+  "bias_groups": {
+    "B1": {
+      "title": "Pilotage automatique",
+      "ids": [
+        "ORD-01",
+        "ORD-02",
+        "COL-01",
+        "COL-10",
+        "VER-01"
+      ]
+    },
+    "B2": {
+      "title": "Double cible et surcharge",
+      "ids": [
+        "LON-02",
+        "LON-04",
+        "LON-09",
+        "JOB-12",
+        "TOR-10"
+      ]
+    },
+    "B3": {
+      "title": "Simplification trompeuse",
+      "ids": [
+        "LON-01",
+        "LON-03",
+        "LON-05",
+        "JOB-11",
+        "VER-05"
+      ]
+    },
+    "B4": {
+      "title": "Le pion prétendument gratuit",
+      "ids": [
+        "LON-10",
+        "LON-11",
+        "LON-12",
+        "LON-15",
+        "PST-04"
+      ]
+    },
+    "B5": {
+      "title": "Peur et sur-réaction",
+      "ids": [
+        "LON-06",
+        "LON-07",
+        "TOR-02",
+        "TOR-05",
+        "PST-01"
+      ]
+    },
+    "B6": {
+      "title": "Règles rigides",
+      "ids": [
+        "ORD-09",
+        "TOR-08",
+        "TOR-09",
+        "STO-01",
+        "BDG-01"
+      ]
+    },
+    "B7": {
+      "title": "Attaque d’aile avant le centre",
+      "ids": [
+        "ORD-10",
+        "JOB-06",
+        "JOB-09",
+        "JOB-10",
+        "VER-08"
+      ]
+    },
+    "B8": {
+      "title": "Géométrie tactique machine-humanisée",
+      "ids": [
+        "JOB-03",
+        "JOB-04",
+        "JOB-13",
+        "TOR-06",
+        "VER-03"
+      ]
+    }
+  },
+  "evidence_status": {
+    "static_pgn": "to_run",
+    "stockfish_v1": "not_run_binary_unavailable_in_build_environment",
+    "legacy_stockfish_v0_9": "included_unreproduced",
+    "maia3_79m": "not_run_weights_not_downloaded",
+    "lichess": "not_run_dataset_not_downloaded",
+    "external_review": "pending"
+  }
+}

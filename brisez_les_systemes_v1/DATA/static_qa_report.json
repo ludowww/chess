@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "pgn": "/opt/data/profiles/chessable_fr/chess/brisez_les_systemes_v1/PGN/99_cours_v1_core_40.pgn",
+  "manifest": "/opt/data/profiles/chessable_fr/chess/brisez_les_systemes_v1/DATA/core_40_index.csv",
+  "games": 40,
+  "unique_ids": 40,
+  "min_plies": 12,
+  "max_plies": 26,
+  "errors": []
+}

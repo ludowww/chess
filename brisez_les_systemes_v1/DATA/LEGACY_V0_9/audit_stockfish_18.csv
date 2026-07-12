@@ -1,0 +1,177 @@
+line_id,chapter,ply,fen_before,move_uci,move_san,rank_top8,best_eval_white_cp,candidate_eval_white_cp,loss_for_black_cp,grade,engine,nodes_best
+LON-01,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/1QP1PN2/PP3PPP/RN2KB1R b KQkq - 2 6,c5c4,c4,1,-19,-19,0,A,Stockfish 18 WASM,20000
+LON-01,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1Qn2n2/3p4/2pP1B2/2P1PN2/PP3PPP/RN2KB1R b KQkq - 0 7,a7b6,axb6,1,-46,-46,0,A,Stockfish 18 WASM,20000
+LON-02,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/1QP1PN2/PP3PPP/RN2KB1R b KQkq - 2 6,c5c4,c4,1,-19,-19,0,A,Stockfish 18 WASM,20000
+LON-02,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn2n2/3p4/2pP1B2/2P1PN2/PPQ2PPP/RN2KB1R b KQkq - 1 7,c8f5,Bf5,1,-42,-42,0,A,Stockfish 18 WASM,20000
+LON-03,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1Qn2n2/3p4/2pP1B2/2P1PN2/PP3PPP/RN2KB1R b KQkq - 0 7,a7b6,axb6,1,-46,-46,0,A,Stockfish 18 WASM,20000
+LON-03,Londres — noyau ...Qb6,16,r1b1kb1r/1p2pppp/1pn2n2/3p4/2pP1B2/2P1PN2/PP1N1PPP/R3KB1R b KQkq - 1 8,b6b5,b5,1,-53,-53,0,A,Stockfish 18 WASM,20000
+LON-04,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RNQ1KB1R b KQkq - 2 6,c5d4,cxd4,4,-10,5,15,A,Stockfish 18 WASM,20000
+LON-04,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn2n2/3p4/3P1B2/2P2N2/PP3PPP/RNQ1KB1R b KQkq - 0 7,c8f5,Bf5,1,6,6,0,A,Stockfish 18 WASM,20000
+LON-05,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RNQ1KB1R b KQkq - 2 6,c5d4,cxd4,4,-10,5,15,A,Stockfish 18 WASM,20000
+LON-05,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn2n2/3p4/3P1B2/4PN2/PP3PPP/RNQ1KB1R b KQkq - 0 7,c8f5,Bf5,1,-44,-44,0,A,Stockfish 18 WASM,20000
+LON-06,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN2/PPQ2PPP/RN2KB1R b KQkq - 2 6,f6h5,Nh5,3,10,15,5,A,Stockfish 18 WASM,20000
+LON-06,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn5/2pp3n/3P4/2P1PNB1/PPQ2PPP/RN2KB1R b KQkq - 4 7,h5g3,Nxg3,1,-34,-34,0,A,Stockfish 18 WASM,20000
+LON-07,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn5/2pp2Bn/3P4/2P1PN2/PPQ2PPP/RN2KB1R b KQkq - 4 7,h7h6,h6,1,-61,-61,0,A,Stockfish 18 WASM,20000
+LON-07,Londres — noyau ...Qb6,16,r1b1kb1r/pp2ppp1/1qn4p/2pp3n/3P3B/2P1PN2/PPQ2PPP/RN2KB1R b KQkq - 1 8,g7g5,g5,1,-53,-53,0,A,Stockfish 18 WASM,20000
+LON-08,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN2/PPQ2PPP/RN2KB1R b KQkq - 2 6,f6h5,Nh5,3,10,15,5,A,Stockfish 18 WASM,20000
+LON-08,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn5/2Pp3n/5B2/2P1PN2/PPQ2PPP/RN2KB1R b KQkq - 0 7,b6c5,Qxc5,1,16,16,0,A,Stockfish 18 WASM,20000
+LON-09,Londres — noyau ...Qb6,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 0 5,d8b6,Qb6,1,-34,-34,0,A,Stockfish 18 WASM,20000
+LON-09,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/1PP1PN2/P4PPP/RN1QKB1R b KQkq - 0 6,c8g4,Bg4,4,-24,-22,2,A,Stockfish 18 WASM,20000
+LON-10,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2Pp4/5B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 0 6,b6b2,Qxb2,1,-63,-63,0,A,Stockfish 18 WASM,20000
+LON-10,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/2n2n2/2Pp4/5B2/2P1PN2/Pq1N1PPP/R2QKB1R b KQkq - 1 7,b2c3,Qxc3,1,-68,-68,0,A,Stockfish 18 WASM,20000
+LON-11,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R b KQkq - 2 6,b6b2,Qxb2,2,-40,-36,4,A,Stockfish 18 WASM,20000
+LON-11,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN2/Pq1N1PPP/1R1QKB1R b Kkq - 1 7,b2c3,Qxc3,1,-28,-28,0,A,Stockfish 18 WASM,20000
+LON-12,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2PBPN2/PP3PPP/RN1QK2R b KQkq - 2 6,b6b2,Qxb2,1,-152,-152,0,A,Stockfish 18 WASM,20000
+LON-12,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/2n2n2/2pp4/3P1B2/2PBPN2/Pq1N1PPP/R2QK2R b KQkq - 1 7,b2c3,Qxc3,1,-146,-146,0,A,Stockfish 18 WASM,20000
+LON-13,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN1P/PP3PP1/RN1QKB1R b KQkq - 0 6,b6b2,Qxb2,1,-173,-173,0,A,Stockfish 18 WASM,20000
+LON-13,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN1P/Pq1N1PP1/R2QKB1R b KQkq - 1 7,c5c4,c4,1,-145,-145,0,A,Stockfish 18 WASM,20000
+LON-14,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/3P1B2/2P1PN2/PP2BPPP/RN1QK2R b KQkq - 2 6,c5d4,cxd4,2,-109,-73,36,B,Stockfish 18 WASM,20000
+LON-14,Londres — noyau ...Qb6,14,r1b1kb1r/pp2pppp/1qn2n2/3p4/3P1B2/2P2N2/PP2BPPP/RN1QK2R b KQkq - 0 7,b6b2,Qxb2,1,-73,-73,0,A,Stockfish 18 WASM,20000
+LON-15,Londres — noyau ...Qb6,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 0 5,d8b6,Qb6,1,-34,-34,0,A,Stockfish 18 WASM,20000
+LON-15,Londres — noyau ...Qb6,12,r1b1kb1r/pp2pppp/1qn2n2/2pp4/Q2P1B2/2P1PN2/PP3PPP/RN2KB1R b KQkq - 2 6,b6b2,Qxb2,1,-180,-180,0,A,Stockfish 18 WASM,20000
+LON-16,Londres — avant c3,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/4PN2/PPPN1PPP/R2QKB1R b KQkq - 2 5,c5d4,cxd4,2,-33,-12,21,A,Stockfish 18 WASM,20000
+LON-16,Londres — avant c3,12,r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/5N2/PPPN1PPP/R2QKB1R b KQkq - 0 6,c8f5,Bf5,2,0,28,28,B,Stockfish 18 WASM,20000
+LON-17,Londres — avant c3,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4,b8c6,Nc6,2,19,18,0,A,Stockfish 18 WASM,20000
+LON-17,Londres — avant c3,10,r1bqkb1r/pp2pppp/2n2n2/2Pp4/5B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 5,e7e6,e6,1,4,4,0,A,Stockfish 18 WASM,20000
+LON-18,Londres — avant c3,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4,b8c6,Nc6,2,19,18,0,A,Stockfish 18 WASM,20000
+LON-18,Londres — avant c3,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/4PN2/PPP1BPPP/RN1QK2R b KQkq - 2 5,d8b6,Qb6,>8,-15,27,42,B,Stockfish 18 WASM,20000
+ORD-01,Londres — ordres de coups,6,rnbqkbnr/pp2pppp/8/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR b KQkq - 0 3,b8c6,Nc6,1,20,20,0,A,Stockfish 18 WASM,20000
+ORD-01,Londres — ordres de coups,8,r1bqkbnr/pp2pppp/2n5/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 2 4,c8g4,Bg4,5,16,35,19,A,Stockfish 18 WASM,20000
+ORD-02,Londres — ordres de coups,8,r1bqkbnr/pp2pppp/2n5/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR b KQkq - 0 4,g8f6,Nf6,2,-27,-8,19,A,Stockfish 18 WASM,20000
+ORD-02,Londres — ordres de coups,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 2 5,d8b6,Qb6,1,-19,-19,0,A,Stockfish 18 WASM,20000
+ORD-03,Londres — ordres de coups,6,rnbqkbnr/pp2pppp/8/2pp4/3PPB2/8/PPP2PPP/RN1QKBNR b KQkq - 0 3,d5e4,dxe4,1,-52,-52,0,A,Stockfish 18 WASM,20000
+ORD-03,Londres — ordres de coups,8,rnbqkbnr/pp2pppp/8/2pP4/4pB2/8/PPP2PPP/RN1QKBNR b KQkq - 0 4,g8f6,Nf6,1,-66,-66,0,A,Stockfish 18 WASM,20000
+ORD-04,Londres — ordres de coups,4,rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2,c7c5,c5,3,15,17,2,A,Stockfish 18 WASM,20000
+ORD-04,Londres — ordres de coups,6,rnbqkbnr/pp2pppp/8/2Pp4/5B2/8/PPP1PPPP/RN1QKBNR b KQkq - 0 3,e7e6,e6,1,-16,-16,0,A,Stockfish 18 WASM,20000
+ORD-05,Londres — ordres de coups,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2P2N2/PP2PPPP/RN1QKB1R b KQkq - 0 4,b8c6,Nc6,1,-7,-7,0,A,Stockfish 18 WASM,20000
+ORD-05,Londres — ordres de coups,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1PN2/PP3PPP/RN1QKB1R b KQkq - 0 5,d8b6,Qb6,1,-34,-34,0,A,Stockfish 18 WASM,20000
+ORD-06,Londres — ordres de coups,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/5N2/PPPNPPPP/R2QKB1R b KQkq - 1 4,c5d4,cxd4,1,-19,-19,0,A,Stockfish 18 WASM,20000
+ORD-06,Londres — ordres de coups,10,rnbqkb1r/pp2pppp/5n2/3p4/3N1B2/8/PPPNPPPP/R2QKB1R b KQkq - 0 5,b8d7,Nbd7,1,-57,-57,0,A,Stockfish 18 WASM,20000
+ORD-07,Londres — ordres de coups,8,rnbqkb1r/pp2pppp/5n2/2Pp4/5B2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 0 4,b8c6,Nc6,2,-8,34,42,B,Stockfish 18 WASM,20000
+ORD-07,Londres — ordres de coups,10,r1bqkb1r/pp2pppp/2n2n2/2Pp4/5B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 5,e7e6,e6,1,4,4,0,A,Stockfish 18 WASM,20000
+ORD-08,Londres — ordres de coups,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4,d8b6,Qb6,5,7,53,46,B,Stockfish 18 WASM,20000
+ORD-08,Londres — ordres de coups,10,rnb1kb1r/pp2pppp/1q3n2/2pp4/3P1B2/2N1PN2/PPP2PPP/R2QKB1R b KQkq - 2 5,a7a6,a6,1,25,25,0,A,Stockfish 18 WASM,20000
+ORD-09,Londres — ordres de coups,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B1P/5N2/PPP1PPP1/RN1QKB1R b KQkq - 0 4,c5d4,cxd4,1,-90,-90,0,A,Stockfish 18 WASM,20000
+ORD-09,Londres — ordres de coups,10,rnbqkb1r/pp2pppp/5n2/3p4/3N1B1P/8/PPP1PPP1/RN1QKB1R b KQkq - 0 5,b8d7,Nbd7,1,-109,-109,0,A,Stockfish 18 WASM,20000
+ORD-10,Londres — ordres de coups,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/5N1P/PPP1PPP1/RN1QKB1R b KQkq - 0 4,c5d4,cxd4,1,-64,-64,0,A,Stockfish 18 WASM,20000
+ORD-10,Londres — ordres de coups,10,rnbqkb1r/pp2pppp/5n2/3p4/3N1B2/7P/PPP1PPP1/RN1QKB1R b KQkq - 0 5,d8b6,Qb6,1,-57,-57,0,A,Stockfish 18 WASM,20000
+ORD-11,Londres — ordres de coups,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P4/4PNB1/PPP2PPP/RN1QKB1R b KQkq - 2 5,c5d4,cxd4,2,-42,-40,2,A,Stockfish 18 WASM,20000
+ORD-11,Londres — ordres de coups,12,r1bqkb1r/pp2pppp/2n2n2/3p4/3P4/5NB1/PPP2PPP/RN1QKB1R b KQkq - 0 6,d8b6,Qb6,1,-38,-38,0,A,Stockfish 18 WASM,20000
+ORD-12,Londres — ordres de coups,8,r1bqkbnr/pp2pppp/2n5/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR b KQkq - 0 4,d8b6,Qb6,1,-10,-10,0,A,Stockfish 18 WASM,20000
+ORD-12,Londres — ordres de coups,10,r1b1kbnr/pp2pppp/1qn5/2pp4/3P1B2/1QP1P3/PP3PPP/RN2KBNR b KQkq - 2 5,c5c4,c4,3,-3,-2,1,A,Stockfish 18 WASM,20000
+JOB-01,Jobava,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,1,-23,-23,0,A,Stockfish 18 WASM,20000
+JOB-01,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2N1P3/PPP2PPP/R2QKBNR b KQkq - 0 4,c8g4,Bg4,>8,-7,12,19,A,Stockfish 18 WASM,20000
+JOB-02,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2N1P3/PPP2PPP/R2QKBNR b KQkq - 0 4,c5d4,cxd4,5,-7,30,37,B,Stockfish 18 WASM,20000
+JOB-02,Jobava,10,rnbqkb1r/pp2pppp/5n2/1N1p4/3p1B2/4P3/PPP2PPP/R2QKBNR b KQkq - 1 5,d8a5,Qa5+,2,7,16,9,A,Stockfish 18 WASM,20000
+JOB-03,Jobava,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,1,-23,-23,0,A,Stockfish 18 WASM,20000
+JOB-03,Jobava,8,rnbqkb1r/pp2pppp/5n2/2Pp4/5B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 0 4,d5d4,d4,1,-81,-81,0,A,Stockfish 18 WASM,20000
+JOB-04,Jobava,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,1,-23,-23,0,A,Stockfish 18 WASM,20000
+JOB-04,Jobava,8,rnbqkb1r/pp2pppp/5n2/1Npp4/3P1B2/8/PPP1PPPP/R2QKBNR b KQkq - 1 4,d8a5,Qa5+,1,-137,-137,0,A,Stockfish 18 WASM,20000
+JOB-05,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3PPB2/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4,f6e4,Nxe4,1,-26,-26,0,A,Stockfish 18 WASM,20000
+JOB-05,Jobava,10,rnbqkb1r/pp2pppp/8/2pp4/3PNB2/8/PPP2PPP/R2QKBNR b KQkq - 0 5,d5e4,dxe4,1,-47,-47,0,A,Stockfish 18 WASM,20000
+JOB-06,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2N2P2/PPP1P1PP/R2QKBNR b KQkq - 0 4,c5d4,cxd4,1,-198,-198,0,A,Stockfish 18 WASM,20000
+JOB-06,Jobava,10,rnbqkb1r/pp2pppp/5n2/3p4/3Q1B2/2N2P2/PPP1P1PP/R3KBNR b KQkq - 0 5,b8c6,Nc6,1,-234,-234,0,A,Stockfish 18 WASM,20000
+JOB-07,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2N5/PPPQPPPP/R3KBNR b KQkq - 1 4,c5d4,cxd4,1,-210,-210,0,A,Stockfish 18 WASM,20000
+JOB-07,Jobava,10,rnbqkb1r/pp2pppp/5n2/1N1p4/3p1B2/8/PPPQPPPP/R3KBNR b KQkq - 1 5,f6e4,Ne4,1,-176,-176,0,A,Stockfish 18 WASM,20000
+JOB-08,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2N2N2/PPP1PPPP/R2QKB1R b KQkq - 1 4,c5d4,cxd4,1,-66,-66,0,A,Stockfish 18 WASM,20000
+JOB-08,Jobava,10,rnbqkb1r/pp2pppp/5n2/3p4/3N1B2/2N5/PPP1PPPP/R2QKB1R b KQkq - 0 5,b8d7,Nbd7,1,-63,-63,0,A,Stockfish 18 WASM,20000
+JOB-09,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/P1N5/1PP1PPPP/R2QKBNR b KQkq - 0 4,c5d4,cxd4,1,-127,-127,0,A,Stockfish 18 WASM,20000
+JOB-09,Jobava,10,rnbqkb1r/pp2pppp/5n2/3p4/3Q1B2/P1N5/1PP1PPPP/R3KBNR b KQkq - 0 5,b8c6,Nc6,1,-137,-137,0,A,Stockfish 18 WASM,20000
+JOB-10,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B1P/2N5/PPP1PPP1/R2QKBNR b KQkq - 0 4,c5d4,cxd4,1,-219,-219,0,A,Stockfish 18 WASM,20000
+JOB-10,Jobava,10,rnbqkb1r/pp2pppp/5n2/3p4/3Q1B1P/2N5/PPP1PPP1/R3KBNR b KQkq - 0 5,b8c6,Nc6,1,-207,-207,0,A,Stockfish 18 WASM,20000
+JOB-11,Jobava,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,1,-23,-23,0,A,Stockfish 18 WASM,20000
+JOB-11,Jobava,8,rBbqkb1r/pp2pppp/5n2/2pp4/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 0 4,a8b8,Rxb8,1,-84,-84,0,A,Stockfish 18 WASM,20000
+JOB-12,Jobava,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,1,-23,-23,0,A,Stockfish 18 WASM,20000
+JOB-12,Jobava,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 4,d8b6,Qb6,2,-168,-163,5,A,Stockfish 18 WASM,20000
+JOB-13,Jobava,12,rn1qkb1r/pp2pppp/5n2/2pp4/3P1B2/2N1P3/PPP1NPPP/R2QK2R b KQkq - 0 6,b8c6,Nc6,1,-17,-17,0,A,Stockfish 18 WASM,20000
+JOB-13,Jobava,14,r2qkb1r/pp2pppp/2n2n2/1Npp4/3P1B2/4P3/PPP1NPPP/R2QK2R b KQkq - 2 7,d8a5,Qa5+,1,-60,-60,0,A,Stockfish 18 WASM,20000
+JOB-14,Jobava,10,rnbqkb1r/pp2pppp/5n2/2P5/3p1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 5,e7e5,e5,2,-72,-71,1,A,Stockfish 18 WASM,20000
+JOB-14,Jobava,12,rnbqkb1r/pp3ppp/5n2/2P1B3/3p4/8/PPP1PPPP/RN1QKBNR b KQkq - 0 6,b8c6,Nc6,1,-74,-74,0,A,Stockfish 18 WASM,20000
+COL-01,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-01,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 2 4,e7e6,e6,1,16,16,0,A,Stockfish 18 WASM,20000
+COL-02,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-02,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/3BPN2/PPP2PPP/RNBQK2R b KQkq - 2 4,f5g6,Bg6,3,11,30,19,A,Stockfish 18 WASM,20000
+COL-03,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-03,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/2PP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4,c7c6,c6,2,33,49,16,A,Stockfish 18 WASM,20000
+COL-04,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-04,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/1P2PN2/P1P2PPP/RNBQKB1R b KQkq - 0 4,e7e6,e6,1,-27,-27,0,A,Stockfish 18 WASM,20000
+COL-05,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-05,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/4PN2/PPPN1PPP/R1BQKB1R b KQkq - 2 4,e7e6,e6,1,4,4,0,A,Stockfish 18 WASM,20000
+COL-06,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-06,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/4PN2/PPP1BPPP/RNBQK2R b KQkq - 2 4,e7e6,e6,2,19,20,1,A,Stockfish 18 WASM,20000
+COL-07,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-07,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/2P1PN2/PP3PPP/RNBQKB1R b KQkq - 0 4,b8d7,Nbd7,3,-16,-13,3,A,Stockfish 18 WASM,20000
+COL-08,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-08,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P3N/4P3/PPP2PPP/RNBQKB1R b KQkq - 2 4,f5g4,Bg4,1,-19,-19,0,A,Stockfish 18 WASM,20000
+COL-09,Colle et Zukertort,6,rnbqkb1r/ppp1pppp/5n2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R b KQkq - 0 3,c8f5,Bf5,5,16,37,21,A,Stockfish 18 WASM,20000
+COL-09,Colle et Zukertort,8,rn1qkb1r/ppp1pppp/5n2/3p1b2/3P4/2N1PN2/PPP2PPP/R1BQKB1R b KQkq - 2 4,c7c6,c6,2,-23,-22,1,A,Stockfish 18 WASM,20000
+COL-10,Colle et Zukertort,8,rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/1P2PN2/P1P2PPP/RNBQKB1R b KQkq - 0 4,c7c5,c5,3,15,16,1,A,Stockfish 18 WASM,20000
+COL-10,Colle et Zukertort,10,rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/1P2PN2/PBP2PPP/RN1QKB1R b KQkq - 1 5,b8c6,Nc6,>8,16,8,0,A,Stockfish 18 WASM,20000
+COL-11,Colle et Zukertort,10,rnbqkb1r/pp3ppp/4pn2/2pp4/2PP4/1P2PN2/P4PPP/RNBQKB1R b KQkq - 0 5,c5d4,cxd4,1,-9,-9,0,A,Stockfish 18 WASM,20000
+COL-11,Colle et Zukertort,12,rnbqkb1r/pp3ppp/4pn2/3p4/2PP4/1P3N2/P4PPP/RNBQKB1R b KQkq - 0 6,f8b4,Bb4+,2,-16,-15,1,A,Stockfish 18 WASM,20000
+COL-12,Colle et Zukertort,10,rnbqkb1r/pp3ppp/4pn2/2pp4/3P4/1P2PN2/P1P1BPPP/RNBQK2R b KQkq - 1 5,c5d4,cxd4,1,-8,-8,0,A,Stockfish 18 WASM,20000
+COL-12,Colle et Zukertort,12,rnbqkb1r/pp3ppp/4pn2/3p4/3P4/1P3N2/P1P1BPPP/RNBQK2R b KQkq - 0 6,f8d6,Bd6,2,-19,-18,1,A,Stockfish 18 WASM,20000
+TOR-01,Torre,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3,f6e4,Ne4,4,6,17,11,A,Stockfish 18 WASM,20000
+TOR-01,Torre,8,rnbqkb1r/ppp1pppp/8/3p4/3PnB2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 5 4,c7c5,c5,2,-14,-11,3,A,Stockfish 18 WASM,20000
+TOR-02,Torre,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3,f6e4,Ne4,4,6,17,11,A,Stockfish 18 WASM,20000
+TOR-02,Torre,8,rnbqkb1r/ppp1pppp/8/3p4/3Pn2B/5N2/PPP1PPPP/RN1QKB1R b KQkq - 5 4,h7h5,h5,>8,-9,-47,0,A,Stockfish 18 WASM,20000
+TOR-03,Torre,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3,f6e4,Ne4,4,6,17,11,A,Stockfish 18 WASM,20000
+TOR-03,Torre,8,rnbqkb1r/ppp1pppp/8/3p4/3Pn3/4BN2/PPP1PPPP/RN1QKB1R b KQkq - 5 4,c8f5,Bf5,1,-23,-23,0,A,Stockfish 18 WASM,20000
+TOR-04,Torre,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3,f6e4,Ne4,4,6,17,11,A,Stockfish 18 WASM,20000
+TOR-04,Torre,8,rnbqkb1r/ppp1pppp/8/3p4/3Pn3/5N2/PPPBPPPP/RN1QKB1R b KQkq - 5 4,c7c5,c5,2,-40,-39,1,A,Stockfish 18 WASM,20000
+TOR-05,Torre,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3,f6e4,Ne4,4,6,17,11,A,Stockfish 18 WASM,20000
+TOR-05,Torre,8,rnbqkb1r/ppp1pppp/8/3p2B1/3Pn2P/5N2/PPP1PPP1/RN1QKB1R b KQkq - 0 4,c7c5,c5,1,-34,-34,0,A,Stockfish 18 WASM,20000
+TOR-06,Torre,8,rnbqkb1r/ppp1pppp/8/3p2B1/3Pn3/5N2/PPPNPPPP/R2QKB1R b KQkq - 5 4,e4g5,Nxg5,1,-103,-103,0,A,Stockfish 18 WASM,20000
+TOR-06,Torre,10,rnbqkb1r/ppp1pppp/8/3p2N1/3P4/8/PPPNPPPP/R2QKB1R b KQkq - 0 5,e7e5,e5,1,-148,-148,0,A,Stockfish 18 WASM,20000
+TOR-07,Torre,8,rnbqkb1r/ppp1pppp/8/3p2B1/2PPn3/5N2/PP2PPPP/RN1QKB1R b KQkq - 0 4,e4g5,Nxg5,1,-93,-93,0,A,Stockfish 18 WASM,20000
+TOR-07,Torre,10,rnbqkb1r/ppp1pppp/8/3p2N1/2PP4/8/PP2PPPP/RN1QKB1R b KQkq - 0 5,e7e5,e5,1,-79,-79,0,A,Stockfish 18 WASM,20000
+TOR-08,Torre,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/5N2/PPP1PPPP/RN1QKB1R b KQkq - 3 3,f6e4,Ne4,4,6,17,11,A,Stockfish 18 WASM,20000
+TOR-08,Torre,8,rnbqkb1r/ppp1pppp/8/3p2B1/3Pn3/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 4,f7f6,f6,1,-56,-56,0,A,Stockfish 18 WASM,20000
+TOR-09,Torre,12,rnbqkb1r/ppp1p1p1/5p2/3p3p/3Pn2B/4P3/PPPN1PPP/RN1QKB1R b KQkq - 1 6,e4d2,Nxd2,1,-172,-172,0,A,Stockfish 18 WASM,20000
+TOR-09,Torre,14,rnbqkb1r/ppp1p1p1/5p2/3p3p/3P3B/4P3/PPPN1PPP/R2QKB1R b KQkq - 0 7,g7g5,g5,1,-227,-227,0,A,Stockfish 18 WASM,20000
+TOR-10,Torre,8,rnbqkb1r/ppp1pppp/8/3p4/3PnB2/5N2/PPP1PPPP/RN1QKB1R b KQkq - 5 4,c7c5,c5,2,-14,-11,3,A,Stockfish 18 WASM,20000
+TOR-10,Torre,10,rnbqkb1r/pp2pppp/8/2pp4/3PnB2/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 5,d8b6,Qb6,1,-25,-25,0,A,Stockfish 18 WASM,20000
+VER-01,Veresov et pseudo-Trompowsky,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,>8,-8,-10,0,A,Stockfish 18 WASM,20000
+VER-01,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2pp2B1/3P4/2N1P3/PPP2PPP/R2QKBNR b KQkq - 0 4,e7e6,e6,1,-15,-15,0,A,Stockfish 18 WASM,20000
+VER-02,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2pp2B1/3PP3/2N5/PPP2PPP/R2QKBNR b KQkq - 0 4,f6e4,Nxe4,1,-64,-64,0,A,Stockfish 18 WASM,20000
+VER-02,Veresov et pseudo-Trompowsky,10,rnbqkb1r/pp2pppp/8/2pp2B1/3PN3/8/PPP2PPP/R2QKBNR b KQkq - 0 5,d5e4,dxe4,1,-65,-65,0,A,Stockfish 18 WASM,20000
+VER-03,Veresov et pseudo-Trompowsky,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,>8,-8,-10,0,A,Stockfish 18 WASM,20000
+VER-03,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2Pp2B1/8/2N5/PPP1PPPP/R2QKBNR b KQkq - 0 4,d5d4,d4,1,-92,-92,0,A,Stockfish 18 WASM,20000
+VER-04,Veresov et pseudo-Trompowsky,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,>8,-8,-10,0,A,Stockfish 18 WASM,20000
+VER-04,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2pp2B1/3P4/2N2N2/PPP1PPPP/R2QKB1R b KQkq - 1 4,f6e4,Ne4,1,-45,-45,0,A,Stockfish 18 WASM,20000
+VER-05,Veresov et pseudo-Trompowsky,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,>8,-8,-10,0,A,Stockfish 18 WASM,20000
+VER-05,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5B2/2pp4/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 0 4,g7f6,gxf6,1,-26,-26,0,A,Stockfish 18 WASM,20000
+VER-06,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2pp2B1/3P4/2N5/PPPQPPPP/R3KBNR b KQkq - 1 4,c5d4,cxd4,2,-41,-32,9,A,Stockfish 18 WASM,20000
+VER-06,Veresov et pseudo-Trompowsky,10,rnbqkb1r/pp2pppp/5n2/3p2B1/3Q4/2N5/PPP1PPPP/R3KBNR b KQkq - 0 5,b8c6,Nc6,1,-204,-204,0,A,Stockfish 18 WASM,20000
+VER-07,Veresov et pseudo-Trompowsky,6,rnbqkb1r/ppp1pppp/5n2/3p2B1/3P4/2N5/PPP1PPPP/R2QKBNR b KQkq - 3 3,c7c5,c5,>8,-8,-10,0,A,Stockfish 18 WASM,20000
+VER-07,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2pp2B1/3P4/P1N5/1PP1PPPP/R2QKBNR b KQkq - 0 4,b8c6,Nc6,2,-38,-34,4,A,Stockfish 18 WASM,20000
+VER-08,Veresov et pseudo-Trompowsky,8,rnbqkb1r/pp2pppp/5n2/2pp2B1/3P4/2N2P2/PPP1P1PP/R2QKBNR b KQkq - 0 4,c5d4,cxd4,1,-118,-118,0,A,Stockfish 18 WASM,20000
+VER-08,Veresov et pseudo-Trompowsky,10,rnbqkb1r/pp2pppp/5n2/3p2B1/3Q4/2N2P2/PPP1P1PP/R3KBNR b KQkq - 0 5,b8c6,Nc6,1,-150,-150,0,A,Stockfish 18 WASM,20000
+PST-01,Veresov et pseudo-Trompowsky,4,rnbqkbnr/ppp1pppp/8/3p2B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2,h7h6,h6,3,-41,-18,23,A,Stockfish 18 WASM,20000
+PST-01,Veresov et pseudo-Trompowsky,6,rnbqkbnr/ppp1ppp1/7p/3p4/3P3B/8/PPP1PPPP/RN1QKBNR b KQkq - 1 3,c7c5,c5,1,-28,-28,0,A,Stockfish 18 WASM,20000
+PST-02,Veresov et pseudo-Trompowsky,4,rnbqkbnr/ppp1pppp/8/3p2B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2,h7h6,h6,3,-41,-18,23,A,Stockfish 18 WASM,20000
+PST-02,Veresov et pseudo-Trompowsky,6,rnbqkbnr/ppp1ppp1/7p/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR b KQkq - 1 3,c7c5,c5,1,-19,-19,0,A,Stockfish 18 WASM,20000
+PST-03,Veresov et pseudo-Trompowsky,4,rnbqkbnr/ppp1pppp/8/3p2B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2,h7h6,h6,3,-41,-18,23,A,Stockfish 18 WASM,20000
+PST-03,Veresov et pseudo-Trompowsky,6,rnbqkbnr/ppp1ppp1/7p/3p4/3P4/4B3/PPP1PPPP/RN1QKBNR b KQkq - 1 3,c7c5,c5,1,-60,-60,0,A,Stockfish 18 WASM,20000
+PST-04,Veresov et pseudo-Trompowsky,4,rnbqkbnr/ppp1pppp/8/3p2B1/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 1 2,h7h6,h6,3,-41,-18,23,A,Stockfish 18 WASM,20000
+PST-04,Veresov et pseudo-Trompowsky,6,rnbqkbnr/ppp1ppp1/7B/3p4/3P4/8/PPP1PPPP/RN1QKBNR b KQkq - 0 3,h8h6,Rxh6,1,-422,-422,0,A,Stockfish 18 WASM,20000
+STO-01,Stonewall et gambits,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1P2/3BP3/PPP3PP/RNBQK1NR b KQkq - 0 4,c5c4,c4,3,-66,-60,6,A,Stockfish 18 WASM,20000
+STO-01,Stonewall et gambits,10,rnbqkb1r/pp2pppp/5n2/3p4/2pP1P2/4P3/PPP1B1PP/RNBQK1NR b KQkq - 1 5,c8f5,Bf5,2,-62,-56,6,A,Stockfish 18 WASM,20000
+STO-02,Stonewall et gambits,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1P2/3BP3/PPP3PP/RNBQK1NR b KQkq - 0 4,c5c4,c4,3,-66,-60,6,A,Stockfish 18 WASM,20000
+STO-02,Stonewall et gambits,10,rnbqkb1r/pp2pppp/5n2/3p4/2pP1P2/4P3/PPP3PP/RNBQKBNR b KQkq - 1 5,c8f5,Bf5,2,-106,-104,2,A,Stockfish 18 WASM,20000
+STO-03,Stonewall et gambits,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P4/2PBP3/PP3PPP/RNBQK1NR b KQkq - 0 4,b8c6,Nc6,1,-34,-34,0,A,Stockfish 18 WASM,20000
+STO-03,Stonewall et gambits,10,r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1P2/2PBP3/PP4PP/RNBQK1NR b KQkq - 0 5,c8g4,Bg4,1,-64,-64,0,A,Stockfish 18 WASM,20000
+STO-04,Stonewall et gambits,8,rnbqkb1r/pp2pppp/5n2/2pp4/3P1P2/3BP3/PPP3PP/RNBQK1NR b KQkq - 0 4,c5c4,c4,3,-66,-60,6,A,Stockfish 18 WASM,20000
+STO-04,Stonewall et gambits,10,rnbqkb1r/pp2pppp/5n2/3p4/2pP1P2/4P3/PPP1B1PP/RNBQK1NR b KQkq - 1 5,b8c6,Nc6,2,-49,-41,8,A,Stockfish 18 WASM,20000
+STO-05,Stonewall et gambits,6,rnbqkbnr/pp2pppp/8/2pp4/3P1P2/4P3/PPP3PP/RNBQKBNR b KQkq - 0 3,b8c6,Nc6,1,-60,-60,0,A,Stockfish 18 WASM,20000
+STO-05,Stonewall et gambits,8,r1bqkbnr/pp2pppp/2n5/2pp4/3P1P2/4PN2/PPP3PP/RNBQKB1R b KQkq - 2 4,c8f5,Bf5,2,-58,-55,3,A,Stockfish 18 WASM,20000
+BDG-01,Stonewall et gambits,8,rnbqkb1r/ppp1pppp/5n2/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR b KQkq - 0 4,e4f3,exf3,1,-79,-79,0,A,Stockfish 18 WASM,20000
+BDG-01,Stonewall et gambits,10,rnbqkb1r/ppp1pppp/5n2/8/3P4/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5,c8f5,Bf5,>8,-65,-55,10,A,Stockfish 18 WASM,20000
+BDG-02,Stonewall et gambits,8,rnbqkb1r/ppp1pppp/5n2/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR b KQkq - 0 4,e4f3,exf3,1,-79,-79,0,A,Stockfish 18 WASM,20000
+BDG-02,Stonewall et gambits,10,rnbqkb1r/ppp1pppp/5n2/8/3P4/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5,g7g6,g6,1,-72,-72,0,A,Stockfish 18 WASM,20000
+BDG-03,Stonewall et gambits,8,rnbqkb1r/ppp1pppp/5n2/8/3Pp3/2N2P2/PPP3PP/R1BQKBNR b KQkq - 0 4,e4f3,exf3,1,-79,-79,0,A,Stockfish 18 WASM,20000
+BDG-03,Stonewall et gambits,10,rnbqkb1r/ppp1pppp/5n2/8/3P4/2N2Q2/PPP3PP/R1B1KBNR b KQkq - 0 5,d8d4,Qxd4,1,-142,-142,0,A,Stockfish 18 WASM,20000
+BDG-04,Stonewall et gambits,10,rnbqkb1r/ppp1pppp/5n2/8/3P4/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5,c8f5,Bf5,>8,-65,-55,10,A,Stockfish 18 WASM,20000
+BDG-04,Stonewall et gambits,12,rn1qkb1r/ppp1pppp/5n2/5b2/2BP4/2N2N2/PPP3PP/R1BQK2R b KQkq - 2 6,e7e6,e6,1,-77,-77,0,A,Stockfish 18 WASM,20000
+BDG-05,Stonewall et gambits,10,rnbqkb1r/ppp1pppp/5n2/8/3P4/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 5,c8f5,Bf5,>8,-65,-55,10,A,Stockfish 18 WASM,20000
+BDG-05,Stonewall et gambits,12,rn1qkb1r/ppp1pppp/5n2/5bB1/3P4/2N2N2/PPP3PP/R2QKB1R b KQkq - 2 6,c7c6,c6,1,-76,-76,0,A,Stockfish 18 WASM,20000

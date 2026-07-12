@@ -1,0 +1,7 @@
+python-chess>=1.999
+pandas>=2.0
+PyYAML>=6.0
+zstandard>=0.22
+numpy>=1.26
+# Maia-3 : installation recommandée, épinglée à une révision validée par le projet :
+# pip install 'git+https://github.com/CSSLab/maia3.git@1e13597c42d4858b7cfd7cfdae01e297263364b2'

@@ -1,0 +1,20 @@
+{
+  "title": "Brisez les systèmes !",
+  "version": "0.9.0-beta-professionnelle",
+  "date": "2026-07-12",
+  "line_count": 88,
+  "chapter_count": 7,
+  "engine": "Stockfish 18 WASM",
+  "fixed_move_audit_nodes": 20000,
+  "human_model_status": "Manifest préparé; inférence non exécutée faute de poids locaux disponibles.",
+  "scope": "Répertoire noir contre les systèmes 1.d4 sans 2.c4 principal.",
+  "chapters": {
+    "01_londres_noyau_qb6": 15,
+    "02_londres_ordres_de_coups": 15,
+    "03_jobava": 14,
+    "04_colle_zukertort": 12,
+    "05_torre": 10,
+    "06_veresov_pseudo_tromp": 12,
+    "07_stonewall_bdg": 10
+  }
+}

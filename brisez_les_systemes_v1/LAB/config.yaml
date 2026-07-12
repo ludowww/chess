@@ -1,0 +1,48 @@
+course:
+  manifest: ../DATA/core_40_index.csv
+  core_pgn: ../PGN/99_cours_v1_core_40.pgn
+
+stockfish:
+  binary: stockfish
+  nodes_quick: 50000
+  nodes_publish: 500000
+  multipv: 8
+  hash_mb: 512
+  threads: 2
+  grade_thresholds_cp:
+    A: 25
+    B: 50
+    C: 80
+
+maia3:
+  model: maia3-79m
+  pinned_revision: 1e13597c42d4858b7cfd7cfdae01e297263364b2
+  device: cpu
+  elos: [1100, 1300, 1500, 1700, 1900, 2100]
+  multipv: 10
+  temperature: 0.0
+  top_p: 1.0
+  use_uci_history: true
+
+lichess:
+  speeds: [blitz, rapid]
+  elo_bands:
+    - [1100, 1299]
+    - [1300, 1499]
+    - [1500, 1699]
+    - [1700, 1899]
+    - [1900, 2099]
+  minimum_position_sample: 200
+  minimum_move_sample: 30
+  splits:
+    discovery: []
+    validation: []
+    test: []
+
+scoring:
+  response_error_threshold_cp: 40
+  severe_error_threshold_cp: 100
+  publish_minimums:
+    engine_max_loss_cp: 50
+    empirical_position_sample: 200
+    evidence_completeness: 80
