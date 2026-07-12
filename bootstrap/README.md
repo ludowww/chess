@@ -23,7 +23,7 @@ powershell -ExecutionPolicy Bypass -File bootstrap/restore_bundle.ps1
 3. contrôle SHA-256 :
 
 ```text
-819bab279e77a4835a579110cebaa79d8827d0cc7747dd7cd66a9a7e287f805e
+c88f59116ffd8eddd5c0254508b814e7f84d2efdef9ff6ccce0dc62729aec225
 ```
 
 4. extraction de l’archive ;
