@@ -1,0 +1,45 @@
+name: Bootstrap Verification
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: bootstrap/archive/brisez_les_systemes_v1_0_rc1.tar.xz.b64.part00
+
+      - name: Restore and verify V1 bundle
+        run: bash bootstrap/restore_bundle.sh
+
+      - name: Install laboratory dependencies
+        run: python -m pip install -r brisez_les_systemes_v1/LAB/requirements.txt
+
+      - name: Run static course QA
+        working-directory: brisez_les_systemes_v1
+        run: bash LAB/run_static_qa.sh
+
+      - name: Verify key deliverables
+        run: |
+          test -f brisez_les_systemes_v1/MANUSCRIT_COURS_V1.md
+          test -f brisez_les_systemes_v1/PGN/00_parcours_essentiel_20.pgn
+          test -f brisez_les_systemes_v1/PGN/99_cours_v1_core_40.pgn
+          test -f brisez_les_systemes_v1/LAB/README_LAB.md
+          test -f brisez_les_systemes_v1/DATA/core_40_index.csv
+
+      - name: Confirm archive checksum
+        run: echo "c88f59116ffd8eddd5c0254508b814e7f84d2efdef9ff6ccce0dc62729aec225  brisez_les_systemes_v1_0_rc1.tar.xz" | sha256sum --check --strict
