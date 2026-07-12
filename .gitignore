@@ -1,0 +1,6 @@
+.venv/
+**/__pycache__/
+*.py[cod]
+brisez_les_systemes_v1_0_rc1.tar.xz
+*.zip
+/data/
