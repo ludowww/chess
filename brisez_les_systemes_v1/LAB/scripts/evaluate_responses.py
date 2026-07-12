@@ -33,26 +33,32 @@ def evaluate(distribution_path: Path, manifest_path: Path, engine_path: str, nod
     dist = dist[dist["position_role"] == "after_key"].copy()
     engine = chess.engine.SimpleEngine.popen_uci(engine_path)
     rows=[]
+    cache: dict[tuple[str, str], dict] = {}
     try:
         for rec in dist.to_dict("records"):
-            board = chess.Board(manifest.loc[rec["line_id"], "fen_after_key_move"] + " 0 1")
-            move = chess.Move.from_uci(rec["move_uci"])
-            if move not in board.legal_moves:
-                continue
-            pov = board.turn
-            best = engine.analyse(board, chess.engine.Limit(nodes=nodes))
-            cand = engine.analyse(board, chess.engine.Limit(nodes=nodes), root_moves=[move])
-            best_cp = score_cp(best, pov)
-            cand_cp = score_cp(cand, pov)
-            loss = max(0, best_cp - cand_cp)
-            rows.append({**rec,
-                "move_san": board.san(move),
-                "best_eval_mover_cp": best_cp,
-                "candidate_eval_mover_cp": cand_cp,
-                "response_loss_cp": loss,
-                "response_quality": "OK" if loss < 40 else ("ERROR" if loss < 100 else "SEVERE_ERROR"),
-                "nodes": nodes,
-            })
+            line_id = rec["line_id"]
+            move_uci = rec["move_uci"]
+            key = (line_id, move_uci)
+            if key not in cache:
+                board = chess.Board(manifest.loc[line_id, "fen_after_key_move"] + " 0 1")
+                move = chess.Move.from_uci(move_uci)
+                if move not in board.legal_moves:
+                    continue
+                pov = board.turn
+                best = engine.analyse(board, chess.engine.Limit(nodes=nodes))
+                cand = engine.analyse(board, chess.engine.Limit(nodes=nodes), root_moves=[move])
+                best_cp = score_cp(best, pov)
+                cand_cp = score_cp(cand, pov)
+                loss = max(0, best_cp - cand_cp)
+                cache[key] = {
+                    "move_san": board.san(move),
+                    "best_eval_mover_cp": best_cp,
+                    "candidate_eval_mover_cp": cand_cp,
+                    "response_loss_cp": loss,
+                    "response_quality": "OK" if loss < 40 else ("ERROR" if loss < 100 else "SEVERE_ERROR"),
+                    "nodes": nodes,
+                }
+            rows.append({**rec, **cache[key]})
     finally:
         engine.quit()
     return pd.DataFrame(rows)
