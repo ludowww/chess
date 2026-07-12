@@ -1,25 +1,62 @@
 from __future__ import annotations
 
 import argparse
+import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
 import chess
-import chess.pgn
 import pandas as pd
 
 from common import elo_band, fen4, game_speed, load_manifest, open_text_maybe_zst, safe_int
 
+HEADER_RE = re.compile(r'^\[(\w+)\s+"(.*)"\]$')
+COMMENT_RE = re.compile(r'\{[^}]*\}')
+VAR_RE = re.compile(r'\([^()]*\)')
+RESULTS = {"1-0", "0-1", "1/2-1/2", "*"}
 
-def extract(
-    pgn_paths: list[Path],
-    manifest_path: Path,
-    bands: list[tuple[int, int]],
-    speeds: set[str],
-    split: str,
-    max_games: int | None = None,
-    max_plies: int | None = None,
-) -> pd.DataFrame:
+
+def san_tokens(movetext: str):
+    text = COMMENT_RE.sub(" ", movetext)
+    # Lichess dumps should not contain variations, but strip shallow ones defensively.
+    while "(" in text and ")" in text:
+        new = VAR_RE.sub(" ", text)
+        if new == text:
+            break
+        text = new
+    text = re.sub(r"\$\d+", " ", text)
+    text = re.sub(r"\d+\.(\.\.)?", " ", text)
+    for token in text.split():
+        token = token.strip()
+        if not token or token in RESULTS:
+            continue
+        yield token
+
+
+def iter_games(handle):
+    headers: dict[str, str] = {}
+    movelines: list[str] = []
+    in_moves = False
+    for raw in handle:
+        line = raw.strip()
+        if not line:
+            if in_moves and headers:
+                yield headers, " ".join(movelines)
+                headers = {}
+                movelines = []
+                in_moves = False
+            continue
+        m = HEADER_RE.match(line)
+        if m and not in_moves:
+            headers[m.group(1)] = m.group(2)
+        else:
+            in_moves = True
+            movelines.append(line)
+    if in_moves and headers:
+        yield headers, " ".join(movelines)
+
+
+def extract(pgn_paths: list[Path], manifest_path: Path, bands: list[tuple[int, int]], speeds: set[str], split: str, max_games: int | None = None, max_plies: int = 80) -> pd.DataFrame:
     manifest = load_manifest(manifest_path)
     positions: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
     for row in manifest.to_dict("records"):
@@ -29,26 +66,29 @@ def extract(
     counts: Counter = Counter()
     totals: Counter = Counter()
     games_seen = 0
+    parse_errors = 0
 
     for path in pgn_paths:
         with open_text_maybe_zst(path) as handle:
-            while True:
-                game = chess.pgn.read_game(handle)
-                if game is None:
-                    break
+            for headers, movetext in iter_games(handle):
                 games_seen += 1
                 if max_games and games_seen > max_games:
                     break
-                speed = game_speed(game.headers)
+                speed = game_speed(headers)
                 if speed not in speeds:
                     continue
-                white_elo = safe_int(game.headers.get("WhiteElo"))
-                black_elo = safe_int(game.headers.get("BlackElo"))
+                white_elo = safe_int(headers.get("WhiteElo"))
+                black_elo = safe_int(headers.get("BlackElo"))
                 if white_elo is None or black_elo is None:
                     continue
-                board = game.board()
-                for ply_index, move in enumerate(game.mainline_moves(), start=1):
+                board = chess.Board()
+                for ply_index, token in enumerate(san_tokens(movetext), start=1):
                     if max_plies and ply_index > max_plies:
+                        break
+                    try:
+                        move = board.parse_san(token)
+                    except Exception:
+                        parse_errors += 1
                         break
                     key = fen4(board)
                     hits = positions.get(key)
@@ -65,7 +105,7 @@ def extract(
             if max_games and games_seen > max_games:
                 break
 
-    rows=[]
+    rows = []
     for key, count in counts.items():
         line_id, role, low, high, speed, split_name, move_uci = key
         total = totals[(line_id, role, low, high, speed, split_name)]
@@ -83,8 +123,8 @@ def extract(
         })
     df = pd.DataFrame(rows)
     if not df.empty:
-        df = df.sort_values(["line_id","position_role","elo_min","speed","frequency"], ascending=[True,True,True,True,False])
-    print(f"Scanned {games_seen} games; matched {sum(totals.values())} target-position occurrences.")
+        df = df.sort_values(["line_id", "position_role", "elo_min", "speed", "frequency"], ascending=[True, True, True, True, False])
+    print(f"Scanned {games_seen} games; matched {sum(totals.values())} target-position occurrences; parse_errors={parse_errors}.")
     return df
 
 
@@ -94,14 +134,14 @@ def parse_band(value: str) -> tuple[int, int]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Stream Lichess PGNs and count moves in target positions.")
+    parser = argparse.ArgumentParser(description="Fast shallow stream extraction for Lichess PGNs.")
     parser.add_argument("pgn", nargs="+", type=Path)
     parser.add_argument("--manifest", required=True, type=Path)
     parser.add_argument("--bands", nargs="+", type=parse_band, default=[(1100,1299),(1300,1499),(1500,1699),(1700,1899),(1900,2099)])
-    parser.add_argument("--speeds", nargs="+", default=["blitz","rapid"])
-    parser.add_argument("--split", required=True, choices=["discovery","validation","test"])
+    parser.add_argument("--speeds", nargs="+", default=["blitz", "rapid"])
+    parser.add_argument("--split", required=True, choices=["discovery", "validation", "test"])
     parser.add_argument("--max-games", type=int)
-    parser.add_argument("--max-plies", type=int, help="Optional opening-only scan cutoff; target FENs are opening positions.")
+    parser.add_argument("--max-plies", type=int, default=80)
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
     df = extract(args.pgn, args.manifest, args.bands, set(args.speeds), args.split, args.max_games, args.max_plies)
