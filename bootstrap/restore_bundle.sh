@@ -4,7 +4,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ARCHIVE_DIR="$REPO_ROOT/bootstrap/archive"
 OUTPUT="$REPO_ROOT/brisez_les_systemes_v1_0_rc1.tar.xz"
-EXPECTED_SHA256="819bab279e77a4835a579110cebaa79d8827d0cc7747dd7cd66a9a7e287f805e"
+EXPECTED_SHA256="c88f59116ffd8eddd5c0254508b814e7f84d2efdef9ff6ccce0dc62729aec225"
 
 python3 - "$ARCHIVE_DIR" "$OUTPUT" "$EXPECTED_SHA256" <<'PY'
 from __future__ import annotations
