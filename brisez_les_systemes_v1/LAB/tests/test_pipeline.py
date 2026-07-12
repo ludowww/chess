@@ -145,9 +145,63 @@ class MaiaGpuToolingTests(unittest.TestCase):
         detail, summary = compare_full_policy_to_lichess(pd.DataFrame(maia_rows), pd.DataFrame(lichess_rows), manifest)
         self.assertEqual(summary["expected_maia_groups"], 240)
         self.assertEqual(summary["maia_groups_observed"], 240)
-        self.assertGreater(summary["overall_maia_mass_covered_by_lichess"], 0.99)
+        self.assertEqual(summary["maia_groups_total"], 240)
+        self.assertEqual(summary["lichess_observed_groups"], 240)
+        self.assertGreater(summary["maia_mass_covered_observed_only"], 0.99)
         self.assertIn("blitz", summary["by_speed"])
         self.assertFalse(detail.empty)
+
+    def test_full_policy_lichess_missing_groups_are_excluded_from_agreement_and_divergence_rates(self):
+        manifest = pd.DataFrame([{"line_id":"A"}, {"line_id":"B"}])
+        maia = pd.DataFrame([
+            {"line_id":"A","elo":1100,"rank":1,"move_uci":"a2a3","policy_probability":0.7},
+            {"line_id":"A","elo":1100,"rank":2,"move_uci":"a2a4","policy_probability":0.3},
+            {"line_id":"B","elo":1100,"rank":1,"move_uci":"b2b3","policy_probability":1.0},
+            {"line_id":"A","elo":2100,"rank":1,"move_uci":"a2a3","policy_probability":1.0},
+        ])
+        lichess = pd.DataFrame([
+            {"line_id":"A","position_role":"after_key","elo_min":1100,"elo_max":1299,"speed":"blitz","split":"test","move_uci":"a2a3","count":7,"total_positions":10,"frequency":0.7},
+            {"line_id":"A","position_role":"after_key","elo_min":1100,"elo_max":1299,"speed":"blitz","split":"test","move_uci":"a2a4","count":3,"total_positions":10,"frequency":0.3},
+        ])
+        detail, summary = compare_full_policy_to_lichess(maia, lichess, manifest)
+        self.assertEqual(summary["maia_groups_total"], 3)
+        self.assertEqual(summary["lichess_observed_groups"], 1)
+        self.assertEqual(summary["lichess_missing_groups"], 1)
+        self.assertEqual(summary["model_only_groups"], 1)
+        self.assertEqual(summary["top1_agreement_observed_only"], 1.0)
+        self.assertEqual(summary["top3_agreement_observed_only"], 1.0)
+        self.assertEqual(summary["true_disagreements_observed_only"], 0)
+        missing = detail[(detail["line_id"] == "B") & (detail["elo"] == 1100)].iloc[0]
+        self.assertEqual(missing["comparison_status"], "NO_LICHESS_DATA")
+        self.assertFalse(bool(missing["remaining_divergences"]))
+        model_only = detail[(detail["line_id"] == "A") & (detail["elo"] == 2100)].iloc[0]
+        self.assertEqual(model_only["comparison_status"], "MODEL_ONLY_NO_MATCHING_LICHESS_BAND")
+        self.assertTrue(pd.isna(model_only["top1_agreement"]))
+        self.assertEqual(summary["by_elo"]["2100"]["top1_agreement_rate"], None)
+
+    def test_full_policy_lichess_speed_summaries_are_observed_only(self):
+        manifest = pd.DataFrame([{"line_id":"A"}, {"line_id":"B"}])
+        maia = pd.DataFrame([
+            {"line_id":"A","elo":1100,"rank":1,"move_uci":"a2a3","policy_probability":1.0},
+            {"line_id":"B","elo":1100,"rank":1,"move_uci":"b2b3","policy_probability":1.0},
+        ])
+        lichess = pd.DataFrame([
+            {"line_id":"A","position_role":"after_key","elo_min":1100,"elo_max":1299,"speed":"rapid","split":"test","move_uci":"a2a3","count":2,"total_positions":2,"frequency":1.0},
+        ])
+        detail, summary = compare_full_policy_to_lichess(maia, lichess, manifest)
+        rapid = summary["by_speed"]["rapid"]
+        self.assertEqual(rapid["observed_groups"], 1)
+        self.assertEqual(rapid["unique_rows"], 1)
+        self.assertEqual(rapid["total_positions"], 2)
+        self.assertEqual(rapid["top1_agreement_rate"], 1.0)
+
+    def test_gpu_validation_report_is_clean_utf8_markdown(self):
+        report_path = COURSE/"DATA/GPU_LOCAL/RAPPORT_MAIA3_GPU_VALIDATION_V1.md"
+        text = report_path.read_text(encoding="utf-8")
+        self.assertNotRegex(text, r"Ã|Â|�")
+        self.assertNotRegex(text, r"(?m)^``json$")
+        self.assertEqual(text.count("```") % 2, 0)
+        self.assertIn("```json", text)
 
     def test_windows_scripts_present_and_repo_writes_stay_under_gpu_local(self):
         self.assertTrue((COURSE.parent/"tools/run_maia3_gpu_validation.ps1").exists())
