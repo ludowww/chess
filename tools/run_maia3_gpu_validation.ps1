@@ -13,9 +13,9 @@ function Fail($Message) {
   exit 1
 }
 
-function Run-Step($Name, $Exe, [string[]]$Args) {
+function Run-Step($Name, $Exe, [string[]]$ArgumentList) {
   Write-Host "`n==> $Name" -ForegroundColor Cyan
-  & $Exe @Args
+  & $Exe @ArgumentList
   if ($LASTEXITCODE -ne 0) {
     Fail "Step failed ($LASTEXITCODE): $Name"
   }
@@ -60,6 +60,7 @@ print(json.dumps(data, ensure_ascii=False, indent=2))
 $EnvScript = Join-Path $OutDir "_check_cuda_env.py"
 Set-Content -Path $EnvScript -Value ($EnvCheck.Replace("__ENV_JSON__", $EnvJson)) -Encoding UTF8
 Run-Step "CUDA/PyTorch/Maia-3 environment" $Python @($EnvScript)
+Remove-Item $EnvScript -Force -ErrorAction SilentlyContinue
 
 $Manifest = Join-Path $DataRoot "core_40_index.csv"
 $CpuProfile = Join-Path $DataRoot "maia3_79m_profiles_corrected.csv"
