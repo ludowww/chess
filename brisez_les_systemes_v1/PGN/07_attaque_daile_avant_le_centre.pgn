@@ -1,0 +1,131 @@
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "ORD-10"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — ordres de coups"]
+[Tier "Essentiel"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B7"]
+[HumanBias "Attaque d’aile avant le centre"]
+
+{ OBJECTIF — Capitaliser sur un tempo prophylactique qui ne répond à aucune menace réelle. PROBLÈME HUMAIN — h3 est joué par habitude pour offrir h2 au fou. PLAN NOIR — Attaquer b2, puis utiliser ...Bf5 ou ...cxd4. REPÈRE — Quand l’adversaire prépare une retraite, avance au centre. NIVEAU — Essentiel. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. h3 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Nxd4 Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. POSITION-CLÉ — Capitaliser sur un tempo prophylactique qui ne répond à aucune menace réelle. Pourquoi c’est inconfortable : h3 est joué par habitude pour offrir h2 au fou. Plan pratique : Attaquer b2, puis utiliser ...Bf5 ou ...cxd4. À retenir : Quand l’adversaire prépare une retraite, avance au centre. }
+6. e3 Qxb2 7. Nd2 a6 8. Rb1 Qa3 9. Bb5+ axb5 10. Nxb5 Qa4 11. Nc7+ Kd8 12. Nxa8
+Qxa8 13. O-O Ke8
+{ BILAN — Ligne ORD-10, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-06"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B7"]
+[HumanBias "Attaque d’aile avant le centre"]
+
+{ OBJECTIF — Punir une préparation lente de e4 en ouvrant le centre. PROBLÈME HUMAIN — f3 affaiblit e3 et le roi tout en plaçant la dame blanche face aux tempos. PLAN NOIR — Développer ...e5 ou ...Bf5 avec tempo sur la dame. REPÈRE — Quand f3 prépare e4, ouvre le centre avant e4. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. f3 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Qxd4 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. POSITION-CLÉ — Punir une préparation lente de e4 en ouvrant le centre. Pourquoi c’est inconfortable : f3 affaiblit e3 et le roi tout en plaçant la dame blanche face aux tempos. Plan pratique : Développer ...e5 ou ...Bf5 avec tempo sur la dame. À retenir : Quand f3 prépare e4, ouvre le centre avant e4. }
+6. Qd3 e5 7. Bg3 d4 8. Nd1 Qb6 9. e4 dxe3 10. Qxe3
+{ BILAN — Ligne JOB-06, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-09"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B7"]
+[HumanBias "Attaque d’aile avant le centre"]
+
+{ OBJECTIF — Ouvrir le centre avant que le coup utile e3 n’arrive. PROBLÈME HUMAIN — a3 prépare b4 mais ne répond pas à la tension sur d4. PLAN NOIR — Développer avec tempo et viser e5. REPÈRE — Un coup d’aile sans menace offre un tempo au centre. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. a3 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Qxd4 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. POSITION-CLÉ — Ouvrir le centre avant que le coup utile e3 n’arrive. Pourquoi c’est inconfortable : a3 prépare b4 mais ne répond pas à la tension sur d4. Plan pratique : Développer avec tempo et viser e5. À retenir : Un coup d’aile sans menace offre un tempo au centre. }
+6. Qa4 Bd7 7. e3 e5 8. Bg5 Nd4 9. Nb5 Ne6 10. Bxf6 gxf6 11. Qh4 Qa5+ 12. Nc3 d4
+13. exd4 exd4
+{ BILAN — Ligne JOB-09, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-10"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B7"]
+[HumanBias "Attaque d’aile avant le centre"]
+
+{ OBJECTIF — Montrer que l’agression visuelle n’empêche pas la rupture centrale. PROBLÈME HUMAIN — h4 cherche une attaque avant que le roi noir ait choisi son aile. PLAN NOIR — Développer ...e5 avec tempo si possible et garder le roi flexible. REPÈRE — Ne réponds pas à h4 par h5 : réponds par le centre. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. h4 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Qxd4 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. POSITION-CLÉ — Montrer que l’agression visuelle n’empêche pas la rupture centrale. Pourquoi c’est inconfortable : h4 cherche une attaque avant que le roi noir ait choisi son aile. Plan pratique : Développer ...e5 avec tempo si possible et garder le roi flexible. À retenir : Ne réponds pas à h4 par h5 : réponds par le centre. }
+6. Qd3 e5 7. Bg5 d4 8. Nd1 Qb6 9. e4 Nb4
+{ BILAN — Ligne JOB-10, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "VER-08"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B7"]
+[HumanBias "Attaque d’aile avant le centre"]
+
+{ OBJECTIF — Attaquer la dame et le centre avant que f3-e4 ne fonctionne. PROBLÈME HUMAIN — f3 affaiblit les diagonales et retarde le cavalier g1. PLAN NOIR — Développer ...e5 avec tempo et garder le roi flexible. REPÈRE — Comme au Jobava : f3 appelle ...cxd4. NIVEAU — Essentiel. }
+1. d4 d5 2. Nc3 Nf6 3. Bg5 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. f3 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Qxd4 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. POSITION-CLÉ — Attaquer la dame et le centre avant que f3-e4 ne fonctionne. Pourquoi c’est inconfortable : f3 affaiblit les diagonales et retarde le cavalier g1. Plan pratique : Développer ...e5 avec tempo et garder le roi flexible. À retenir : Comme au Jobava : f3 appelle ...cxd4. }
+6. Qd2 d4 7. Nd1 h6 8. Bh4 Qb6 9. Bf2 e5 10. e4 Be6 11. a3 Nd7 12. Ne2 Nc5
+{ BILAN — Ligne VER-08, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*

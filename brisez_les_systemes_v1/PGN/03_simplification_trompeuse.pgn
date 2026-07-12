@@ -1,0 +1,138 @@
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+
+{ OBJECTIF — Fermer le centre avec gain de temps et accepter les pions doublés pour ouvrir la colonne a. PROBLÈME HUMAIN — Le joueur du Londres pense neutraliser la pression par un échange de dames ; il sous-estime la structure active des Noirs. PLAN NOIR — Jouer ...b5, ...Bf5 et utiliser la colonne a ; le fou f4 manque souvent de bonnes cases. REPÈRE — Qb3 ? Répondre c4 ; après l’échange, la colonne a paie les pions doublés. NIVEAU — Essentiel. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qb3 c4
+{ Coup d’espace et de tempo : la structure blanche perd sa fluidité et une pièce doit se redéfinir. }
+7. Qxb6 axb6
+{ POSITION-CLÉ — Fermer le centre avec gain de temps et accepter les pions doublés pour ouvrir la colonne a. Pourquoi c’est inconfortable : Le joueur du Londres pense neutraliser la pression par un échange de dames ; il sous-estime la structure active des Noirs. Plan pratique : Jouer ...b5, ...Bf5 et utiliser la colonne a ; le fou f4 manque souvent de bonnes cases. À retenir : Qb3 ? Répondre c4 ; après l’échange, la colonne a paie les pions doublés. }
+8. Be2 Bf5 9. Nbd2 b5 10. Nh4 Bc2 11. Rc1 Be4 12. a3 h6 13. Nxe4 Nxe4
+{ BILAN — Ligne LON-01, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-03"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Avancé"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+
+{ OBJECTIF — Transformer une faiblesse statique apparente en majorité d’espace et colonne ouverte. PROBLÈME HUMAIN — Les Blancs évaluent souvent les pions b6-b7 comme faibles sans voir la poussée ...b5-b4. PLAN NOIR — Fixer l’aile-dame, développer le fou c8 en f5 et doubler les tours sur la colonne a. REPÈRE — Les pions doublés ne sont faibles que s’ils ne bougent pas et si la colonne ouverte ne sert à rien. NIVEAU — Avancé. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qb3 c4
+{ Coup d’espace et de tempo : la structure blanche perd sa fluidité et une pièce doit se redéfinir. }
+7. Qxb6 axb6 8. Nbd2 b5
+{ POSITION-CLÉ — Transformer une faiblesse statique apparente en majorité d’espace et colonne ouverte. Pourquoi c’est inconfortable : Les Blancs évaluent souvent les pions b6-b7 comme faibles sans voir la poussée ...b5-b4. Plan pratique : Fixer l’aile-dame, développer le fou c8 en f5 et doubler les tours sur la colonne a. À retenir : Les pions doublés ne sont faibles que s’ils ne bougent pas et si la colonne ouverte ne sert à rien. }
+9. Be2 h6 10. Ne5 g5 11. Bg3 h5 12. h4 g4 13. O-O Bh6
+{ BILAN — Ligne LON-03, piste Avancé. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-05"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Club"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+
+{ OBJECTIF — Forcer une structure de Carlsbad inversée où les Noirs ont déjà développé activement. PROBLÈME HUMAIN — La reprise cxd4 paraît saine mais laisse c3 vide et facilite ...Nb4. PLAN NOIR — Développer ...e6, viser b4 et mettre une tour en c8. REPÈRE — Après cxd4, la case b4 devient une vraie destination. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qc1 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+7. cxd4 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. POSITION-CLÉ — Forcer une structure de Carlsbad inversée où les Noirs ont déjà développé activement. Pourquoi c’est inconfortable : La reprise cxd4 paraît saine mais laisse c3 vide et facilite ...Nb4. Plan pratique : Développer ...e6, viser b4 et mettre une tour en c8. À retenir : Après cxd4, la case b4 devient une vraie destination. }
+8. Nc3 e6 9. Be2 Be7 10. O-O O-O 11. Na4 Qa5 12. Nc5 Rfc8 13. Nxb7 Qb6
+{ BILAN — Ligne LON-05, piste Club. Audit moteur des coups imposés : A, perte maximale observée 15 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "JOB-11"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Club"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+
+{ OBJECTIF — Accepter une structure inhabituelle pour activer la tour sur la colonne b. PROBLÈME HUMAIN — Les Blancs pensent abîmer la coordination noire en échangeant le fou contre le cavalier. PLAN NOIR — Jouer ...a6, ...e6 et utiliser b2 comme cible de long terme. REPÈRE — Une tour développée gratuitement peut valoir plus que le droit de roquer côté dame. NIVEAU — Club. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. Bxb8 Rxb8
+{ POSITION-CLÉ — Accepter une structure inhabituelle pour activer la tour sur la colonne b. Pourquoi c’est inconfortable : Les Blancs pensent abîmer la coordination noire en échangeant le fou contre le cavalier. Plan pratique : Jouer ...a6, ...e6 et utiliser b2 comme cible de long terme. À retenir : Une tour développée gratuitement peut valoir plus que le droit de roquer côté dame. }
+5. e3 a6 6. a3 e6 7. Nf3 Bd7 8. Be2 Rc8 9. O-O
+{ BILAN — Ligne JOB-11, piste Club. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "VER-05"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Club"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+
+{ OBJECTIF — Accepter la structure pour obtenir la colonne g et un centre mobile. PROBLÈME HUMAIN — Les Blancs appliquent la règle “abîmer les pions du roque” sans regarder que le roi noir peut roquer long ou rester au centre. PLAN NOIR — Jouer ...cxd4, ...e6 et utiliser la paire de fous. REPÈRE — Les pions doublés g contrôlent e5 et ouvrent la colonne g. NIVEAU — Club. }
+1. d4 d5 2. Nc3 Nf6 3. Bg5 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. Bxf6 gxf6
+{ Structure volontaire : colonne g ouverte, paire de fous et centre mobile compensent largement l’esthétique des pions. POSITION-CLÉ — Accepter la structure pour obtenir la colonne g et un centre mobile. Pourquoi c’est inconfortable : Les Blancs appliquent la règle “abîmer les pions du roque” sans regarder que le roi noir peut roquer long ou rester au centre. Plan pratique : Jouer ...cxd4, ...e6 et utiliser la paire de fous. À retenir : Les pions doublés g contrôlent e5 et ouvrent la colonne g. }
+5. e4 dxe4 6. dxc5 f5 7. Qxd8+ Kxd8 8. f3 exf3 9. O-O-O+ Nd7 10. Nxf3 e6 11.
+Bb5 Ke7 12. Rhe1
+{ BILAN — Ligne VER-05, piste Club. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*

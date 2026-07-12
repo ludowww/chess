@@ -1,0 +1,13 @@
+{
+  "pgn_files": 9,
+  "games": 200,
+  "parse_errors": [],
+  "illegal_or_empty": [],
+  "audit_status_counts": {
+    "A": 82,
+    "B": 6
+  },
+  "rejected_prefixes": [],
+  "test_positions": 20,
+  "test_parse_errors": []
+}

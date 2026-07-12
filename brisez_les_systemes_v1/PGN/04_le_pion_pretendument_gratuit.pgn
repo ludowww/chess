@@ -1,0 +1,139 @@
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-10"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+
+{ OBJECTIF — Exploiter la surcharge de la dame blanche : elle ne peut défendre c5, b2 et le développement. PROBLÈME HUMAIN — Le joueur du système voit un pion en c5 et oublie que sa tour a1 est encore enfermée. PLAN NOIR — Rentrer par a5 ou c3, puis développer ; ne pas collectionner les pions sans voie de sortie. REPÈRE — Avant de prendre c5, compte b2 — deux fois. NIVEAU — Essentiel. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. dxc5 Qxb2
+{ La prise est calculée, non gourmande : la dame dispose d’une route de sortie et le développement blanc est retardé. }
+7. Nbd2 Qxc3
+{ Case d’évacuation tactique : la dame gagne un second pion tout en échappant à Rb1. POSITION-CLÉ — Exploiter la surcharge de la dame blanche : elle ne peut défendre c5, b2 et le développement. Pourquoi c’est inconfortable : Le joueur du système voit un pion en c5 et oublie que sa tour a1 est encore enfermée. Plan pratique : Rentrer par a5 ou c3, puis développer ; ne pas collectionner les pions sans voie de sortie. À retenir : Avant de prendre c5, compte b2 — deux fois. }
+8. Rc1 Qb4 9. Be2 e6 10. Nd4 Nxd4 11. a3 Nf3+ 12. gxf3 Qa5 13. O-O
+{ BILAN — Ligne LON-10, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-11"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Club"]
+[LineType "critique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+
+{ OBJECTIF — Prendre b2 seulement lorsque la dame dispose d’une case de fuite concrète. PROBLÈME HUMAIN — Rb1 ressemble à un gain de dame, mais c3 devient la case d’évacuation. PLAN NOIR — Après ...Qxc3, répondre au développement par ...Bd7 ou ...cxd4 et ramener la dame. REPÈRE — Une dame n’est pas piégée si elle peut sortir par la case que le pion c vient de quitter. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Nbd2 Qxb2
+{ La prise est calculée, non gourmande : la dame dispose d’une route de sortie et le développement blanc est retardé. }
+7. Rb1 Qxc3
+{ Case d’évacuation tactique : la dame gagne un second pion tout en échappant à Rb1. POSITION-CLÉ — Prendre b2 seulement lorsque la dame dispose d’une case de fuite concrète. Pourquoi c’est inconfortable : Rb1 ressemble à un gain de dame, mais c3 devient la case d’évacuation. Plan pratique : Après ...Qxc3, répondre au développement par ...Bd7 ou ...cxd4 et ramener la dame. À retenir : Une dame n’est pas piégée si elle peut sortir par la case que le pion c vient de quitter. }
+8. Bb5 Bd7 9. Ba4 Qa5 10. O-O Nd8 11. Bxd7+ Nxd7 12. Nb3 Qa4 13. Nxc5 Qxd1
+{ BILAN — Ligne LON-11, piste Club. Audit moteur des coups imposés : A, perte maximale observée 4 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-12"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+
+{ OBJECTIF — Punir un développement automatique qui ne répond pas à la menace immédiate. PROBLÈME HUMAIN — Bd3 est le coup “du système”, mais la position exige d’abord de traiter b2. PLAN NOIR — Après le gain de pion, neutraliser e4 et finir le développement sans précipitation. REPÈRE — Un coup normal peut être une gaffe s’il ignore une question concrète. NIVEAU — Essentiel. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Bd3 Qxb2
+{ La prise est calculée, non gourmande : la dame dispose d’une route de sortie et le développement blanc est retardé. }
+7. Nbd2 Qxc3
+{ Case d’évacuation tactique : la dame gagne un second pion tout en échappant à Rb1. POSITION-CLÉ — Punir un développement automatique qui ne répond pas à la menace immédiate. Pourquoi c’est inconfortable : Bd3 est le coup “du système”, mais la position exige d’abord de traiter b2. Plan pratique : Après le gain de pion, neutraliser e4 et finir le développement sans précipitation. À retenir : Un coup normal peut être une gaffe s’il ignore une question concrète. }
+8. Bb5 e6 9. O-O Bd7 10. Rb1 a6 11. Bxc6 Bxc6 12. Ne5 Bb5 13. Re1 c4
+{ BILAN — Ligne LON-12, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-15"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Avancé"]
+[LineType "critique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+
+{ OBJECTIF — Vérifier concrètement la cible b2 au lieu de répondre automatiquement au pseudo-clouage. PROBLÈME HUMAIN — Qa4 donne une impression d’activité, mais la dame blanche ne protège toujours pas son aile-dame. PLAN NOIR — Après ...Qxb2, préparer ...Bd7 ou ...a6 et identifier la sortie avant Rb1. REPÈRE — Une dame active ne protège pas automatiquement les pions qu’elle a quittés. NIVEAU — Avancé. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qa4 Qxb2
+{ La prise est calculée, non gourmande : la dame dispose d’une route de sortie et le développement blanc est retardé. POSITION-CLÉ — Vérifier concrètement la cible b2 au lieu de répondre automatiquement au pseudo-clouage. Pourquoi c’est inconfortable : Qa4 donne une impression d’activité, mais la dame blanche ne protège toujours pas son aile-dame. Plan pratique : Après ...Qxb2, préparer ...Bd7 ou ...a6 et identifier la sortie avant Rb1. À retenir : Une dame active ne protège pas automatiquement les pions qu’elle a quittés. }
+7. Bb5 Bd7 8. O-O Qxa1 9. Qb3 c4 10. Qc2 Bf5 11. Qa4
+{ BILAN — Ligne LON-15, piste Avancé. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "PST-04"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+
+{ OBJECTIF — Reconnaître un sacrifice visuellement tentant mais insuffisant. PROBLÈME HUMAIN — Le joueur pense empêcher le roque et gagner deux pions pour le fou. PLAN NOIR — Développer ...Nf6, ...c5 et utiliser la tour active h6. REPÈRE — Deux pions ne valent pas un fou ; la tour h6 peut rentrer par h8. NIVEAU — Essentiel. }
+1. d4 d5 2. Bg5 h6 3. Bxh6 Rxh6
+{ Le sacrifice est accepté : la tour peut revenir, tandis que les Blancs ont cédé une pièce pour trop peu de matériel. POSITION-CLÉ — Reconnaître un sacrifice visuellement tentant mais insuffisant. Pourquoi c’est inconfortable : Le joueur pense empêcher le roque et gagner deux pions pour le fou. Plan pratique : Développer ...Nf6, ...c5 et utiliser la tour active h6. À retenir : Deux pions ne valent pas un fou ; la tour h6 peut rentrer par h8. }
+4. Nf3 c5 5. dxc5 Nc6 6. Nbd2 Nf6
+{ BILAN — Ligne PST-04, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 23 cp. }
+*

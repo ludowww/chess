@@ -1,0 +1,130 @@
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-06"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+
+{ OBJECTIF — Échanger le fou du Londres et provoquer une structure qui offre des cibles. PROBLÈME HUMAIN — Les Blancs veulent conserver leur fou et acceptent souvent une reprise h qui modifie leur roque. PLAN NOIR — Jouer ...g6, ...Bg7 et ouvrir la colonne h seulement si le roi blanc y roque. REPÈRE — Q protégée, fou exposé : ...Nh5 devient possible. NIVEAU — Essentiel. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qc2 Nh5
+{ Le fou “du système” doit prendre une décision. La menace vaut surtout par la perte de temps qu’elle impose. }
+7. Bg3 Nxg3 8. hxg3
+{ POSITION-CLÉ — Échanger le fou du Londres et provoquer une structure qui offre des cibles. Pourquoi c’est inconfortable : Les Blancs veulent conserver leur fou et acceptent souvent une reprise h qui modifie leur roque. Plan pratique : Jouer ...g6, ...Bg7 et ouvrir la colonne h seulement si le roi blanc y roque. À retenir : Q protégée, fou exposé : ...Nh5 devient possible. }
+8... g6 9. Qb3 Bg7 10. Be2 O-O 11. O-O Rd8 12. Rc1 Bf5 13. Nbd2 Rab8
+{ BILAN — Ligne LON-06, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 5 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "LON-07"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+
+{ OBJECTIF — Gagner de l’espace sur l’aile-roi sans mettre son roi en danger, car le centre est contrôlé. PROBLÈME HUMAIN — Le fou blanc suit un automatisme de conservation et finit par manquer de cases. PLAN NOIR — Poursuivre par ...g4 si le cavalier f3 est mal placé, sinon consolider avec ...Bg7. REPÈRE — Ne pousse pas les pions pour attaquer le roi : pousse-les pour emprisonner le fou. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qc2 Nh5
+{ Le fou “du système” doit prendre une décision. La menace vaut surtout par la perte de temps qu’elle impose. }
+7. Bg5 h6 8. Bh4 g5
+{ POSITION-CLÉ — Gagner de l’espace sur l’aile-roi sans mettre son roi en danger, car le centre est contrôlé. Pourquoi c’est inconfortable : Le fou blanc suit un automatisme de conservation et finit par manquer de cases. Plan pratique : Poursuivre par ...g4 si le cavalier f3 est mal placé, sinon consolider avec ...Bg7. À retenir : Ne pousse pas les pions pour attaquer le roi : pousse-les pour emprisonner le fou. }
+9. Bg3 cxd4 10. cxd4 Nb4 11. Qa4+ Bd7 12. Qd1 Bf5
+{ BILAN — Ligne LON-07, piste Club. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "TOR-02"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+
+{ OBJECTIF — Restreindre le fou et préparer ...f6-g5 sans craindre une attaque de roi immédiate. PROBLÈME HUMAIN — Bh4 applique une règle de conservation du fou mais lui retire ses cases. PLAN NOIR — Après e3, jouer ...f6 ; si Nfd2, échanger ou gagner de l’espace. REPÈRE — Le but de ...h5 n’est pas d’attaquer : c’est de fermer la porte h2. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. Bh4 h5
+{ Coup de restriction : l’objectif est de réduire les cases du fou, pas de lancer une attaque prématurée. POSITION-CLÉ — Restreindre le fou et préparer ...f6-g5 sans craindre une attaque de roi immédiate. Pourquoi c’est inconfortable : Bh4 applique une règle de conservation du fou mais lui retire ses cases. Plan pratique : Après e3, jouer ...f6 ; si Nfd2, échanger ou gagner de l’espace. À retenir : Le but de ...h5 n’est pas d’attaquer : c’est de fermer la porte h2. }
+5. h3 c5 6. e3 Qb6 7. Nc3 Qa5 8. Bb5+ Nc6 9. O-O Nxc3 10. Bxc6+ bxc6 11. bxc3
+Qxc3 12. Bg3
+{ BILAN — Ligne TOR-02, piste Club. Audit moteur des coups imposés : A, perte maximale observée 11 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "TOR-05"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+
+{ OBJECTIF — Répondre sur le centre plutôt que copier une poussée d’aile. PROBLÈME HUMAIN — h4 cherche à punir ...Nxg5 ou ...f6, mais le roi blanc n’est pas développé. PLAN NOIR — Jouer ...Qb6, ...Nc6 et laisser les Blancs justifier h4. REPÈRE — Contre h4, ne joue pas h5 par réflexe : joue ...c5. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. h4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. POSITION-CLÉ — Répondre sur le centre plutôt que copier une poussée d’aile. Pourquoi c’est inconfortable : h4 cherche à punir ...Nxg5 ou ...f6, mais le roi blanc n’est pas développé. Plan pratique : Jouer ...Qb6, ...Nc6 et laisser les Blancs justifier h4. À retenir : Contre h4, ne joue pas h5 par réflexe : joue ...c5. }
+5. e3 Nc6 6. Nbd2 f6 7. Bf4 cxd4 8. exd4 e5 9. dxe5 Qb6 10. Nxe4
+{ BILAN — Ligne TOR-05, piste Club. Audit moteur des coups imposés : A, perte maximale observée 11 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "PST-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+
+{ OBJECTIF — Obtenir un tempo utile avant de frapper le centre. PROBLÈME HUMAIN — Le pseudo-Trompowsky mise sur un Noir qui développe Nf6 automatiquement. PLAN NOIR — Jouer ...cxd4, ...Nc6 et ...Qb6. REPÈRE — Avant de jouer ...Nf6, demande au fou où il veut vivre. NIVEAU — Essentiel. }
+1. d4 d5 2. Bg5 h6 3. Bh4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. POSITION-CLÉ — Obtenir un tempo utile avant de frapper le centre. Pourquoi c’est inconfortable : Le pseudo-Trompowsky mise sur un Noir qui développe Nf6 automatiquement. Plan pratique : Jouer ...cxd4, ...Nc6 et ...Qb6. À retenir : Avant de jouer ...Nf6, demande au fou où il veut vivre. }
+4. e3 cxd4 5. exd4 Bf5 6. c3 a6 7. Nd2 Nf6 8. Be2 Nc6 9. Ngf3
+{ BILAN — Ligne PST-01, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 23 cp. }
+*

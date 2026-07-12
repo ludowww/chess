@@ -1,0 +1,89 @@
+line_id,chapter,title,tier,role_v1,bias_code_v1,bias_title_v1,legacy_engine_grade,legacy_engine_max_loss_cp
+LON-01,Londres — noyau ...Qb6,La dame blanche s’échange : ...c4!,Essentiel,CORE_40,B3,Simplification trompeuse,A,0
+LON-02,Londres — noyau ...Qb6,La dame recule en c2 : ...Bf5,Club,CORE_40,B2,Double cible et surcharge,A,0
+LON-03,Londres — noyau ...Qb6,La finale asymétrique : le plan ...b5,Avancé,CORE_40,B3,Simplification trompeuse,A,0
+LON-04,Londres — noyau ...Qb6,Qc1 et reprise par le pion e,Essentiel,CORE_40,B2,Double cible et surcharge,A,15
+LON-05,Londres — noyau ...Qb6,Qc1 et reprise par le pion c,Club,CORE_40,B3,Simplification trompeuse,A,15
+LON-06,Londres — noyau ...Qb6,Qc2 : poser la question avec ...Nh5,Essentiel,CORE_40,B5,Peur et sur-réaction,A,5
+LON-07,Londres — noyau ...Qb6,Le fou se cache en g5 : ...h6 et ...g5,Club,CORE_40,B5,Peur et sur-réaction,A,0
+LON-08,Londres — noyau ...Qb6,Qc2 puis prise en c5,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,5
+LON-09,Londres — noyau ...Qb6,b3 protège b2 : développer avec ...Bg4,Essentiel,CORE_40,B2,Double cible et surcharge,A,2
+LON-10,Londres — noyau ...Qb6,Le pion c5 “gratuit” : ...Qxb2!,Essentiel,CORE_40,B4,Le pion prétendument gratuit,A,0
+LON-11,Londres — noyau ...Qb6,Nbd2 laisse b2 : la route de sortie ...Qxc3,Club,CORE_40,B4,Le pion prétendument gratuit,A,4
+LON-12,Londres — noyau ...Qb6,Bd3 oublie b2,Essentiel,CORE_40,B4,Le pion prétendument gratuit,A,0
+LON-13,Londres — noyau ...Qb6,h3 : un tempo de trop,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+LON-14,Londres — noyau ...Qb6,Be2 et reprise exd4 : b2 reste vulnérable,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,B,36
+LON-15,Londres — noyau ...Qb6,Qa4 ne sauve pas b2 : ...Qxb2,Avancé,CORE_40,B4,Le pion prétendument gratuit,A,0
+LON-16,Londres — avant c3,Nbd2 précoce : clarifier d4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,B,28
+LON-17,Londres — avant c3,Prise précoce en c5 : récupérer sans perdre le centre,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+LON-18,Londres — avant c3,Be2 sans c3 : ...Qb6 garde la pression,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,B,42
+ORD-01,Londres — ordres de coups,2.Bf4 : ...c5 puis le clouage ...Bg4,Essentiel,CORE_40,B1,Pilotage automatique,A,19
+ORD-02,Londres — ordres de coups,2.Bf4 et 3.c3 : revenir au plan ...Nc6,Essentiel,CORE_40,B1,Pilotage automatique,A,19
+ORD-03,Londres — ordres de coups,Le pseudo-gambit 3.e4 : accepter le centre,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+ORD-04,Londres — ordres de coups,"2.Bf4, prise en c5 : ...e6",Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,2
+ORD-05,Londres — ordres de coups,4.c3 avant e3 : même ...Nc6,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+ORD-06,Londres — ordres de coups,4.Nbd2 : ...cxd4 puis ...Nbd7,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+ORD-07,Londres — ordres de coups,4.dxc5 : développement avant récupération,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,B,42
+ORD-08,Londres — ordres de coups,...Qb6 avant ...Nc6 : savoir refuser ...Qxb2,Avancé,BIBLIOTHEQUE_48_A_REEVALUER,,,B,46
+ORD-09,Londres — ordres de coups,h4 précoce : riposter au centre,Club,CORE_40,B6,Règles rigides,A,0
+ORD-10,Londres — ordres de coups,h3 précoce : prendre l’initiative,Essentiel,CORE_40,B7,Attaque d’aile avant le centre,A,0
+ORD-11,Londres — ordres de coups,Le fou en g3 trop tôt : ...cxd4 puis ...Qb6,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,2
+ORD-12,Londres — ordres de coups,Le Londres sans Nf3 : ...Qb6 et ...e5,Avancé,BIBLIOTHEQUE_48_A_REEVALUER,,,A,1
+JOB-01,Jobava,4.e3 : le clouage utile ...Bg4,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,19
+JOB-02,Jobava,4.e3 cxd4 et l’échec ...Qa5+,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,B,37
+JOB-03,Jobava,4.dxc5 : la poussée machine ...d4!,Essentiel,CORE_40,B8,Géométrie tactique machine-humanisée,A,0
+JOB-04,Jobava,4.Nb5 : l’échec qui casse le schéma,Essentiel,CORE_40,B8,Géométrie tactique machine-humanisée,A,0
+JOB-05,Jobava,4.e4 : enlever le centre avec ...Nxe4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+JOB-06,Jobava,4.f3 : ouvrir d4 avant l’attaque,Essentiel,CORE_40,B7,Attaque d’aile avant le centre,A,0
+JOB-07,Jobava,4.Qd2 : ...cxd4 force la dame à travailler,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+JOB-08,Jobava,4.Nf3 : ...cxd4 puis ...Nbd7,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+JOB-09,Jobava,4.a3 : un tempo décoratif,Essentiel,CORE_40,B7,Attaque d’aile avant le centre,A,0
+JOB-10,Jobava,4.h4 : même sanction centrale,Essentiel,CORE_40,B7,Attaque d’aile avant le centre,A,0
+JOB-11,Jobava,4.Bxb8 : reprendre avec la tour,Club,CORE_40,B3,Simplification trompeuse,A,0
+JOB-12,Jobava,4.Nb1 : la pression ...Qb6,Club,CORE_40,B2,Double cible et surcharge,A,5
+JOB-13,Jobava,Le double motif : clouage puis ...Qa5+,Avancé,CORE_40,B8,Géométrie tactique machine-humanisée,A,0
+JOB-14,Jobava,Le plan complet après 4.dxc5 d4,Avancé,BIBLIOTHEQUE_48_A_REEVALUER,,,A,1
+COL-01,Colle et Zukertort,3.e3 : sortir le fou avec ...Bf5,Essentiel,CORE_40,B1,Pilotage automatique,A,21
+COL-02,Colle et Zukertort,Éviter l’échange : ...Bg6,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-03,Colle et Zukertort,4.c4 : structure solide avec ...c6,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-04,Colle et Zukertort,4.b3 : ...e6 et ...c5,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-05,Colle et Zukertort,4.Nbd2 : le plan naturel ...e6,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-06,Colle et Zukertort,4.Be2 : développement sans concession,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-07,Colle et Zukertort,4.c3 : ...Nbd7 et contrôle de e5,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-08,Colle et Zukertort,4.Nh4 : conserver le fou par ...Bg4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-09,Colle et Zukertort,"4.Nc3 : ...c6, puis ...e6",Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,21
+COL-10,Colle et Zukertort,Zukertort : frapper par ...c5,Essentiel,CORE_40,B1,Pilotage automatique,A,1
+COL-11,Colle et Zukertort,Zukertort avec c4 : isoler d4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,1
+COL-12,Colle et Zukertort,Zukertort calme : clarifier au centre,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,1
+TOR-01,Torre,3...Ne4! : occuper la case que le fou a quittée,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,11
+TOR-02,Torre,4.Bh4 : le coup machine ...h5!,Club,CORE_40,B5,Peur et sur-réaction,A,11
+TOR-03,Torre,4.Be3 : développement actif ...Bf5,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,11
+TOR-04,Torre,4.Bd2 : ...c5 et pression centrale,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,11
+TOR-05,Torre,4.h4 : ignorer l’intimidation,Club,CORE_40,B5,Peur et sur-réaction,A,11
+TOR-06,Torre,4.Nbd2 : prendre le fou,Essentiel,CORE_40,B8,Géométrie tactique machine-humanisée,A,0
+TOR-07,Torre,4.c4 : éliminer le fou puis jouer ...e5,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+TOR-08,Torre,4.e3 : le coup concret ...f6,Club,CORE_40,B6,Règles rigides,A,11
+TOR-09,Torre,Bh4-h5-f6 : échanger puis enfermer,Avancé,CORE_40,B6,Règles rigides,A,0
+TOR-10,Torre,Bf4 puis ...Qb6 : double pression,Avancé,CORE_40,B2,Double cible et surcharge,A,3
+VER-01,Veresov et pseudo-Trompowsky,3...c5 : attaquer d4 immédiatement,Essentiel,CORE_40,B1,Pilotage automatique,A,0
+VER-02,Veresov et pseudo-Trompowsky,4.e4 : le centre tactique ...Nxe4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+VER-03,Veresov et pseudo-Trompowsky,4.dxc5 : encore ...d4!,Essentiel,CORE_40,B8,Géométrie tactique machine-humanisée,A,0
+VER-04,Veresov et pseudo-Trompowsky,4.Nf3 : l’avant-poste ...Ne4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+VER-05,Veresov et pseudo-Trompowsky,4.Bxf6 : reprendre du pion g,Club,CORE_40,B3,Simplification trompeuse,A,0
+VER-06,Veresov et pseudo-Trompowsky,4.Qd2 : clarifier d4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,9
+VER-07,Veresov et pseudo-Trompowsky,4.a3 : développement avant tout,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,4
+VER-08,Veresov et pseudo-Trompowsky,4.f3 : ouvrir avant e4,Essentiel,CORE_40,B7,Attaque d’aile avant le centre,A,0
+PST-01,Veresov et pseudo-Trompowsky,2.Bg5 : demander au fou avec ...h6,Essentiel,CORE_40,B5,Peur et sur-réaction,A,23
+PST-02,Veresov et pseudo-Trompowsky,3.Bf4 : ...c5 et gain de temps,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,23
+PST-03,Veresov et pseudo-Trompowsky,3.Be3 : ...c5 et pression simple,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,23
+PST-04,Veresov et pseudo-Trompowsky,3.Bxh6? : accepter le sacrifice,Essentiel,CORE_40,B4,Le pion prétendument gratuit,A,23
+STO-01,Stonewall et gambits,Stonewall : fermer par ...c4!,Essentiel,CORE_40,B6,Règles rigides,A,6
+STO-02,Stonewall et gambits,Le fou recule en f1 : développement gratuit,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,6
+STO-03,Stonewall et gambits,Ordre c3-f4 : clouage ...Bg4,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+STO-04,Stonewall et gambits,"Même structure, autre développement : ...Nc6",Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,8
+STO-05,Stonewall et gambits,2.f4 : frapper par ...c5,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,3
+BDG-01,Stonewall et gambits,Blackmar-Diemer : accepter avec ...exf3,Essentiel,CORE_40,B6,Règles rigides,A,10
+BDG-02,Stonewall et gambits,Développement fianchetto : ...g6,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+BDG-03,Stonewall et gambits,5.Qxf3? : la dame noire prend d4,Essentiel,BIBLIOTHEQUE_48_A_REEVALUER,,,A,0
+BDG-04,Stonewall et gambits,6.Bc4 : consolider avec ...e6,Club,BIBLIOTHEQUE_48_A_REEVALUER,,,A,10
+BDG-05,Stonewall et gambits,6.Bg5 : le frein ...c6,Avancé,BIBLIOTHEQUE_48_A_REEVALUER,,,A,10

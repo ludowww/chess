@@ -1,0 +1,129 @@
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "ORD-09"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — ordres de coups"]
+[Tier "Club"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B6"]
+[HumanBias "Règles rigides"]
+
+{ OBJECTIF — Répondre à une expansion d’aile par une pression centrale immédiate. PROBLÈME HUMAIN — h4 cherche à intimider, mais ne développe rien et ne défend pas b2. PLAN NOIR — Ne pas lancer une contre-attaque de pions ; finir le développement et viser d4. REPÈRE — Une attaque d’aile prématurée se punit au centre. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. h4 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Nxd4 Nbd7
+{ POSITION-CLÉ — Répondre à une expansion d’aile par une pression centrale immédiate. Pourquoi c’est inconfortable : h4 cherche à intimider, mais ne développe rien et ne défend pas b2. Plan pratique : Ne pas lancer une contre-attaque de pions ; finir le développement et viser d4. À retenir : Une attaque d’aile prématurée se punit au centre. }
+6. Nb3 e5 7. Bg5 h6 8. Bxf6 Nxf6 9. e4 Be7 10. Bb5+ Bd7 11. Bxd7+ Qxd7
+{ BILAN — Ligne ORD-09, piste Club. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "TOR-08"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B6"]
+[HumanBias "Règles rigides"]
+
+{ OBJECTIF — Chasser le fou et préparer e5 dans un centre fermé. PROBLÈME HUMAIN — e3 consolide d4 mais enferme le fou c1 ; le roi blanc ne peut exploiter la poussée f. PLAN NOIR — Après Bf4, jouer ...c5 ; après Bh4, g5 peut gagner le fou. REPÈRE — La poussée ...f6 est saine quand elle gagne un tempo et prépare ...e5. NIVEAU — Club. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. e3 f6
+{ Coup concret rendu possible par le gain de tempo sur le fou et le contrôle du centre. POSITION-CLÉ — Chasser le fou et préparer e5 dans un centre fermé. Pourquoi c’est inconfortable : e3 consolide d4 mais enferme le fou c1 ; le roi blanc ne peut exploiter la poussée f. Plan pratique : Après Bf4, jouer ...c5 ; après Bh4, g5 peut gagner le fou. À retenir : La poussée ...f6 est saine quand elle gagne un tempo et prépare ...e5. }
+5. Bf4 g5 6. Nxg5 Nxg5 7. Bxg5 fxg5 8. Qh5+ Kd7 9. h4 Qe8 10. hxg5 Qxh5 11.
+Rxh5 c6 12. Bd3 Kc7
+{ BILAN — Ligne TOR-08, piste Club. Audit moteur des coups imposés : A, perte maximale observée 11 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "TOR-09"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Avancé"]
+[LineType "structure"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B6"]
+[HumanBias "Règles rigides"]
+
+{ OBJECTIF — Échanger le cavalier qui pourrait défendre le fou, puis construire une cage de pions. PROBLÈME HUMAIN — Les Blancs jouent des coups “sûrs” ; l’échange en d2 retire un défenseur et rend la restriction du fou plus concrète. PLAN NOIR — Après ...g5, choisir entre gagner le fou, ouvrir la colonne h ou consolider avec ...e6. REPÈRE — Échange d’abord le bon défenseur, puis compte les cases du fou. NIVEAU — Avancé. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. Bh4 h5
+{ Coup de restriction : l’objectif est de réduire les cases du fou, pas de lancer une attaque prématurée. }
+5. e3 f6
+{ Coup concret rendu possible par le gain de tempo sur le fou et le contrôle du centre. }
+6. Nfd2 Nxd2 7. Nxd2 g5
+{ POSITION-CLÉ — Échanger le cavalier qui pourrait défendre le fou, puis construire une cage de pions. Pourquoi c’est inconfortable : Les Blancs jouent des coups “sûrs” ; l’échange en d2 retire un défenseur et rend la restriction du fou plus concrète. Plan pratique : Après ...g5, choisir entre gagner le fou, ouvrir la colonne h ou consolider avec ...e6. À retenir : Échange d’abord le bon défenseur, puis compte les cases du fou. }
+8. Bg3 h4 9. Be2 Bg7 10. Bh5+ Kf8 11. Qe2 hxg3 12. hxg3 Be6 13. O-O-O Qd6
+{ BILAN — Ligne TOR-09, piste Avancé. Audit moteur des coups imposés : A, perte maximale observée 0 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "STO-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Stonewall et gambits"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B6"]
+[HumanBias "Règles rigides"]
+
+{ OBJECTIF — Fixer le fou d3 hors de sa diagonale d’attaque et gagner de l’espace. PROBLÈME HUMAIN — Le Stonewall veut Bxh7+ ou e4 ; ...c4 coupe le fou et empêche la rupture facile. PLAN NOIR — Jouer ...e6, ...Nc6 et développer l’aile-dame par ...b5. REPÈRE — Fou d3 + f4 = ferme le centre par ...c4. NIVEAU — Essentiel. }
+1. d4 d5 2. e3 Nf6 3. Bd3 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. f4 c4
+{ Coup d’espace et de tempo : la structure blanche perd sa fluidité et une pièce doit se redéfinir. }
+5. Be2 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. POSITION-CLÉ — Fixer le fou d3 hors de sa diagonale d’attaque et gagner de l’espace. Pourquoi c’est inconfortable : Le Stonewall veut Bxh7+ ou e4 ; ...c4 coupe le fou et empêche la rupture facile. Plan pratique : Jouer ...e6, ...Nc6 et développer l’aile-dame par ...b5. À retenir : Fou d3 + f4 = ferme le centre par ...c4. }
+6. b3 b5 7. a4 Nc6 8. axb5 Nb4 9. Na3 Qa5
+{ BILAN — Ligne STO-01, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 6 cp. }
+*
+
+[Event "Brisez les systèmes !"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "BDG-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Stonewall et gambits"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.0.0-rc1"]
+[CourseRole "CORE_40"]
+[BiasCode "B6"]
+[HumanBias "Règles rigides"]
+
+{ OBJECTIF — Accepter le pion puis développer le fou avant ...e6. PROBLÈME HUMAIN — Le gambit compte sur un Noir qui défend passivement son pion supplémentaire. PLAN NOIR — Développer ...e6, ...Be7 et roquer ; rendre le pion seulement pour simplifier. REPÈRE — Accepte, développe, roque — ne protège pas le pion avec des contorsions. NIVEAU — Essentiel. }
+1. d4 d5 2. e4 dxe4 3. Nc3 Nf6 4. f3 exf3
+{ Le gambit est accepté. La priorité suivante est le développement, pas la conservation obsessionnelle du pion. }
+5. Nxf3 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. POSITION-CLÉ — Accepter le pion puis développer le fou avant ...e6. Pourquoi c’est inconfortable : Le gambit compte sur un Noir qui défend passivement son pion supplémentaire. Plan pratique : Développer ...e6, ...Be7 et roquer ; rendre le pion seulement pour simplifier. À retenir : Accepte, développe, roque — ne protège pas le pion avec des contorsions. }
+6. Ne5 Be6 7. Bg5 c6 8. Bc4 Bxc4 9. Nxc4 e6 10. Bxf6 gxf6 11. Qd3 Nd7 12. O-O-O
+Nb6 13. Rhe1 Be7
+{ BILAN — Ligne BDG-01, piste Essentiel. Audit moteur des coups imposés : A, perte maximale observée 10 cp. }
+*

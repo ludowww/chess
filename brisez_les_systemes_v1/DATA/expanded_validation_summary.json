@@ -1,0 +1,149 @@
+{
+  "files": {
+    "lichess_discovery_expanded.csv": {
+      "bytes": 44990,
+      "rows": 674
+    },
+    "lichess_validation_expanded.csv": {
+      "bytes": 36652,
+      "rows": 547
+    },
+    "lichess_test_expanded.csv": {
+      "bytes": 32957,
+      "rows": 542
+    },
+    "lichess_test_expanded_evaluated.csv": {
+      "bytes": 14260,
+      "rows": 157
+    },
+    "maia3_vs_lichess_expanded_comparison.csv": {
+      "bytes": 33351,
+      "rows": 494
+    },
+    "scorecards_validated_expanded.csv": {
+      "bytes": 6973,
+      "rows": 40
+    }
+  },
+  "scorecards": {
+    "sample": {
+      "INSUFFICIENT_EVIDENCE": 27,
+      "ELIGIBLE_FOR_EDITORIAL_REVIEW": 13
+    },
+    "expanded": {
+      "ELIGIBLE_FOR_EDITORIAL_REVIEW": 23,
+      "INSUFFICIENT_EVIDENCE": 17
+    }
+  },
+  "status_changes": [
+    {
+      "line_id": "VER-01",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "LON-04",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "TOR-10",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "LON-05",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "VER-05",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "LON-10",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "TOR-02",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "TOR-05",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "TOR-08",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    },
+    {
+      "line_id": "VER-03",
+      "sample_status": "INSUFFICIENT_EVIDENCE",
+      "expanded_status": "ELIGIBLE_FOR_EDITORIAL_REVIEW"
+    }
+  ],
+  "max_manifest_required_ply": 16,
+  "split_summaries": {
+    "discovery": {
+      "rows": 674,
+      "line_ids": 25,
+      "target_occurrences": 2199,
+      "max_group_sample": 121,
+      "by_elo": {
+        "1100-1299": 147,
+        "1300-1499": 324,
+        "1500-1699": 474,
+        "1700-1899": 662,
+        "1900-2099": 592
+      },
+      "by_speed": {
+        "blitz": 1707,
+        "rapid": 492
+      }
+    },
+    "validation": {
+      "rows": 547,
+      "line_ids": 22,
+      "target_occurrences": 1586,
+      "max_group_sample": 92,
+      "by_elo": {
+        "1100-1299": 108,
+        "1300-1499": 224,
+        "1500-1699": 337,
+        "1700-1899": 471,
+        "1900-2099": 446
+      },
+      "by_speed": {
+        "blitz": 1235,
+        "rapid": 351
+      }
+    },
+    "test": {
+      "rows": 542,
+      "line_ids": 23,
+      "target_occurrences": 1570,
+      "max_group_sample": 89,
+      "by_elo": {
+        "1100-1299": 133,
+        "1300-1499": 172,
+        "1500-1699": 333,
+        "1700-1899": 449,
+        "1900-2099": 483
+      },
+      "by_speed": {
+        "blitz": 1221,
+        "rapid": 349
+      }
+    }
+  },
+  "maia_lichess_agreement": {
+    "lines_compared": 17,
+    "top1_any_elo": 0,
+    "top3_any_elo": 1
+  }
+}

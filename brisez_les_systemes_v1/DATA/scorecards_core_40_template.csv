@@ -1,0 +1,41 @@
+line_id,bias_code,title,engine_safety_0_100,maia_best_defence_rarity_0_100,maia_response_entropy_0_100,lichess_surprise_0_100,lichess_human_error_rate_0_100,cross_elo_robustness_0_100,our_playability_editorial_0_100,learning_longevity_editorial_0_100,evidence_completeness_0_100,promotion_status,notes
+ORD-01,B1,2.Bf4 : ...c5 puis le clouage ...Bg4,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+ORD-02,B1,2.Bf4 et 3.c3 : revenir au plan ...Nc6,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+COL-01,B1,3.e3 : sortir le fou avec ...Bf5,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+COL-10,B1,Zukertort : frapper par ...c5,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+VER-01,B1,3...c5 : attaquer d4 immédiatement,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-02,B2,La dame recule en c2 : ...Bf5,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-04,B2,Qc1 et reprise par le pion e,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-09,B2,b3 protège b2 : développer avec ...Bg4,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-12,B2,4.Nb1 : la pression ...Qb6,,,,,,,80,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+TOR-10,B2,Bf4 puis ...Qb6 : double pression,,,,,,,80,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-01,B3,La dame blanche s’échange : ...c4!,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-03,B3,La finale asymétrique : le plan ...b5,,,,,,,80,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-05,B3,Qc1 et reprise par le pion c,,,,,,,80,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-11,B3,4.Bxb8 : reprendre avec la tour,,,,,,,80,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+VER-05,B3,4.Bxf6 : reprendre du pion g,,,,,,,60,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-10,B4,Le pion c5 “gratuit” : ...Qxb2!,,,,,,,80,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-11,B4,Nbd2 laisse b2 : la route de sortie ...Qxc3,,,,,,,60,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-12,B4,Bd3 oublie b2,,,,,,,100,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-15,B4,Qa4 ne sauve pas b2 : ...Qxb2,,,,,,,80,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+PST-04,B4,3.Bxh6? : accepter le sacrifice,,,,,,,100,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-06,B5,Qc2 : poser la question avec ...Nh5,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+LON-07,B5,Le fou se cache en g5 : ...h6 et ...g5,,,,,,,80,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+TOR-02,B5,4.Bh4 : le coup machine ...h5!,,,,,,,80,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+TOR-05,B5,4.h4 : ignorer l’intimidation,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+PST-01,B5,2.Bg5 : demander au fou avec ...h6,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+ORD-09,B6,h4 précoce : riposter au centre,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+TOR-08,B6,4.e3 : le coup concret ...f6,,,,,,,80,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+TOR-09,B6,Bh4-h5-f6 : échanger puis enfermer,,,,,,,60,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+STO-01,B6,Stonewall : fermer par ...c4!,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+BDG-01,B6,Blackmar-Diemer : accepter avec ...exf3,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+ORD-10,B7,h3 précoce : prendre l’initiative,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-06,B7,4.f3 : ouvrir d4 avant l’attaque,,,,,,,100,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-09,B7,4.a3 : un tempo décoratif,,,,,,,100,80,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-10,B7,4.h4 : même sanction centrale,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+VER-08,B7,4.f3 : ouvrir avant e4,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-03,B8,4.dxc5 : la poussée machine ...d4!,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-04,B8,4.Nb5 : l’échec qui casse le schéma,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+JOB-13,B8,Le double motif : clouage puis ...Qa5+,,,,,,,60,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+TOR-06,B8,4.Nbd2 : prendre le fou,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
+VER-03,B8,4.dxc5 : encore ...d4!,,,,,,,100,100,20,CORE_RC1,Aucun score composite final avant Stockfish V1 + Maia-3 + Lichess hors échantillon.
