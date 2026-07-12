@@ -12,7 +12,16 @@ COURSE = ROOT.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from common import elo_band, fen4, load_manifest, parse_pgn_games  # noqa: E402
-from maia3_profile import fen6, normalized_entropy, position_from_fixed_prefix, set_position_from_record  # noqa: E402
+from maia3_profile import (  # noqa: E402
+    build_arg_parser,
+    fen6,
+    normalized_entropy,
+    position_from_fixed_prefix,
+    profile,
+    set_position_from_record,
+)
+from compare_maia_profiles import compare_profiles  # noqa: E402
+from compare_full_policy_lichess import compare_full_policy_to_lichess  # noqa: E402
 from score_candidates import build_scorecards  # noqa: E402
 from validate_course import validate  # noqa: E402
 
@@ -53,6 +62,101 @@ class FakeMaiaEngine:
                     self.board.push(chess.Move.from_uci(uci))
             return
         raise ValueError(command)
+
+
+
+class MaiaGpuToolingTests(unittest.TestCase):
+    def test_amp_mode_parser_accepts_expected_values_and_rejects_invalid(self):
+        parser = build_arg_parser()
+        self.assertEqual(parser.parse_args(["--manifest", "m.csv", "--output", "o.csv", "--amp-mode", "auto"]).amp_mode, "auto")
+        self.assertEqual(parser.parse_args(["--manifest", "m.csv", "--output", "o.csv", "--amp-mode", "on"]).amp_mode, "on")
+        self.assertEqual(parser.parse_args(["--manifest", "m.csv", "--output", "o.csv", "--amp-mode", "off"]).amp_mode, "off")
+        with self.assertRaises(SystemExit):
+            parser.parse_args(["--manifest", "m.csv", "--output", "o.csv", "--amp-mode", "bad"])
+
+    def test_profile_keeps_top10_default_and_exports_all_legal_policy_with_mass(self):
+        import maia3_profile as mp
+
+        class PolicyEngine(FakeMaiaEngine):
+            def __init__(self, multipv):
+                super().__init__()
+                self.multipv = multipv
+                self.self_elo = None
+                self.oppo_elo = None
+
+            def score_moves(self):
+                legal = list(self.board.legal_moves)
+                count = min(self.multipv, len(legal))
+                p = 1.0 / count
+                return legal[0], [
+                    {"move": mv, "policy": p, "wdl": (500, 0, 500)}
+                    for mv in legal[:count]
+                ]
+
+        manifest = pd.DataFrame([{
+            "line_id": "TST-01",
+            "bias_code": "B0",
+            "fixed_prefix": "1. e4 e5",
+            "fen_before_key_move": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -",
+            "fen_after_key_move": chess.Board("rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2").fen(),
+            "key_move_uci": "e7e5",
+        }])
+        tmp = COURSE / "DATA" / "GPU_LOCAL" / "unit_manifest.csv"
+        tmp.parent.mkdir(parents=True, exist_ok=True)
+        manifest.to_csv(tmp, index=False)
+        original = mp.load_direct_engine
+        try:
+            mp.load_direct_engine = lambda model, device, multipv, amp_mode="auto": PolicyEngine(multipv)
+            top10 = profile(tmp, "maia3-79m", "cpu", [1100], 10)
+            self.assertEqual(len(top10), 10)
+            self.assertEqual(sorted(top10["rank"].tolist()), list(range(1, 11)))
+            self.assertIn("amp_mode", top10.columns)
+            full = profile(tmp, "maia3-79m", "cpu", [1100], 10, amp_mode="off", all_legal_moves=True)
+            legal_count = chess.Board(manifest.iloc[0]["fen_after_key_move"]).legal_moves.count()
+            self.assertEqual(len(full), legal_count)
+            self.assertAlmostEqual(float(full["legal_policy_mass"].iloc[0]), 1.0, places=7)
+        finally:
+            mp.load_direct_engine = original
+            tmp.unlink(missing_ok=True)
+
+    def test_compare_maia_profiles_is_order_independent_and_reports_top_metrics(self):
+        left = pd.DataFrame([
+            {"line_id":"A", "elo":1100, "rank":1, "move_uci":"a2a3", "policy_probability":0.5, "fen":"8/8/8/8/8/8/P7/K6k w - -"},
+            {"line_id":"A", "elo":1100, "rank":2, "move_uci":"a2a4", "policy_probability":0.5, "fen":"8/8/8/8/8/8/P7/K6k w - -"},
+        ])
+        right = left.iloc[[1,0]].copy()
+        result = compare_profiles(left, right)
+        self.assertEqual(result.summary["groups_left"], 1)
+        self.assertEqual(result.summary["top1_agreement_rate"], 1.0)
+        self.assertEqual(result.summary["top3_agreement_rate"], 1.0)
+        self.assertEqual(result.summary["missing_groups"], 0)
+        self.assertEqual(result.summary["fen_mismatches"], 0)
+
+    def test_full_policy_lichess_comparison_expects_240_groups_and_detects_covered_mass(self):
+        manifest = load_manifest(COURSE/"DATA/core_40_index.csv")[["line_id", "fen_after_key_move"]]
+        maia_rows = []
+        lichess_rows = []
+        for line_id, fen in manifest.itertuples(index=False):
+            for elo in [1100,1300,1500,1700,1900,2100]:
+                maia_rows.append({"line_id":line_id,"elo":elo,"rank":1,"move_uci":"a2a3","policy_probability":0.6,"fen":fen})
+                maia_rows.append({"line_id":line_id,"elo":elo,"rank":2,"move_uci":"a2a4","policy_probability":0.4,"fen":fen})
+                lichess_rows.append({"line_id":line_id,"position_role":"after_key","elo_min":elo,"elo_max":elo+199,"speed":"blitz","split":"test","move_uci":"a2a3","count":3,"total_positions":5,"frequency":0.6})
+                lichess_rows.append({"line_id":line_id,"position_role":"after_key","elo_min":elo,"elo_max":elo+199,"speed":"rapid","split":"test","move_uci":"a2a4","count":2,"total_positions":5,"frequency":0.4})
+        detail, summary = compare_full_policy_to_lichess(pd.DataFrame(maia_rows), pd.DataFrame(lichess_rows), manifest)
+        self.assertEqual(summary["expected_maia_groups"], 240)
+        self.assertEqual(summary["maia_groups_observed"], 240)
+        self.assertGreater(summary["overall_maia_mass_covered_by_lichess"], 0.99)
+        self.assertIn("blitz", summary["by_speed"])
+        self.assertFalse(detail.empty)
+
+    def test_windows_scripts_present_and_repo_writes_stay_under_gpu_local(self):
+        self.assertTrue((COURSE.parent/"tools/run_maia3_gpu_validation.ps1").exists())
+        self.assertTrue((COURSE.parent/"tools/test_gpu_environment.ps1").exists())
+        report = (COURSE.parent/"tools/run_maia3_gpu_validation.ps1").read_text(encoding="utf-8")
+        self.assertIn("DATA/GPU_LOCAL", report.replace("\\", "/"))
+        self.assertIn(".venv-gpu", report)
+        self.assertNotIn("git commit", report.lower())
+        self.assertNotIn("git push", report.lower())
 
 
 class MaiaPositionTests(unittest.TestCase):
