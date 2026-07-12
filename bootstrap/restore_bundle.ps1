@@ -3,7 +3,7 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $ArchiveDir = Join-Path $PSScriptRoot "archive"
 $Output = Join-Path $RepoRoot "brisez_les_systemes_v1_0_rc1.tar.xz"
-$Expected = "819bab279e77a4835a579110cebaa79d8827d0cc7747dd7cd66a9a7e287f805e"
+$Expected = "c88f59116ffd8eddd5c0254508b814e7f84d2efdef9ff6ccce0dc62729aec225"
 $Pattern = "brisez_les_systemes_v1_0_rc1.tar.xz.b64.part*"
 
 $Parts = @(Get-ChildItem $ArchiveDir -Filter $Pattern | Sort-Object Name)
