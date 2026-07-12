@@ -1,0 +1,15 @@
+{
+  "groups_left": 240,
+  "groups_right": 240,
+  "groups_compared": 240,
+  "missing_groups": 0,
+  "top1_agreement_rate": 0.9916666666666667,
+  "top3_agreement_rate": 1.0,
+  "mean_top10_intersection": 9.758333333333333,
+  "mean_probability_correlation": 0.9999886384050891,
+  "mean_absolute_difference": 0.00036436827135393873,
+  "max_absolute_difference": 0.005118191242218018,
+  "top1_changes": 2,
+  "illegal_move_groups": 0,
+  "fen_mismatches": 0
+}

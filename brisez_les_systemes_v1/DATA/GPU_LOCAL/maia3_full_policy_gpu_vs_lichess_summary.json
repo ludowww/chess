@@ -1,0 +1,78 @@
+{
+  "expected_maia_groups": 240,
+  "maia_groups_observed": 240,
+  "detail_rows": 265,
+  "overall_maia_mass_covered_by_lichess": 0.7758987853425692,
+  "overall_top1_agreement_rate": 0.10416666666666667,
+  "overall_top3_agreement_rate": 0.17916666666666667,
+  "lichess_outside_maia_top10_but_in_full_policy": 0,
+  "remaining_divergences": 215,
+  "by_elo": {
+    "1100": {
+      "groups": 40,
+      "maia_mass_covered_by_lichess": 0.5270522698050453,
+      "top1_agreement_rate": 0.05,
+      "top3_agreement_rate": 0.125,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 38
+    },
+    "1300": {
+      "groups": 40,
+      "maia_mass_covered_by_lichess": 0.6487973316710579,
+      "top1_agreement_rate": 0.125,
+      "top3_agreement_rate": 0.2,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 35
+    },
+    "1500": {
+      "groups": 40,
+      "maia_mass_covered_by_lichess": 0.704093595199725,
+      "top1_agreement_rate": 0.15,
+      "top3_agreement_rate": 0.25,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 34
+    },
+    "1700": {
+      "groups": 40,
+      "maia_mass_covered_by_lichess": 0.7919778856168307,
+      "top1_agreement_rate": 0.125,
+      "top3_agreement_rate": 0.225,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 35
+    },
+    "1900": {
+      "groups": 40,
+      "maia_mass_covered_by_lichess": 0.8652078540412692,
+      "top1_agreement_rate": 0.175,
+      "top3_agreement_rate": 0.275,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 33
+    },
+    "2100": {
+      "groups": 40,
+      "maia_mass_covered_by_lichess": 0.0,
+      "top1_agreement_rate": 0.0,
+      "top3_agreement_rate": 0.0,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 40
+    }
+  },
+  "by_speed": {
+    "blitz": {
+      "groups": 44,
+      "maia_mass_covered_by_lichess": 0.722961069718082,
+      "top1_agreement_rate": 0.5227272727272727,
+      "top3_agreement_rate": 0.8636363636363636,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 21
+    },
+    "rapid": {
+      "groups": 28,
+      "maia_mass_covered_by_lichess": 0.5825338886267896,
+      "top1_agreement_rate": 0.5,
+      "top3_agreement_rate": 0.8928571428571429,
+      "lichess_outside_maia_top10_but_in_full_policy": 0,
+      "remaining_divergences": 14
+    }
+  }
+}

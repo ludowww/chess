@@ -1,0 +1,10 @@
+{
+  "device": "cuda",
+  "amp_mode": "off",
+  "torch_version": "2.11.0+cu128",
+  "torch_cuda_version": "12.8",
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "elapsed_seconds": 6.139748300425708,
+  "peak_vram_bytes": 632516608,
+  "legal_policy_mass": 0.9924695843365043
+}
