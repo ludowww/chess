@@ -134,7 +134,12 @@
 - Source scorecards : DATA/scorecards_validated_expanded_corrected.csv.
 - Source synthèse corrigée : DATA/corrected_validation_summary.json.
 - Source GPU full-policy : DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess_summary.json.
-- Groupes Maia GPU total : 240 ; groupes Lichess observés : 72 ; top3 agreement observed-only : 0.875. Les groupes sans données Lichess sont exclus des taux.
+- Maia fournit 240 groupes uniques ligne/Elo.
+- 47 groupes ligne/Elo disposent d’au moins une observation Lichess.
+- Ces observations produisent 72 cellules ligne/Elo/cadence : 44 en blitz et 28 en rapide.
+- L’accord top 3 est de 87.5 % sur ces 72 cellules.
+- Les 193 groupes ligne/Elo sans échantillon sont exclus des taux.
+- Les 40 groupes Elo 2100 sont inclus dans ces 193 groupes manquants et marqués MODEL_ONLY_NO_MATCHING_LICHESS_BAND.
 - La rareté ne condamne pas automatiquement un concept sain ; elle baisse la priorité core, le poids MoveTrainer et signale un besoin de bêta humaine.
 
 ## Note audit moteur candidat

@@ -2,77 +2,86 @@
   "source_csv": "DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess.csv",
   "maia_groups_total": 240,
   "detail_rows": 265,
-  "lichess_observed_groups": 72,
-  "lichess_missing_groups": 193,
-  "model_only_groups": 40,
+  "lichess_observed_maia_groups": 47,
+  "lichess_missing_maia_groups": 193,
+  "lichess_observed_speed_groups": 72,
+  "model_only_maia_groups": 40,
   "model_only_status": "MODEL_ONLY_NO_MATCHING_LICHESS_BAND",
-  "top1_agreement_observed_only": 0.5138888888888888,
-  "top3_agreement_observed_only": 0.875,
-  "maia_mass_covered_observed_only": 0.5039242313295189,
-  "true_disagreements_observed_only": 9,
+  "top1_agreement_observed_speed_groups": 0.5138888888888888,
+  "top3_agreement_observed_speed_groups": 0.875,
+  "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.5039242313295189,
+  "top3_disagreements_observed_speed_groups": 9,
   "excluded_from_agreement_rates": {
-    "missing_side_lichess_speed_ALL_groups": 193,
-    "elo_2100_model_only_groups": 40
+    "missing_side_lichess_speed_ALL_rows": 193,
+    "elo_2100_model_only_maia_groups": 40
   },
-  "by_elo_observed_only": {
+  "by_elo_observed_speed_groups": {
     "1100": {
-      "lichess_observed_groups": 10,
-      "top1_agreement_observed_only": 0.3,
-      "top3_agreement_observed_only": 0.7,
-      "maia_mass_covered_observed_only": 0.38276432063430543,
-      "true_disagreements_observed_only": 3
+      "lichess_observed_speed_groups": 10,
+      "lichess_observed_maia_groups": 5,
+      "top1_agreement_observed_speed_groups": 0.3,
+      "top3_agreement_observed_speed_groups": 0.7,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.38276432063430543,
+      "top3_disagreements_observed_speed_groups": 3
     },
     "1300": {
-      "lichess_observed_groups": 12,
-      "top1_agreement_observed_only": 0.5,
-      "top3_agreement_observed_only": 0.9166666666666666,
-      "maia_mass_covered_observed_only": 0.4116920374411468,
-      "true_disagreements_observed_only": 1
+      "lichess_observed_speed_groups": 12,
+      "lichess_observed_maia_groups": 9,
+      "top1_agreement_observed_speed_groups": 0.5,
+      "top3_agreement_observed_speed_groups": 0.9166666666666666,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.4116920374411468,
+      "top3_disagreements_observed_speed_groups": 1
     },
     "1500": {
-      "lichess_observed_groups": 17,
-      "top1_agreement_observed_only": 0.5294117647058824,
-      "top3_agreement_observed_only": 0.8235294117647058,
-      "maia_mass_covered_observed_only": 0.4777767954065518,
-      "true_disagreements_observed_only": 3
+      "lichess_observed_speed_groups": 17,
+      "lichess_observed_maia_groups": 11,
+      "top1_agreement_observed_speed_groups": 0.5294117647058824,
+      "top3_agreement_observed_speed_groups": 0.8235294117647058,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.4777767954065518,
+      "top3_disagreements_observed_speed_groups": 3
     },
     "1700": {
-      "lichess_observed_groups": 14,
-      "top1_agreement_observed_only": 0.42857142857142855,
-      "top3_agreement_observed_only": 0.9285714285714286,
-      "maia_mass_covered_observed_only": 0.5695243272930384,
-      "true_disagreements_observed_only": 1
+      "lichess_observed_speed_groups": 14,
+      "lichess_observed_maia_groups": 10,
+      "top1_agreement_observed_speed_groups": 0.42857142857142855,
+      "top3_agreement_observed_speed_groups": 0.9285714285714286,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.5695243272930384,
+      "top3_disagreements_observed_speed_groups": 1
     },
     "1900": {
-      "lichess_observed_groups": 19,
-      "top1_agreement_observed_only": 0.6842105263157895,
-      "top3_agreement_observed_only": 0.9473684210526315,
-      "maia_mass_covered_observed_only": 0.6010026787407696,
-      "true_disagreements_observed_only": 1
+      "lichess_observed_speed_groups": 19,
+      "lichess_observed_maia_groups": 12,
+      "top1_agreement_observed_speed_groups": 0.6842105263157895,
+      "top3_agreement_observed_speed_groups": 0.9473684210526315,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.6010026787407696,
+      "top3_disagreements_observed_speed_groups": 1
     },
     "2100": {
       "status": "MODEL_ONLY_NO_MATCHING_LICHESS_BAND",
-      "lichess_observed_groups": 0,
-      "top1_agreement_observed_only": null,
-      "top3_agreement_observed_only": null,
-      "maia_mass_covered_observed_only": null,
-      "true_disagreements_observed_only": 0
+      "lichess_observed_speed_groups": 0,
+      "lichess_observed_maia_groups": 0,
+      "top1_agreement_observed_speed_groups": null,
+      "top3_agreement_observed_speed_groups": null,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": null,
+      "top3_disagreements_observed_speed_groups": 0
     }
   },
-  "by_speed_observed_only": {
+  "by_speed_observed_groups": {
     "blitz": {
-      "lichess_observed_groups": 44,
-      "top1_agreement_observed_only": 0.5227272727272727,
-      "top3_agreement_observed_only": 0.8636363636363636,
-      "maia_mass_covered_observed_only": 0.5105177095498551,
-      "true_disagreements_observed_only": 6
+      "lichess_observed_speed_groups": 44,
+      "lichess_observed_maia_groups": 44,
+      "top1_agreement_observed_speed_groups": 0.5227272727272727,
+      "top3_agreement_observed_speed_groups": 0.8636363636363636,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.5105177095498551,
+      "top3_disagreements_observed_speed_groups": 6
     },
     "rapid": {
-      "lichess_observed_groups": 28,
-      "top1_agreement_observed_only": 0.5,
-      "top3_agreement_observed_only": 0.8928571428571429,
-      "maia_mass_covered_observed_only": 0.4935630512689905,
-      "true_disagreements_observed_only": 3
+      "lichess_observed_speed_groups": 28,
+      "lichess_observed_maia_groups": 28,
+      "top1_agreement_observed_speed_groups": 0.5,
+      "top3_agreement_observed_speed_groups": 0.8928571428571429,
+      "maia_mass_covered_observed_speed_groups_unweighted_mean": 0.4935630512689905,
+      "top3_disagreements_observed_speed_groups": 3
     }
   }
 }

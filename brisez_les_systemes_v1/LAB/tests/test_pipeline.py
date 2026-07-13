@@ -275,32 +275,64 @@ class EditorialV11Tests(unittest.TestCase):
     def test_v11_gpu_observed_only_summary_and_report_text(self):
         summary = json.loads((COURSE / "DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess_summary.json").read_text(encoding="utf-8"))
         detail = pd.read_csv(COURSE / "DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess.csv")
-        observed = detail[detail["lichess_total"].fillna(0).astype(int) > 0]
-        observed = observed[~((observed["speed"].astype(str) == "ALL") & (observed["missing_side"].astype(str) == "lichess"))]
-        self.assertEqual(summary["lichess_observed_groups"], len(observed))
-        self.assertEqual(summary["model_only_groups"], int((detail["elo"].astype(int) == 2100).sum()))
-        self.assertEqual(summary["by_elo_observed_only"]["2100"]["status"], "MODEL_ONLY_NO_MATCHING_LICHESS_BAND")
-        self.assertEqual(summary["by_elo_observed_only"]["2100"]["true_disagreements_observed_only"], 0)
-        self.assertAlmostEqual(summary["top3_agreement_observed_only"], float(observed["top3_agreement"].fillna(False).astype(bool).mean()))
-        self.assertNotEqual(summary["top3_agreement_observed_only"], 0.17916666666666667)
+        observed_speed = detail[detail["lichess_total"].fillna(0).astype(int) > 0]
+        observed_speed = observed_speed[~((observed_speed["speed"].astype(str) == "ALL") & (observed_speed["missing_side"].astype(str) == "lichess"))]
+        observed_maia = observed_speed[["line_id", "elo"]].drop_duplicates()
+        all_maia = detail[["line_id", "elo"]].drop_duplicates()
+        missing_maia = pd.merge(all_maia, observed_maia, how="left", indicator=True).query("_merge == 'left_only'")[["line_id", "elo"]]
+        model_only_maia = detail.loc[detail["elo"].astype(int) == 2100, ["line_id", "elo"]].drop_duplicates()
+        self.assertEqual(summary["maia_groups_total"], 240)
+        self.assertEqual(summary["lichess_observed_maia_groups"], 47)
+        self.assertEqual(summary["lichess_missing_maia_groups"], 193)
+        self.assertEqual(summary["lichess_observed_speed_groups"], 72)
+        self.assertEqual(summary["model_only_maia_groups"], 40)
+        self.assertEqual(summary["lichess_observed_maia_groups"] + summary["lichess_missing_maia_groups"], summary["maia_groups_total"])
+        self.assertEqual(len(observed_maia), 47)
+        self.assertEqual(len(missing_maia), 193)
+        model_only_keys = {tuple(x) for x in model_only_maia.to_numpy()}
+        missing_keys = {tuple(x) for x in missing_maia.to_numpy()}
+        self.assertTrue(model_only_keys <= missing_keys)
+        self.assertEqual(summary["by_elo_observed_speed_groups"]["2100"]["status"], "MODEL_ONLY_NO_MATCHING_LICHESS_BAND")
+        self.assertEqual(summary["by_elo_observed_speed_groups"]["2100"]["top3_disagreements_observed_speed_groups"], 0)
+        self.assertAlmostEqual(summary["top1_agreement_observed_speed_groups"], 0.5138888888888888)
+        self.assertAlmostEqual(summary["top3_agreement_observed_speed_groups"], 0.875)
+        self.assertAlmostEqual(summary["maia_mass_covered_observed_speed_groups_unweighted_mean"], 0.5039242313295189)
+        self.assertEqual(summary["top3_disagreements_observed_speed_groups"], 9)
+        self.assertNotIn("lichess_observed_groups", summary)
+        self.assertNotIn("top3_agreement_observed_only", summary)
         decisions = pd.read_csv(COURSE / "DATA/editorial_line_decisions_v1_1.csv")
         self.assertNotIn("gpu_full_policy_groups_observed", decisions.columns)
         self.assertNotIn("gpu_top3_agreement_rate", decisions.columns)
+        self.assertNotIn("gpu_lichess_observed_groups", decisions.columns)
+        self.assertNotIn("gpu_top3_agreement_observed_only", decisions.columns)
         self.assertIn("gpu_maia_groups_total", decisions.columns)
-        self.assertIn("gpu_lichess_observed_groups", decisions.columns)
-        self.assertIn("gpu_top3_agreement_observed_only", decisions.columns)
+        self.assertIn("gpu_lichess_observed_maia_groups", decisions.columns)
+        self.assertIn("gpu_lichess_observed_speed_groups", decisions.columns)
+        self.assertIn("gpu_top3_agreement_observed_speed_groups", decisions.columns)
         bdg_reason = decisions.loc[decisions["line_id"] == "BDG-01", "decision_reason"].iloc[0]
         self.assertNotIn("Continuation REJECT", bdg_reason)
         report = (COURSE / "PRODUCTION/RAPPORT_REFONTE_EDITORIALE_V1_1.md").read_text(encoding="utf-8")
         self.assertNotIn("0.17916666666666667", report)
         self.assertNotIn("doit être réaudité", report)
-        self.assertIn("groupes Lichess observés : 72", report)
-        self.assertIn("Les groupes sans données Lichess sont exclus", report)
+        self.assertNotIn("groupes Lichess observés : 72", report)
+        self.assertIn("Maia fournit 240 groupes uniques ligne/Elo.", report)
+        self.assertIn("47 groupes ligne/Elo disposent d’au moins une observation Lichess.", report)
+        self.assertIn("Ces observations produisent 72 cellules ligne/Elo/cadence : 44 en blitz et 28 en rapide.", report)
+        self.assertIn("L’accord top 3 est de 87.5 % sur ces 72 cellules.", report)
+        self.assertIn("Les 193 groupes ligne/Elo sans échantillon sont exclus des taux.", report)
+        self.assertIn("Les 40 groupes Elo 2100 sont inclus dans ces 193 groupes manquants", report)
         self.assertIn("Le PGN candidat a été réaudité à 500 000 nœuds : 215 coups noirs, 0 REVIEW, 0 REJECT, gate global PASS.", report)
 
     def test_v11_protected_v1_files_untouched(self):
         result = subprocess.run(
-            ["git", "diff", "--name-only", "--", "brisez_les_systemes_v1/PGN/99_cours_v1_core_40.pgn", "brisez_les_systemes_v1/MANUSCRIT_COURS_V1.md"],
+            [
+                "git", "diff", "--name-only", "--",
+                "brisez_les_systemes_v1/PGN/99_cours_v1_core_40.pgn",
+                "brisez_les_systemes_v1/PGN/99_cours_v1_1_candidate.pgn",
+                "brisez_les_systemes_v1/DATA/stockfish_v1_1_candidate_500k.csv",
+                "brisez_les_systemes_v1/DATA/stockfish_v1_500k.csv",
+                "brisez_les_systemes_v1/MANUSCRIT_COURS_V1.md",
+            ],
             cwd=COURSE.parent,
             text=True,
             capture_output=True,
