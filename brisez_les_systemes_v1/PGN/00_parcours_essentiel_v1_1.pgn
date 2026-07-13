@@ -14,7 +14,12 @@
 [SourceLineID "ORD-01"]
 [LessonMove "Bg4"]
 
-1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3 Bg4 { Idée : développer avec menace avant de sortir la dame. Pourquoi : sans c3, les Blancs n’ont pas consolidé d4 et le cavalier f3 peut être cloué. Suite : jouer ...e6 puis choisir Bxe2, Bh5 ou Bf5 selon la réponse. Mémo : sans c3, développe ; avec c3, pense ...Qb6. } *
+{ Repère : le Londres n’a pas encore joué c3. Le centre blanc est moins consolidé et le cavalier f3 peut devenir une cible utile. }
+1. d4 d5 2. Bf4 c5 3. e3 Nc6 4. Nf3
+{ Déclencheur : Nf3 développe une pièce, mais place aussi le cavalier devant la dame et autorise un clouage. Il n’est pas nécessaire de sortir la dame noire tout de suite. }
+4... Bg4
+{ Le coup : ...Bg4 développe le fou c8 avec une menace concrète sur f3 et ralentit e4. Après Be2, choisis entre ...Bxe2 et ...e6 ; après h3, recule en h5 ou f5 selon l’activité. À retenir : sans c3, développe d’abord ; avec c3, ...Qb6 devient plus logique. Erreur à éviter : jouer ...Qb6 par automatisme. }
+*
 
 [Event "V1.1 pédagogique / B1 — Pilotage automatique / Avec c3 : transposer vers ...Qb6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -32,7 +37,12 @@
 [SourceLineID "ORD-02"]
 [LessonMove "Qb6"]
 
-1. d4 d5 2. Bf4 c5 3. c3 Nc6 4. e3 Nf6 5. Nf3 Qb6 { Idée : revenir au plan principal par transposition. Pourquoi : c3 défend d4 mais laisse b2 durablement sensible. Suite : si la dame recule, développer ...Bf5 ou jouer ...Nh5 selon la case du fou. Mémo : c3 protège le centre une fois ; b2 reste une cible. } *
+{ Repère : c3 protège d4, mais retire cette case au cavalier b1 et laisse b2 sans défense naturelle. }
+1. d4 d5 2. Bf4 c5 3. c3 Nc6 4. e3 Nf6 5. Nf3
+{ Déclencheur : les Blancs ont terminé leur installation sans répondre à la pression sur b2. La dame noire peut maintenant poser deux questions à la fois. }
+5... Qb6
+{ Le coup : ...Qb6 vise b2 et d4. Sa force vient surtout des concessions qu’il impose : Qc2, Qb3 ou b3. Si la dame recule, développe ...Bf5 ; si le fou devient vulnérable, ...Nh5 peut gagner un tempo. À retenir : c3 protège le centre une fois, b2 reste une cible. Erreur à éviter : prendre b2 sans route de sortie. }
+*
 
 [Event "V1.1 pédagogique / B1 — Pilotage automatique / Contre le Colle : sortir le fou avant ...e6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -50,7 +60,14 @@
 [SourceLineID "COL-01"]
 [LessonMove "Bf5"]
 
-1. d4 d5 2. Nf3 Nf6 3. e3 Bf5 { Idée : jouer ...Bf5 pour sortir le fou c8 avant ...e6. Pourquoi : le Colle espère enfermer ce fou et préparer e4 sans pression. Suite : après Bxf5 exf5, contrôler e4 et utiliser la colonne e. Mémo : fou dehors, pion e ensuite. } 4. Bd3 e6 5. Bxf5 exf5 *
+{ Repère : avec Nf3 et e3, les Blancs annoncent souvent un Colle. Leur plan devient confortable si le fou c8 reste enfermé derrière ...e6. }
+1. d4 d5 2. Nf3 Nf6 3. e3
+{ Déclencheur : 3.e3 ferme la diagonale du fou c1, mais les Noirs ne doivent pas copier ce geste. C’est le moment de résoudre le problème du fou c8. }
+3... Bf5
+{ Le coup : ...Bf5 sort la pièce avant de jouer ...e6 et contrôle e4, la case centrale recherchée par le Colle. L’échange Bxd3 n’est pas l’objectif : le développement actif suffit déjà. }
+4. Bd3 e6 5. Bxf5 exf5
+{ Plan : après Bxf5 exf5, le pion f5 soutient e4 et la colonne e peut devenir utile. Développe simplement ...Bd6, ...O-O et ...Re8 selon la position. À retenir : fou dehors, pion e ensuite. Erreur à éviter : jouer ...e6 avant d’avoir trouvé une case au fou. }
+*
 
 [Event "V1.1 pédagogique / B1 — Pilotage automatique / Contre Nc3–Bg5 : ...c5 puis ...e6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -68,7 +85,14 @@
 [SourceLineID "VER-01"]
 [LessonMove "c5"]
 
-1. d4 d5 2. Nc3 Nf6 3. Bg5 c5 { Idée : contester d4 avant que les Blancs ne jouent e4. Pourquoi : Nc3 et Bg5 préparent un centre ambitieux mais retardent la défense de d4. Suite : développer ...e6, ...Nc6 et ...Be7. Mémo : contre Nc3–Bg5, ...c5 arrive avant e4. } 4. e3 e6 5. Nf3 Be7 *
+{ Repère : Nc3 et Bg5 préparent souvent e4. Les Blancs comptent sur un centre fermé où leur développement paraît harmonieux. }
+1. d4 d5 2. Nc3 Nf6 3. Bg5
+{ Déclencheur : Bg5 ajoute de la pression sur f6, mais ne protège pas davantage d4. Avant que e4 n’arrive, attaque le centre. }
+3... c5
+{ Le coup : ...c5 oblige les Blancs à définir leur structure. S’ils ferment, les Noirs gagnent de l’espace ; s’ils échangent, les pièces noires se développent naturellement. Le but n’est pas de gagner un pion, mais de retirer aux Blancs leur installation automatique. }
+4. e3 e6 5. Nf3 Be7
+{ Plan : après ...e6 et ...Be7, joue ...Nc6 puis décide entre ...cxd4 et le roque. À retenir : contre Nc3–Bg5, ...c5 arrive avant e4. Erreur à éviter : jouer ...e6 trop tôt et accepter une position fermée sans contre-jeu. }
+*
 
 [Event "V1.1 pédagogique / B1 — Pilotage automatique / Contre le Zukertort : ...c5 puis ...Nc6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -86,7 +110,14 @@
 [SourceLineID "COL-10"]
 [LessonMove "c5"]
 
-1. d4 d5 2. Nf3 Nf6 3. e3 e6 4. b3 c5 { Idée : ouvrir le centre avant que le Zukertort ne termine son installation. Pourquoi : b3 et Bb2 demandent du temps et supposent une position calme. Suite : jouer ...Nc6, ...Bd6, roquer, puis échanger en d4 si cela isole le pion. Mémo : le Zukertort veut du temps ; prends-lui le centre. } 5. Bb2 Nc6 6. Bd3 cxd4 *
+{ Repère : le Zukertort investit plusieurs tempi dans b3, Bb2 et Bd3. Il devient dangereux seulement si les Noirs lui laissent une position calme. }
+1. d4 d5 2. Nf3 Nf6 3. e3 e6 4. b3
+{ Déclencheur : b3 ne crée aucune menace immédiate au centre. Profite de ce temps avant que Bb2 et Bd3 ne coordonnent une attaque. }
+4... c5
+{ Le coup : ...c5 conteste d4 et force les Blancs à prendre une décision. La rupture est plus importante que la recherche d’une variante forcée : elle empêche le schéma blanc de se dérouler gratuitement. }
+5. Bb2 Nc6 6. Bd3 cxd4
+{ Plan : développe ...Nc6, ...Bd6 et roque. L’échange ...cxd4 est utile quand il laisse un pion d4 isolé ou ouvre des lignes à tes pièces. À retenir : le Zukertort veut du temps ; prends-lui le centre. Erreur à éviter : rester symétrique avec ...b6 et ...Bb7 sans pression. }
+*
 
 [Event "V1.1 pédagogique / B2 — Double cible et surcharge / Après Qc2 : gagner un tempo avec ...Bf5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -104,7 +135,12 @@
 [SourceLineID "LON-02"]
 [LessonMove "Bf5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qc2 Bf5 { Idée : développer le fou avec un nouveau tempo sur la dame. Pourquoi : Qc2 paraît sûr mais la dame vient déjà de bouger deux fois. Suite : jouer ...e6, ...Be7 et envisager ...Nh5. Mémo : une dame déplacée deux fois peut encore être interrogée. } *
+{ Repère : après ...Qb6 et ...c4, la dame blanche cherche une case sûre tout en défendant b2. Chaque recul peut offrir un nouveau tempo. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qc2
+{ Déclencheur : Qc2 paraît stabiliser la position, mais la dame se place sur la diagonale du fou c8. Les Noirs peuvent développer en l’attaquant. }
+7... Bf5
+{ Le coup : ...Bf5 gagne un tempo sans détourner une pièce de son rôle naturel. La dame doit encore bouger et les Noirs prennent l’avance de développement. Ensuite, joue ...e6 et ...Be7 ; ...Nh5 devient intéressant si le fou f4 manque de cases. À retenir : une dame déplacée deux fois peut encore être interrogée. Erreur à éviter : chercher un gain tactique immédiat au lieu de terminer le développement. }
+*
 
 [Event "V1.1 pédagogique / B2 — Double cible et surcharge / Après Qc1 : ouvrir la colonne c avec ...cxd4"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -122,7 +158,14 @@
 [SourceLineID "LON-04"]
 [LessonMove "cxd4"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc1 cxd4 { Idée : clarifier le centre dès que la dame revient en c1. Pourquoi : Qc1 défend b2 mais gêne la tour a1 et laisse la colonne c exploitable. Suite : développer ...Bf5, ...e6 et placer une tour en c8. Mémo : Qc1 appelle ...cxd4. } 7. exd4 Bf5 *
+{ Repère : Qc1 défend b2, mais replace la dame devant la tour a1. La défense fonctionne matériellement tout en réduisant la coordination blanche. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc1
+{ Déclencheur : la dame est revenue en c1 et le pion d4 n’est plus soutenu par le pion c après un échange. C’est le bon moment pour clarifier le centre. }
+6... cxd4
+{ Le coup : ...cxd4 ouvre la colonne c et oblige les Blancs à choisir leur structure. Après exd4, la colonne c reste une voie d’entrée ; après cxd4, la case b4 devient disponible. }
+7. exd4 Bf5
+{ Plan : ...Bf5 développe avec activité, puis ...e6 et ...Rc8 mettent la pression sur la colonne ouverte. À retenir : Qc1 appelle ...cxd4. Erreur à éviter : lancer ...g5 avant d’avoir exploité le centre et la colonne c. }
+*
 
 [Event "V1.1 pédagogique / B2 — Double cible et surcharge / Après b3 : déplacer la cible vers f3 avec ...Bg4"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -140,7 +183,14 @@
 [SourceLineID "LON-09"]
 [LessonMove "Bg4"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. b3 Bg4 { Idée : changer de cible quand b2 est protégé par b3. Pourquoi : b3 ralentit le cavalier b1 et rend f3 plus important. Suite : échanger en f3 si h3 le demande, puis jouer ...e6. Mémo : b2 sauvé, vise f3. } 7. h3 Bxf3 *
+{ Repère : b3 protège b2 contre ...Qb6, mais ce coup ralentit le développement du cavalier b1 et crée une nouvelle cible sur f3. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. b3
+{ Déclencheur : les Blancs ont réglé le problème b2, pas toute la position. Au lieu d’insister avec la dame, change de cible. }
+6... Bg4
+{ Le coup : ...Bg4 développe le fou, cloue le cavalier f3 et gêne e4. Le coup est fort parce qu’il améliore une pièce tout en demandant une nouvelle concession. }
+7. h3 Bxf3
+{ Plan : après h3, ...Bxf3 retire un défenseur central et oblige souvent la dame à reprendre. Continue par ...e6 et ...Be7. À retenir : b2 sauvé, vise f3. Erreur à éviter : poursuivre b2 avec des manœuvres de dame inutiles. }
+*
 
 [Event "V1.1 pédagogique / B3 — Simplification trompeuse / Après Qxb6 : reprendre avec ...axb6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -158,7 +208,14 @@
 [SourceLineID "LON-01"]
 [LessonMove "axb6"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qxb6 axb6 { Idée : accepter les pions doublés pour ouvrir la colonne a et gagner de l’espace. Pourquoi : l’échange des dames ne neutralise pas le plan noir. Suite : jouer ...Bf5 puis ...b5 et activer la tour a8. Mémo : après Qxb6, le pion a reprend et la colonne a travaille. } 8. Be2 Bf5 *
+{ Repère : après ...c4, l’échange des dames semble soulager les Blancs. En réalité, il donne aux Noirs une structure active et une colonne ouverte. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qxb6
+{ Déclencheur : Qxb6 échange les dames, mais ne gagne pas le pion b6. La bonne reprise doit préserver le plan d’espace à l’aile-dame. }
+7... axb6
+{ Le coup : ...axb6 accepte des pions doublés en échange de la colonne a et du levier ...b5. Ces pions ne sont pas faibles tant qu’ils peuvent avancer et soutenir c4. }
+8. Be2 Bf5
+{ Plan : développe ...Bf5, pousse ...b5 et utilise la tour a8 sur la colonne ouverte. À retenir : après Qxb6, le pion a reprend et la colonne a travaille. Erreur à éviter : reprendre avec une pièce et renoncer à l’activité structurelle. }
+*
 
 [Event "V1.1 pédagogique / B3 — Simplification trompeuse / Après cxd4 : développer avec ...Bf5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -176,7 +233,14 @@
 [SourceLineID "LON-05"]
 [LessonMove "Bf5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc1 cxd4 7. cxd4 Bf5 { Idée : développer activement après la reprise cxd4. Pourquoi : le pion c a quitté c3 et la case b4 devient disponible. Suite : jouer ...e6, ...Be7, roquer, puis envisager ...Nb4 et ...Rc8. Mémo : cxd4 libère b4. } 8. Nc3 e6 *
+{ Repère : la reprise cxd4 donne aux Blancs une structure compacte, mais libère c3 et surtout la case b4 pour les pièces noires. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc1 cxd4 7. cxd4
+{ Déclencheur : le pion c a quitté c3. Les Blancs ont une structure saine, mais moins de contrôle sur b4 et une dame encore passive en c1. }
+7... Bf5
+{ Le coup : ...Bf5 développe le fou avant ...e6 et prépare une pression naturelle sur c2 et b4. Le plan ne repose pas sur une tactique : il exploite les cases laissées par la reprise. }
+8. Nc3 e6
+{ Plan : après ...e6, développe ...Be7, roque et envisage ...Nb4 puis ...Rc8. À retenir : cxd4 libère b4. Erreur à éviter : traiter la structure blanche comme si rien n’avait changé. }
+*
 
 [Event "V1.1 pédagogique / B3 — Simplification trompeuse / Dans la finale : fixer l’aile-dame avec ...b5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -194,7 +258,12 @@
 [SourceLineID "LON-03"]
 [LessonMove "b5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qxb6 axb6 8. Nbd2 b5 { Idée : transformer les pions doublés en majorité d’espace. Pourquoi : immobiles, ils deviennent des cibles ; en avançant, ils fixent l’aile-dame. Suite : développer ...Bf5 et utiliser la colonne a. Mémo : les pions doublés doivent bouger. } *
+{ Repère : sans les dames, les pions b6 et b7 semblent être des faiblesses. Leur valeur dépend pourtant de leur capacité à avancer et à gagner de l’espace. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qb3 c4 7. Qxb6 axb6 8. Nbd2
+{ Déclencheur : Nbd2 termine le développement blanc et prépare e4 ou Ne5. Si les Noirs restent immobiles, leur aile-dame devient réellement vulnérable. }
+8... b5
+{ Le coup : ...b5 transforme les pions doublés en chaîne d’espace, protège c4 et prépare parfois ...b4. Développe ensuite ...Bf5 et active la tour a8. À retenir : les pions doublés doivent bouger. Erreur à éviter : défendre passivement b6 et b7 comme des faiblesses fixes. }
+*
 
 [Event "V1.1 pédagogique / B4 — Le gain matériel prétendument gratuit / Après Bxh6? : accepter avec ...Rxh6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -212,7 +281,14 @@
 [SourceLineID "PST-04"]
 [LessonMove "Rxh6"]
 
-1. d4 d5 2. Bg5 h6 3. Bxh6 Rxh6 { Idée : accepter le sacrifice sans paniquer. Pourquoi : les Blancs donnent un fou pour un seul pion et la tour h6 n’est pas enfermée. Suite : jouer ...Nf6 et ...c5, puis ramener la tour si nécessaire. Mémo : un pion ne vaut pas un fou ; la tour h6 peut revenir. } 4. Nf3 c5 *
+{ Repère : les Blancs peuvent sacrifier le fou en h6 pour perturber le roque. Il faut compter le matériel avant de réagir à l’apparence étrange de la tour. }
+1. d4 d5 2. Bg5 h6 3. Bxh6
+{ Déclencheur : Bxh6 capture un seul pion. Les Blancs espèrent que la tour h6 et le roi noir resteront durablement mal placés. }
+3... Rxh6
+{ Le coup : ...Rxh6 accepte simplement le fou. La tour n’est pas piégée : elle peut revenir en h8 ou rester active sur la sixième rangée. Les Noirs ont une pièce de plus et n’ont pas besoin de défendre le pion gagné par des contorsions. }
+4. Nf3 c5
+{ Plan : joue ...Nf6 et ...c5, puis développe rapidement les pièces. À retenir : un pion ne vaut pas un fou ; la tour h6 peut revenir. Erreur à éviter : refuser le sacrifice par peur de perdre le droit de roquer. }
+*
 
 [Event "V1.1 pédagogique / B4 — Le gain matériel prétendument gratuit / Bd3 oublie b2 : ...Qxb2 puis ...Qxc3"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -230,7 +306,14 @@
 [SourceLineID "LON-12"]
 [LessonMove "Qxb2"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Bd3 Qxb2 { Idée : prendre b2 seulement parce que la dame dispose de c3 comme sortie. Pourquoi : Bd3 développe une pièce mais ignore la menace immédiate. Suite : après Nbd2, jouer ...Qxc3 puis finir le développement. Mémo : le pion est prenable quand la route de fuite est claire. } 7. Nbd2 Qxc3 *
+{ Repère : prendre b2 avec la dame n’est sain que si une case de fuite est déjà identifiée. Ici, le pion c3 peut libérer précisément cette route. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Bd3
+{ Déclencheur : Bd3 développe une pièce selon le schéma habituel, mais ne répond pas à la menace sur b2. Avant de prendre, vérifie la sortie par c3. }
+6... Qxb2
+{ Le coup : ...Qxb2 gagne un pion parce que Rb1 ne piège pas la dame. La différence entre une prise calculée et de la gourmandise est la route de retraite connue à l’avance. }
+7. Nbd2 Qxc3
+{ Plan : après Nbd2, ...Qxc3 utilise la case libérée et maintient la dame hors de danger. Termine ensuite le développement et neutralise e4. À retenir : le pion est prenable quand la route de fuite est claire. Erreur à éviter : reproduire ...Qxb2 dans une position où c3 reste occupée ou contrôlée. }
+*
 
 [Event "V1.1 pédagogique / B5 — Peur et sur-réaction / Contre 2.Bg5 : demander au fou avec ...h6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -248,7 +331,14 @@
 [SourceLineID "PST-01"]
 [LessonMove "h6"]
 
-1. d4 d5 2. Bg5 h6 { Idée : demander tout de suite au fou où il veut rester. Pourquoi : le pseudo-Trompowsky compte souvent sur ...Nf6 automatique. Suite : après Bh4, jouer ...c5 et ouvrir le centre. Mémo : questionne le fou avant de développer le cavalier. } 3. Bh4 c5 4. e3 cxd4 *
+{ Repère : le pseudo-Trompowsky cherche souvent à provoquer ...Nf6 puis à gêner ce cavalier. Les Noirs peuvent d’abord demander au fou de préciser sa case. }
+1. d4 d5 2. Bg5
+{ Déclencheur : Bg5 apparaît avant que les Blancs n’aient développé le cavalier g1. Le fou s’est engagé tôt et peut être interrogé sans affaiblir le centre. }
+2... h6
+{ Le coup : ...h6 force une décision. Après Bh4, le fou reste éloigné du centre ; après Bxf6, les Noirs récupèrent la paire de fous ou une structure claire. Il ne s’agit pas d’attaquer le roi. }
+3. Bh4 c5 4. e3 cxd4
+{ Plan : joue ...c5 puis ...cxd4 pour ouvrir le centre avant que les Blancs ne terminent leur installation. À retenir : questionne le fou avant de développer le cavalier. Erreur à éviter : jouer ...Nf6 automatiquement et entrer dans le plan préféré des Blancs. }
+*
 
 [Event "V1.1 pédagogique / B5 — Peur et sur-réaction / Après Bh4 : restreindre le fou avec ...h5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -266,7 +356,12 @@
 [SourceLineID "TOR-02"]
 [LessonMove "h5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. Bh4 h5 { Idée : réduire les cases du fou plutôt que lancer une attaque de roi. Pourquoi : Bh4 conserve le fou mais lui retire h2. Suite : selon la réponse, jouer ...f6, ...c5 ou échanger en c3. Mémo : ...h5 ferme une porte ; il ne cherche pas le mat. } *
+{ Repère : dans la Torre, le fou g5 recule souvent en h4 pour éviter l’échange. Ce réflexe de conservation peut réduire ses propres cases. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. Bh4
+{ Déclencheur : Bh4 maintient le fou, mais la case h2 devient essentielle à sa retraite. Les Noirs peuvent fermer cette porte sans chercher une attaque de mat. }
+4... h5
+{ Le coup : ...h5 limite le fou et soutient parfois ...f6 ou ...g5. Choisis la suite selon la réponse blanche : ...c5 pour le centre, ...f6 pour gagner de l’espace, ou un échange si la structure le justifie. À retenir : ...h5 ferme une porte ; il ne cherche pas le mat. Erreur à éviter : pousser tous les pions du roque sans contrôler le centre. }
+*
 
 [Event "V1.1 pédagogique / B5 — Peur et sur-réaction / Contre h4 : répondre au centre avec ...c5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -284,7 +379,14 @@
 [SourceLineID "TOR-05"]
 [LessonMove "c5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. h4 c5 { Idée : répondre à h4 par le centre, pas par une poussée miroir. Pourquoi : h4 ne développe rien et laisse le roi blanc au centre. Suite : jouer ...Nc6 puis ...Qb6 pour augmenter la pression. Mémo : contre une aile prématurée, frappe d4. } 5. e3 Nc6 6. Nbd2 Qb6 *
+{ Repère : h4 tente d’intimider le cavalier e4 et prépare parfois une attaque. Mais ce coup d’aile ne développe aucune pièce et laisse le roi blanc au centre. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. h4
+{ Déclencheur : les Blancs ont dépensé un tempo sur l’aile-roi. Répondre par ...h5 copierait leur jeu ; le centre offre une cible plus importante. }
+4... c5
+{ Le coup : ...c5 attaque d4 et oblige les Blancs à justifier h4. La réaction est positionnelle : ouvrir des lignes pendant que le roi blanc n’est pas prêt. }
+5. e3 Nc6 6. Nbd2 Qb6
+{ Plan : développe ...Nc6 puis ...Qb6 pour ajouter la pression sur d4 et b2. À retenir : contre une aile prématurée, frappe le centre. Erreur à éviter : lancer une course de pions sur l’aile où l’adversaire vient de jouer. }
+*
 
 [Event "V1.1 pédagogique / B5 — Peur et sur-réaction / Chasser le fou : ...h6 puis ...g5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -302,7 +404,14 @@
 [SourceLineID "LON-07"]
 [LessonMove "g5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc2 Nh5 7. Bg5 h6 8. Bh4 g5 { Idée : gagner de l’espace pour limiter le fou du Londres. Pourquoi : après Bg5–h4, le fou manque de bonnes cases. Suite : clarifier d4 puis développer ...Bf5 ; pousser ...g4 seulement si cela gêne vraiment le cavalier. Mémo : chasse le fou, pas le roi. } 9. Bg3 cxd4 10. cxd4 Bf5 *
+{ Repère : après ...Nh5, le fou du Londres peut reculer plusieurs fois pour éviter l’échange. Chaque recul coûte un tempo et peut justifier un gain d’espace. }
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. c3 Qb6 6. Qc2 Nh5 7. Bg5 h6 8. Bh4
+{ Déclencheur : Bh4 conserve encore le fou, mais ses cases deviennent rares. Le centre noir est assez stable pour gagner de l’espace sans exposer immédiatement le roi. }
+8... g5
+{ Le coup : ...g5 chasse le fou et prend des cases. L’objectif est de limiter une pièce, pas d’attaquer le roi blanc. Ne pousse ...g4 que si le cavalier f3 est réellement gêné. }
+9. Bg3 cxd4 10. cxd4 Bf5
+{ Plan : clarifie d4 puis développe ...Bf5, afin que les pièces participent aussi au jeu. À retenir : chasse le fou, pas le roi. Erreur à éviter : continuer les poussées de pions quand le développement noir est en retard. }
+*
 
 [Event "V1.1 pédagogique / B7 — Attaque d’aile avant le centre / Après Qxd4 : gagner un tempo avec ...Nc6"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -320,7 +429,12 @@
 [SourceLineID "JOB-09"]
 [LessonMove "Nc6"]
 
-1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. a3 cxd4 5. Qxd4 Nc6 { Idée : développer avec tempo sur la dame blanche. Pourquoi : a3 prépare une expansion lente tandis que Qxd4 expose la dame. Suite : gagner du développement et surveiller e5. Mémo : un coup d’aile sans menace offre un tempo au centre. } *
+{ Repère : a3 prépare b4, mais ne protège pas le centre. Après l’échange en d4, la dame blanche peut devenir la cible d’un développement naturel. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. a3 cxd4 5. Qxd4
+{ Déclencheur : Qxd4 place la dame au centre avant que les autres pièces blanches ne soient sorties. Les Noirs doivent chercher un coup de développement avec tempo. }
+5... Nc6
+{ Le coup : ...Nc6 attaque la dame, développe une pièce et augmente le contrôle de e5. Aucun calcul compliqué n’est nécessaire : le coup punit simplement l’ordre de coups blanc. À retenir : un coup d’aile sans menace offre un tempo au centre. Erreur à éviter : essayer de gagner la dame au lieu d’utiliser le temps gagné pour développer. }
+*
 
 [Event "V1.1 pédagogique / B8 — Géométrie tactique humanisée / Après Nb5 : exploiter le roi avec ...Qa5+"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -338,7 +452,12 @@
 [SourceLineID "JOB-04"]
 [LessonMove "Qa5+"]
 
-1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. Nb5 Qa5+ { Idée : exploiter immédiatement le cavalier parti en b5. Pourquoi : le cavalier c3 ne peut plus bloquer l’échec sur a5. Suite : reprendre d4 ou développer ...Na6 selon la réponse blanche. Mémo : Nb5 sans c3 disponible appelle ...Qa5+. } *
+{ Repère : Nb5 vise c7 et semble créer une menace immédiate. Pourtant, le cavalier c3 a quitté la case qui pourrait bloquer un échec sur a5. }
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5 4. Nb5
+{ Déclencheur : le cavalier blanc s’éloigne du centre et le roi reste en e1. Avant de défendre c7 passivement, cherche un coup forcing qui exploite cette géométrie. }
+4... Qa5+
+{ Le coup : ...Qa5+ donne échec, développe la dame avec tempo et force les Blancs à résoudre le problème du roi avant de poursuivre Nc7+. Selon la réponse, tu peux reprendre d4 ou développer ...Na6. À retenir : Nb5 sans cavalier en c3 pour bloquer appelle ...Qa5+. Erreur à éviter : paniquer devant la menace Nc7+ et jouer un coup purement défensif. }
+*
 
 [Event "V1.1 pédagogique / B8 — Géométrie tactique humanisée / Nbd2 : échanger avec ...Nxg5, puis jouer ...e5"]
 [Site "Cours Chessable francophone — parcours essentiel"]
@@ -356,4 +475,11 @@
 [SourceLineID "TOR-06"]
 [LessonMove "Nxg5"]
 
-1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. Nbd2 Nxg5 { Idée : échanger le fou actif avant de prendre le centre. Pourquoi : Nbd2 suppose que le cavalier e4 doit reculer, mais l’échange en g5 libère e5. Suite : après Nxg5, jouer ...e5 puis ...Nc6. Mémo : échange d’abord, centre ensuite. } 5. Nxg5 e5 *
+{ Repère : Nbd2 attaque le cavalier e4 et semble gagner un tempo. Mais l’échange en g5 modifie le contrôle du centre avant que le cavalier noir ne doive reculer. }
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4 4. Nbd2
+{ Déclencheur : le cavalier d2 attaque e4, tandis que le fou g5 reste la pièce active du dispositif blanc. Échange cette pièce avant de décider où placer le cavalier. }
+4... Nxg5
+{ Le coup : ...Nxg5 retire le fou et attire le cavalier blanc en g5. Ce cavalier se trouve alors loin de d4 et e3, ce qui libère la poussée centrale. }
+5. Nxg5 e5
+{ Plan : ...e5 prend le centre avec tempo sur le cavalier g5 ; développe ensuite ...Nc6. À retenir : échange d’abord, centre ensuite. Erreur à éviter : reculer automatiquement le cavalier e4 et laisser les Blancs conserver toutes leurs pièces actives. }
+*
