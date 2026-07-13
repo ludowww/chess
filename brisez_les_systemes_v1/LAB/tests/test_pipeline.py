@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import subprocess
 import unittest
 from pathlib import Path
 
@@ -185,21 +186,69 @@ class EditorialV11Tests(unittest.TestCase):
         manifest_ids = set(cand["line_id_v1_1"])
         pgn_ids = {game.headers.get("Round") for game in games}
         self.assertEqual(pgn_ids, manifest_ids)
+        candidate_sf = pd.read_csv(COURSE / "DATA/stockfish_v1_1_candidate_500k.csv")
+        self.assertFalse((candidate_sf["loss_for_black_cp"].astype(int) > 25).any())
+        self.assertEqual(set(candidate_sf["line_id"]), manifest_ids)
         for game in games:
             self.assertFalse(game.errors, game.headers.get("Round"))
             board = game.board()
-            black_rejects = []
-            line_id = game.headers.get("SourceLineID")
-            sf = pd.read_csv(COURSE / "DATA/stockfish_v1_500k.csv")
-            sf_line = sf[sf["line_id"] == line_id]
+            line_id = game.headers.get("Round")
+            sf_line = candidate_sf[candidate_sf["line_id"] == line_id]
             for node in game.mainline():
                 self.assertIn(node.move, board.legal_moves, game.headers.get("Round"))
                 if board.turn == chess.BLACK:
                     match = sf_line[(sf_line["fen_before"].map(fen4) == fen4(board)) & (sf_line["move_uci"] == node.move.uci())]
-                    if not match.empty and int(match.iloc[0]["loss_for_black_cp"]) > 50:
-                        black_rejects.append((node.ply(), node.move.uci()))
+                    if not match.empty:
+                        self.assertLessEqual(int(match.iloc[0]["loss_for_black_cp"]), 25, (line_id, node.ply(), node.move.uci()))
                 board.push(node.move)
-            self.assertFalse(black_rejects, (game.headers.get("Round"), black_rejects))
+    def test_v11_strict_editorial_rules_and_evidence(self):
+        decisions = pd.read_csv(COURSE / "DATA/editorial_line_decisions_v1_1.csv")
+        cand = pd.read_csv(COURSE / "DATA/core_v1_1_candidate_manifest.csv")
+        repairs = pd.read_csv(COURSE / "DATA/continuation_repair_candidates_v1_1.csv")
+        self.assertFalse(((decisions["decision"] == "KEEP_CORE") & (decisions["failure_type"] != "NO_ENGINE_FAILURE")).any())
+        self.assertFalse(cand["continuation_gate"].isin(["LATER_CONTINUATION_REVIEW", "LATER_CONTINUATION_REJECT"]).any())
+        for col in ["maia_status", "lichess_exact_position_status", "empirical_total_after_key", "empirical_sample_gate", "maia_human_error_proxy", "practical_edge_score"]:
+            self.assertIn(col, decisions.columns)
+            self.assertFalse((decisions[col].astype(str) == "NON_EXECUTE").any(), col)
+        expected = {"ORD-01": "f7f6", "COL-10": "d8c7", "LON-04": "a8c8", "LON-03": "c8f5", "LON-07": "c8f5", "TOR-05": "d8b6"}
+        for line_id, move in expected.items():
+            match = repairs[(repairs["line_id"] == line_id) & (repairs["replacement_move_uci"] == move)]
+            self.assertFalse(match.empty, (line_id, move))
+            self.assertLessEqual(int(match.iloc[0]["replacement_loss_cp"]), 25)
+            self.assertEqual(match.iloc[0]["concept_preserved"], "YES")
+
+    def test_v11_repair_fens_bilans_selection_and_composition(self):
+        cand = pd.read_csv(COURSE / "DATA/core_v1_1_candidate_manifest.csv")
+        repairs = pd.read_csv(COURSE / "DATA/continuation_repair_candidates_v1_1.csv")
+        audit = pd.read_csv(COURSE / "DATA/stockfish_v1_1_candidate_500k.csv")
+        for row in cand[cand["editorial_decision"] == "REPAIR_CONTINUATION"].to_dict("records"):
+            repair = repairs[(repairs["line_id"] == row["source_line_id"]) & (repairs["replacement_move_uci"] == row["repair_replacement_uci"])]
+            self.assertFalse(repair.empty, row["source_line_id"])
+            self.assertEqual(fen4(repair.iloc[0]["failure_fen"]), fen4(row["repair_fen"]))
+        maxima = audit.groupby("line_id")["loss_for_black_cp"].max().astype(int).to_dict()
+        for game in parse_pgn_games(COURSE / "PGN/99_cours_v1_1_candidate.pgn"):
+            self.assertIn(f"Coup noir maximal : {maxima[game.headers.get('Round')]} cp", game.comment)
+        script_text = (COURSE / "LAB/scripts/propose_continuation_repairs.py").read_text(encoding="utf-8")
+        self.assertNotIn("selected_ids = selected_ids[:22]", script_text)
+        self.assertFalse((cand["source_line_id"] == pd.read_csv(COURSE / "DATA/core_40_index.csv")["line_id"].head(len(cand)).tolist()).all())
+        family_share = cand["concept_family_id"].value_counts().max() / len(cand)
+        self.assertLessEqual(family_share, 0.5)
+        multi_non_london = cand[cand["system_group"] != "LONDON"].groupby("system_group").size()
+        self.assertGreaterEqual(int((multi_non_london >= 2).sum()), 2)
+        self.assertGreaterEqual((cand["system_group"] == "COLLE_ZUKERTORT").sum(), 2)
+        self.assertGreaterEqual((cand["system_group"] == "JOBAVA").sum(), 2)
+        self.assertGreaterEqual((cand["system_group"] == "TORRE").sum(), 2)
+        self.assertGreaterEqual((cand["system_group"] == "VERESOV_PSEUDO_TROMP").sum(), 2)
+
+    def test_v11_protected_v1_files_untouched(self):
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "--", "brisez_les_systemes_v1/PGN/99_cours_v1_core_40.pgn", "brisez_les_systemes_v1/MANUSCRIT_COURS_V1.md"],
+            cwd=COURSE.parent,
+            text=True,
+            capture_output=True,
+            check=True,
+        )
+        self.assertEqual(result.stdout.strip(), "")
 
 
 class CourseTests(unittest.TestCase):
