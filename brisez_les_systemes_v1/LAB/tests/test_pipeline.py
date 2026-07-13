@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import sys
+import json
+import re
 import subprocess
 import unittest
 from pathlib import Path
@@ -218,16 +220,46 @@ class EditorialV11Tests(unittest.TestCase):
             self.assertEqual(match.iloc[0]["concept_preserved"], "YES")
 
     def test_v11_repair_fens_bilans_selection_and_composition(self):
+        expected_source_ids = [
+            "ORD-01", "ORD-02", "COL-01", "COL-10", "VER-01", "LON-02", "LON-04", "LON-09", "LON-01", "LON-03",
+            "LON-05", "JOB-09", "PST-04", "LON-12", "TOR-02", "PST-01", "LON-07", "TOR-06", "TOR-05", "JOB-04",
+        ]
         cand = pd.read_csv(COURSE / "DATA/core_v1_1_candidate_manifest.csv")
         repairs = pd.read_csv(COURSE / "DATA/continuation_repair_candidates_v1_1.csv")
         audit = pd.read_csv(COURSE / "DATA/stockfish_v1_1_candidate_500k.csv")
+        self.assertEqual(cand["source_line_id"].tolist(), expected_source_ids)
         for row in cand[cand["editorial_decision"] == "REPAIR_CONTINUATION"].to_dict("records"):
             repair = repairs[(repairs["line_id"] == row["source_line_id"]) & (repairs["replacement_move_uci"] == row["repair_replacement_uci"])]
             self.assertFalse(repair.empty, row["source_line_id"])
             self.assertEqual(fen4(repair.iloc[0]["failure_fen"]), fen4(row["repair_fen"]))
-        maxima = audit.groupby("line_id")["loss_for_black_cp"].max().astype(int).to_dict()
-        for game in parse_pgn_games(COURSE / "PGN/99_cours_v1_1_candidate.pgn"):
-            self.assertIn(f"Coup noir maximal : {maxima[game.headers.get('Round')]} cp", game.comment)
+        max_rows = audit.sort_values(["line_id", "loss_for_black_cp", "ply"], ascending=[True, False, True]).drop_duplicates("line_id").set_index("line_id")
+        self.assertFalse((audit["loss_for_black_cp"].astype(int) > 25).any())
+        games = list(parse_pgn_games(COURSE / "PGN/99_cours_v1_1_candidate.pgn"))
+        self.assertEqual(len(games), 20)
+        for game in games:
+            line_id = game.headers.get("Round")
+            self.assertNotIn("BILAN V1.1", game.comment or "")
+            comments = []
+            last = game
+            for node in game.mainline():
+                if node.comment:
+                    comments.append((node, node.comment))
+                last = node
+            all_comments = "\n".join(comment for _, comment in comments)
+            self.assertNotIn("BILAN — Ligne", all_comments)
+            self.assertNotIn("Audit moteur des coups imposés", all_comments)
+            self.assertNotIn("perte maximale observée", all_comments)
+            bilans = [(node, comment) for node, comment in comments if "BILAN V1.1 —" in comment]
+            self.assertEqual(len(bilans), 1, line_id)
+            self.assertIs(bilans[0][0], last, line_id)
+            row = max_rows.loc[line_id]
+            expected_head = f"BILAN V1.1 — Coup noir maximal : {int(row['loss_for_black_cp'])} cp. Gate : PASS."
+            self.assertIn(expected_head, bilans[0][1], line_id)
+            if int(row["loss_for_black_cp"]) > 15:
+                expected_tail = f"Maximum au ply {int(row['ply'])} sur ...{row['move_san']}."
+                self.assertIn(expected_tail, bilans[0][1], (line_id, row["move_uci"]))
+            else:
+                self.assertNotIn("Maximum au ply", bilans[0][1], line_id)
         script_text = (COURSE / "LAB/scripts/propose_continuation_repairs.py").read_text(encoding="utf-8")
         self.assertNotIn("selected_ids = selected_ids[:22]", script_text)
         self.assertFalse((cand["source_line_id"] == pd.read_csv(COURSE / "DATA/core_40_index.csv")["line_id"].head(len(cand)).tolist()).all())
@@ -239,6 +271,32 @@ class EditorialV11Tests(unittest.TestCase):
         self.assertGreaterEqual((cand["system_group"] == "JOBAVA").sum(), 2)
         self.assertGreaterEqual((cand["system_group"] == "TORRE").sum(), 2)
         self.assertGreaterEqual((cand["system_group"] == "VERESOV_PSEUDO_TROMP").sum(), 2)
+
+    def test_v11_gpu_observed_only_summary_and_report_text(self):
+        summary = json.loads((COURSE / "DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess_summary.json").read_text(encoding="utf-8"))
+        detail = pd.read_csv(COURSE / "DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess.csv")
+        observed = detail[detail["lichess_total"].fillna(0).astype(int) > 0]
+        observed = observed[~((observed["speed"].astype(str) == "ALL") & (observed["missing_side"].astype(str) == "lichess"))]
+        self.assertEqual(summary["lichess_observed_groups"], len(observed))
+        self.assertEqual(summary["model_only_groups"], int((detail["elo"].astype(int) == 2100).sum()))
+        self.assertEqual(summary["by_elo_observed_only"]["2100"]["status"], "MODEL_ONLY_NO_MATCHING_LICHESS_BAND")
+        self.assertEqual(summary["by_elo_observed_only"]["2100"]["true_disagreements_observed_only"], 0)
+        self.assertAlmostEqual(summary["top3_agreement_observed_only"], float(observed["top3_agreement"].fillna(False).astype(bool).mean()))
+        self.assertNotEqual(summary["top3_agreement_observed_only"], 0.17916666666666667)
+        decisions = pd.read_csv(COURSE / "DATA/editorial_line_decisions_v1_1.csv")
+        self.assertNotIn("gpu_full_policy_groups_observed", decisions.columns)
+        self.assertNotIn("gpu_top3_agreement_rate", decisions.columns)
+        self.assertIn("gpu_maia_groups_total", decisions.columns)
+        self.assertIn("gpu_lichess_observed_groups", decisions.columns)
+        self.assertIn("gpu_top3_agreement_observed_only", decisions.columns)
+        bdg_reason = decisions.loc[decisions["line_id"] == "BDG-01", "decision_reason"].iloc[0]
+        self.assertNotIn("Continuation REJECT", bdg_reason)
+        report = (COURSE / "PRODUCTION/RAPPORT_REFONTE_EDITORIALE_V1_1.md").read_text(encoding="utf-8")
+        self.assertNotIn("0.17916666666666667", report)
+        self.assertNotIn("doit être réaudité", report)
+        self.assertIn("groupes Lichess observés : 72", report)
+        self.assertIn("Les groupes sans données Lichess sont exclus", report)
+        self.assertIn("Le PGN candidat a été réaudité à 500 000 nœuds : 215 coups noirs, 0 REVIEW, 0 REJECT, gate global PASS.", report)
 
     def test_v11_protected_v1_files_untouched(self):
         result = subprocess.run(

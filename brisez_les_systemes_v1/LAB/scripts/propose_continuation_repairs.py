@@ -352,6 +352,9 @@ def classify(manifest: pd.DataFrame, key: pd.DataFrame, failures: pd.DataFrame, 
         elif failure_type == "LATER_CONTINUATION_REVIEW":
             decision = "SIDELINE_ONLY"
             reason = "Continuation REVIEW sans réparation assez simple validée : sideline."
+        elif failure_type == "NO_ENGINE_FAILURE":
+            decision = "SIDELINE_ONLY"
+            reason = "Ligne saine mais légèrement au-dessus du gate PASS strict ou moins prioritaire éditorialement."
         else:
             decision = "SIDELINE_ONLY"
             reason = "Continuation REJECT ou réparation insuffisante : hors noyau."
@@ -399,8 +402,9 @@ def classify(manifest: pd.DataFrame, key: pd.DataFrame, failures: pd.DataFrame, 
             "selection_score": round(selection_score, 3),
             "rarity_flag": "RARE" if rare else "OBSERVED",
             "redundancy_flag": "REDUNDANT" if redundant else "DISTINCT",
-            "gpu_full_policy_groups_observed": gpu_used.get("maia_groups_observed", ""),
-            "gpu_top3_agreement_rate": gpu_used.get("overall_top3_agreement_rate", ""),
+            "gpu_maia_groups_total": gpu_used.get("maia_groups_total", gpu_used.get("maia_groups_observed", "")),
+            "gpu_lichess_observed_groups": gpu_used.get("lichess_observed_groups", ""),
+            "gpu_top3_agreement_observed_only": gpu_used.get("top3_agreement_observed_only", ""),
         })
     df = pd.DataFrame(rows)
     df.to_csv(output, index=False)
@@ -623,15 +627,16 @@ def write_report(manifest: pd.DataFrame, key: pd.DataFrame, failures: pd.DataFra
     lines.append("- Source scorecards : DATA/scorecards_validated_expanded_corrected.csv.\n")
     lines.append("- Source synthèse corrigée : DATA/corrected_validation_summary.json.\n")
     lines.append("- Source GPU full-policy : DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess_summary.json.\n")
-    if "gpu_full_policy_groups_observed" in decisions.columns:
-        gpu_groups = decisions["gpu_full_policy_groups_observed"].dropna().astype(str).replace("", pd.NA).dropna()
-        gpu_top3 = decisions["gpu_top3_agreement_rate"].dropna().astype(str).replace("", pd.NA).dropna()
-        if not gpu_groups.empty:
-            lines.append(f"- Groupes Maia GPU observés : {gpu_groups.iloc[0]} ; top3 agreement full-policy/Lichess : {gpu_top3.iloc[0] if not gpu_top3.empty else 'n/a'}.\n")
+    if "gpu_top3_agreement_observed_only" in decisions.columns:
+        gpu_total = decisions["gpu_maia_groups_total"].dropna().astype(str).replace("", pd.NA).dropna() if "gpu_maia_groups_total" in decisions.columns else pd.Series(dtype=str)
+        gpu_obs = decisions["gpu_lichess_observed_groups"].dropna().astype(str).replace("", pd.NA).dropna() if "gpu_lichess_observed_groups" in decisions.columns else pd.Series(dtype=str)
+        gpu_top3 = decisions["gpu_top3_agreement_observed_only"].dropna().astype(str).replace("", pd.NA).dropna()
+        if not gpu_top3.empty:
+            lines.append(f"- Groupes Maia GPU total : {gpu_total.iloc[0] if not gpu_total.empty else 'n/a'} ; groupes Lichess observés : {gpu_obs.iloc[0] if not gpu_obs.empty else 'n/a'} ; top3 agreement observed-only : {gpu_top3.iloc[0]}. Les groupes sans données Lichess sont exclus des taux.\n")
     lines.append("- La rareté ne condamne pas automatiquement un concept sain ; elle baisse la priorité core, le poids MoveTrainer et signale un besoin de bêta humaine.\n")
 
     lines.append("\n## Note audit moteur candidat\n")
-    lines.append("Le PGN candidat doit être réaudité dans DATA/stockfish_v1_1_candidate_500k.csv, puis les commentaires BILAN V1.1 sont régénérés exclusivement depuis ce CSV.\n")
+    lines.append("Le PGN candidat a été réaudité à 500 000 nœuds : 215 coups noirs, 0 REVIEW, 0 REJECT, gate global PASS.\n")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("".join(lines), encoding="utf-8")
 

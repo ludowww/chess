@@ -1,78 +1,78 @@
 {
-  "expected_maia_groups": 240,
-  "maia_groups_observed": 240,
+  "source_csv": "DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess.csv",
+  "maia_groups_total": 240,
   "detail_rows": 265,
-  "overall_maia_mass_covered_by_lichess": 0.7758987853425692,
-  "overall_top1_agreement_rate": 0.10416666666666667,
-  "overall_top3_agreement_rate": 0.17916666666666667,
-  "lichess_outside_maia_top10_but_in_full_policy": 0,
-  "remaining_divergences": 215,
-  "by_elo": {
+  "lichess_observed_groups": 72,
+  "lichess_missing_groups": 193,
+  "model_only_groups": 40,
+  "model_only_status": "MODEL_ONLY_NO_MATCHING_LICHESS_BAND",
+  "top1_agreement_observed_only": 0.5138888888888888,
+  "top3_agreement_observed_only": 0.875,
+  "maia_mass_covered_observed_only": 0.5039242313295189,
+  "true_disagreements_observed_only": 9,
+  "excluded_from_agreement_rates": {
+    "missing_side_lichess_speed_ALL_groups": 193,
+    "elo_2100_model_only_groups": 40
+  },
+  "by_elo_observed_only": {
     "1100": {
-      "groups": 40,
-      "maia_mass_covered_by_lichess": 0.5270522698050453,
-      "top1_agreement_rate": 0.05,
-      "top3_agreement_rate": 0.125,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 38
+      "lichess_observed_groups": 10,
+      "top1_agreement_observed_only": 0.3,
+      "top3_agreement_observed_only": 0.7,
+      "maia_mass_covered_observed_only": 0.38276432063430543,
+      "true_disagreements_observed_only": 3
     },
     "1300": {
-      "groups": 40,
-      "maia_mass_covered_by_lichess": 0.6487973316710579,
-      "top1_agreement_rate": 0.125,
-      "top3_agreement_rate": 0.2,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 35
+      "lichess_observed_groups": 12,
+      "top1_agreement_observed_only": 0.5,
+      "top3_agreement_observed_only": 0.9166666666666666,
+      "maia_mass_covered_observed_only": 0.4116920374411468,
+      "true_disagreements_observed_only": 1
     },
     "1500": {
-      "groups": 40,
-      "maia_mass_covered_by_lichess": 0.704093595199725,
-      "top1_agreement_rate": 0.15,
-      "top3_agreement_rate": 0.25,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 34
+      "lichess_observed_groups": 17,
+      "top1_agreement_observed_only": 0.5294117647058824,
+      "top3_agreement_observed_only": 0.8235294117647058,
+      "maia_mass_covered_observed_only": 0.4777767954065518,
+      "true_disagreements_observed_only": 3
     },
     "1700": {
-      "groups": 40,
-      "maia_mass_covered_by_lichess": 0.7919778856168307,
-      "top1_agreement_rate": 0.125,
-      "top3_agreement_rate": 0.225,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 35
+      "lichess_observed_groups": 14,
+      "top1_agreement_observed_only": 0.42857142857142855,
+      "top3_agreement_observed_only": 0.9285714285714286,
+      "maia_mass_covered_observed_only": 0.5695243272930384,
+      "true_disagreements_observed_only": 1
     },
     "1900": {
-      "groups": 40,
-      "maia_mass_covered_by_lichess": 0.8652078540412692,
-      "top1_agreement_rate": 0.175,
-      "top3_agreement_rate": 0.275,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 33
+      "lichess_observed_groups": 19,
+      "top1_agreement_observed_only": 0.6842105263157895,
+      "top3_agreement_observed_only": 0.9473684210526315,
+      "maia_mass_covered_observed_only": 0.6010026787407696,
+      "true_disagreements_observed_only": 1
     },
     "2100": {
-      "groups": 40,
-      "maia_mass_covered_by_lichess": 0.0,
-      "top1_agreement_rate": 0.0,
-      "top3_agreement_rate": 0.0,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 40
+      "status": "MODEL_ONLY_NO_MATCHING_LICHESS_BAND",
+      "lichess_observed_groups": 0,
+      "top1_agreement_observed_only": null,
+      "top3_agreement_observed_only": null,
+      "maia_mass_covered_observed_only": null,
+      "true_disagreements_observed_only": 0
     }
   },
-  "by_speed": {
+  "by_speed_observed_only": {
     "blitz": {
-      "groups": 44,
-      "maia_mass_covered_by_lichess": 0.722961069718082,
-      "top1_agreement_rate": 0.5227272727272727,
-      "top3_agreement_rate": 0.8636363636363636,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 21
+      "lichess_observed_groups": 44,
+      "top1_agreement_observed_only": 0.5227272727272727,
+      "top3_agreement_observed_only": 0.8636363636363636,
+      "maia_mass_covered_observed_only": 0.5105177095498551,
+      "true_disagreements_observed_only": 6
     },
     "rapid": {
-      "groups": 28,
-      "maia_mass_covered_by_lichess": 0.5825338886267896,
-      "top1_agreement_rate": 0.5,
-      "top3_agreement_rate": 0.8928571428571429,
-      "lichess_outside_maia_top10_but_in_full_policy": 0,
-      "remaining_divergences": 14
+      "lichess_observed_groups": 28,
+      "top1_agreement_observed_only": 0.5,
+      "top3_agreement_observed_only": 0.8928571428571429,
+      "maia_mass_covered_observed_only": 0.4935630512689905,
+      "true_disagreements_observed_only": 3
     }
   }
 }

@@ -12,25 +12,25 @@
 
 ## Composition finale du core
 1. V11-01-ORD-01 ← ORD-01 — 2.Bf4 : ...c5 puis le clouage ...Bg4 (REPAIR_CONTINUATION, LONDON_EARLY_C5_BG4) — réparation f6 au FEN exact
-2. V11-02-ORD-02 ← ORD-02 — 2.Bf4 et 3.c3 : revenir au plan ...Nc6 (KEEP_CORE, LONDON_QB6_DOUBLE_PRESSURE)
-3. V11-03-COL-01 ← COL-01 — 3.e3 : sortir le fou avec ...Bf5 (KEEP_CORE, COLLE_BF5_DEVELOPMENT)
+2. V11-02-ORD-02 ← ORD-02 — 2.Bf4 et 3.c3 : revenir au plan ...Nc6 (KEEP_CORE, LONDON_QB6_DOUBLE_PRESSURE) — réparation nan au FEN exact
+3. V11-03-COL-01 ← COL-01 — 3.e3 : sortir le fou avec ...Bf5 (KEEP_CORE, COLLE_BF5_DEVELOPMENT) — réparation nan au FEN exact
 4. V11-04-COL-10 ← COL-10 — Zukertort : frapper par ...c5 (REPAIR_CONTINUATION, COLLE_ZUKERTORT_C5_QC7) — réparation Qc7 au FEN exact
-5. V11-05-VER-01 ← VER-01 — 3...c5 : attaquer d4 immédiatement (KEEP_CORE, VERESOV_CENTER_BREAK)
-6. V11-06-LON-02 ← LON-02 — La dame recule en c2 : ...Bf5 (KEEP_CORE, LONDON_QC1_CXD4_STRUCTURE)
+5. V11-05-VER-01 ← VER-01 — 3...c5 : attaquer d4 immédiatement (KEEP_CORE, VERESOV_CENTER_BREAK) — réparation nan au FEN exact
+6. V11-06-LON-02 ← LON-02 — La dame recule en c2 : ...Bf5 (KEEP_CORE, LONDON_QC1_CXD4_STRUCTURE) — réparation nan au FEN exact
 7. V11-07-LON-04 ← LON-04 — Qc1 et reprise par le pion e (REPAIR_CONTINUATION, LONDON_QC1_CXD4_STRUCTURE) — réparation Rc8 au FEN exact
-8. V11-08-LON-09 ← LON-09 — b3 protège b2 : développer avec ...Bg4 (KEEP_CORE, LONDON_EARLY_C5_BG4)
-9. V11-09-LON-01 ← LON-01 — La dame blanche s’échange : ...c4! (KEEP_CORE, LONDON_QB3_C4_ENDGAME)
+8. V11-08-LON-09 ← LON-09 — b3 protège b2 : développer avec ...Bg4 (KEEP_CORE, LONDON_EARLY_C5_BG4) — réparation nan au FEN exact
+9. V11-09-LON-01 ← LON-01 — La dame blanche s’échange : ...c4! (KEEP_CORE, LONDON_QB3_C4_ENDGAME) — réparation nan au FEN exact
 10. V11-10-LON-03 ← LON-03 — La finale asymétrique : le plan ...b5 (REPAIR_CONTINUATION, LONDON_QB3_C4_ENDGAME) — réparation Bf5 au FEN exact
-11. V11-11-LON-05 ← LON-05 — Qc1 et reprise par le pion c (KEEP_CORE, LONDON_QC1_CXD4_STRUCTURE)
+11. V11-11-LON-05 ← LON-05 — Qc1 et reprise par le pion c (KEEP_CORE, LONDON_QC1_CXD4_STRUCTURE) — réparation nan au FEN exact
 12. V11-12-JOB-09 ← JOB-09 — 4.a3 : un tempo décoratif (REPAIR_CONTINUATION, JOBAVA_TEMPO_CENTER_BREAK) — réparation d4 au FEN exact
-13. V11-13-PST-04 ← PST-04 — 3.Bxh6? : accepter le sacrifice (KEEP_CORE, PSEUDO_TROMP_BISHOP_SAC)
-14. V11-14-LON-12 ← LON-12 — Bd3 oublie b2 (KEEP_CORE, LONDON_QB2_QUEEN_RAID)
-15. V11-15-TOR-02 ← TOR-02 — 4.Bh4 : le coup machine ...h5! (KEEP_CORE, TORRE_H4_H5_BISHOP_TRAP)
-16. V11-16-PST-01 ← PST-01 — 2.Bg5 : demander au fou avec ...h6 (KEEP_CORE, PSEUDO_TROMP_H6_CENTER)
+13. V11-13-PST-04 ← PST-04 — 3.Bxh6? : accepter le sacrifice (KEEP_CORE, PSEUDO_TROMP_BISHOP_SAC) — réparation nan au FEN exact
+14. V11-14-LON-12 ← LON-12 — Bd3 oublie b2 (KEEP_CORE, LONDON_QB2_QUEEN_RAID) — réparation nan au FEN exact
+15. V11-15-TOR-02 ← TOR-02 — 4.Bh4 : le coup machine ...h5! (KEEP_CORE, TORRE_H4_H5_BISHOP_TRAP) — réparation nan au FEN exact
+16. V11-16-PST-01 ← PST-01 — 2.Bg5 : demander au fou avec ...h6 (KEEP_CORE, PSEUDO_TROMP_H6_CENTER) — réparation nan au FEN exact
 17. V11-17-LON-07 ← LON-07 — Le fou se cache en g5 : ...h6 et ...g5 (REPAIR_CONTINUATION, LONDON_NH5_BISHOP_HUNT) — réparation Bf5 au FEN exact
 18. V11-18-TOR-06 ← TOR-06 — 4.Nbd2 : prendre le fou (REPAIR_CONTINUATION, TORRE_NBD2_EXCHANGE_CENTER) — réparation Bd6 au FEN exact
 19. V11-19-TOR-05 ← TOR-05 — 4.h4 : ignorer l’intimidation (REPAIR_CONTINUATION, TORRE_H4_CENTER_RESPONSE) — réparation Qb6 au FEN exact
-20. V11-20-JOB-04 ← JOB-04 — 4.Nb5 : l’échec qui casse le schéma (KEEP_CORE, JOBAVA_NB5_CHECK_RESPONSE)
+20. V11-20-JOB-04 ← JOB-04 — 4.Nb5 : l’échec qui casse le schéma (KEEP_CORE, JOBAVA_NB5_CHECK_RESPONSE) — réparation nan au FEN exact
 
 ## Variantes naturellement PASS
 - COL-01 — Colle/Zukertort : sortir le fou avant e6 ; max V1 avant candidat 20 cp.
@@ -97,7 +97,7 @@
 - TOR-08 — Torre : e3, ...f6-g5 : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess NO_EXACT_POSITION_SAMPLE, n=0).
 - TOR-09 — Torre : route Bh4-h5-f6 et échange : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess NO_EXACT_POSITION_SAMPLE, n=0).
 - STO-01 — Stonewall : fixer par ...c4 : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess NO_EXACT_POSITION_SAMPLE, n=0).
-- BDG-01 — Blackmar-Diemer : accepter puis développer : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess OBSERVED, n=36).
+- BDG-01 — Blackmar-Diemer : accepter puis développer : Ligne saine mais légèrement au-dessus du gate PASS strict (28 cp) et moins prioritaire éditorialement que les systèmes déjà représentés. (Maia AVAILABLE, Lichess OBSERVED, n=36).
 - JOB-06 — Jobava : f3, ouvrir avant e4 : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess NO_EXACT_POSITION_SAMPLE, n=0).
 - JOB-10 — Jobava : tempos d’aile, centre d’abord : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess NO_EXACT_POSITION_SAMPLE, n=0).
 - VER-08 — Veresov : f3, ouvrir avant e4 : Continuation REJECT ou réparation insuffisante : hors noyau. (Maia AVAILABLE, Lichess NO_EXACT_POSITION_SAMPLE, n=0).
@@ -134,8 +134,8 @@
 - Source scorecards : DATA/scorecards_validated_expanded_corrected.csv.
 - Source synthèse corrigée : DATA/corrected_validation_summary.json.
 - Source GPU full-policy : DATA/GPU_LOCAL/maia3_full_policy_gpu_vs_lichess_summary.json.
-- Groupes Maia GPU observés : 240 ; top3 agreement full-policy/Lichess : 0.17916666666666667.
+- Groupes Maia GPU total : 240 ; groupes Lichess observés : 72 ; top3 agreement observed-only : 0.875. Les groupes sans données Lichess sont exclus des taux.
 - La rareté ne condamne pas automatiquement un concept sain ; elle baisse la priorité core, le poids MoveTrainer et signale un besoin de bêta humaine.
 
 ## Note audit moteur candidat
-Le PGN candidat doit être réaudité dans DATA/stockfish_v1_1_candidate_500k.csv, puis les commentaires BILAN V1.1 sont régénérés exclusivement depuis ce CSV.
+Le PGN candidat a été réaudité à 500 000 nœuds : 215 coups noirs, 0 REVIEW, 0 REJECT, gate global PASS.

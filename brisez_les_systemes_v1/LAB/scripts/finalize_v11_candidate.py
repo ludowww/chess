@@ -1,14 +1,29 @@
 from __future__ import annotations
 
 import argparse
-import io
 import json
+import re
 from pathlib import Path
 
 import chess.pgn
 import pandas as pd
 
 from common import parse_pgn_games
+
+STALE_BILAN_MARKERS = (
+    "BILAN — Ligne",
+    "Audit moteur des coups imposés",
+    "perte maximale observée",
+    "BILAN V1.1 —",
+)
+
+
+def clean_comment(comment: str) -> str:
+    if not comment:
+        return ""
+    parts = [part.strip() for part in re.split(r"\n+", comment) if part.strip()]
+    kept = [part for part in parts if not any(marker in part for marker in STALE_BILAN_MARKERS)]
+    return "\n".join(kept).strip()
 
 
 def max_rows(audit: pd.DataFrame) -> pd.DataFrame:
@@ -33,7 +48,14 @@ def max_rows(audit: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows).sort_values("line_id")
 
 
-def append_bilan_comments(pgn_path: Path, audit_path: Path, out_path: Path) -> None:
+def bilan_text(row: pd.Series) -> str:
+    text = f"BILAN V1.1 — Coup noir maximal : {int(row['max_loss_cp'])} cp. Gate : {row['gate']}."
+    if int(row["max_loss_cp"]) > 15:
+        text += f" Maximum au ply {int(row['max_loss_ply'])} sur ...{row['max_loss_move_san']}."
+    return text
+
+
+def regenerate_bilan_comments(pgn_path: Path, audit_path: Path, out_path: Path) -> None:
     audit = pd.read_csv(audit_path)
     maxima = max_rows(audit).set_index("line_id")
     games = list(parse_pgn_games(pgn_path))
@@ -42,11 +64,15 @@ def append_bilan_comments(pgn_path: Path, audit_path: Path, out_path: Path) -> N
             line_id = game.headers.get("Round")
             if line_id not in maxima.index:
                 raise ValueError(f"No audit maximum for {line_id}")
-            m = maxima.loc[line_id]
-            comment = f"BILAN V1.1 — Coup noir maximal : {int(m['max_loss_cp'])} cp. Gate : {m['gate']}."
-            if int(m["max_loss_cp"]) > 15:
-                comment += f" Ply {int(m['max_loss_ply'])}, coup {m['max_loss_move_san']}."
-            game.comment = (game.comment + "\n" if game.comment else "") + comment
+            game.comment = clean_comment(game.comment)
+            last_node = game
+            for node in game.mainline():
+                node.comment = clean_comment(node.comment)
+                last_node = node
+            if last_node is game:
+                raise ValueError(f"Game has no moves: {line_id}")
+            b = bilan_text(maxima.loc[line_id])
+            last_node.comment = (last_node.comment + "\n" if last_node.comment else "") + b
             exporter = chess.pgn.StringExporter(headers=True, variations=False, comments=True)
             handle.write(game.accept(exporter).strip() + "\n\n")
 
@@ -78,11 +104,28 @@ def write_summary(audit_path: Path, manifest_path: Path, out_path: Path) -> dict
 
 def verify_bilans(pgn_path: Path, audit_path: Path) -> None:
     maxima = max_rows(pd.read_csv(audit_path)).set_index("line_id")
+    stale = STALE_BILAN_MARKERS[:-1]
     for game in parse_pgn_games(pgn_path):
         line_id = game.headers.get("Round")
-        expected = f"Coup noir maximal : {int(maxima.loc[line_id, 'max_loss_cp'])} cp"
-        if expected not in (game.comment or ""):
-            raise AssertionError(f"BILAN mismatch for {line_id}: expected {expected!r}, got {game.comment!r}")
+        comments = []
+        last = game
+        for node in game.mainline():
+            if node.comment:
+                comments.append((node, node.comment))
+            last = node
+        bilans = [(node, comment) for node, comment in comments if "BILAN V1.1 —" in comment]
+        if len(bilans) != 1:
+            raise AssertionError(f"Expected exactly one V1.1 bilan for {line_id}, got {len(bilans)}")
+        if bilans[0][0] is not last:
+            raise AssertionError(f"BILAN V1.1 is not on last node for {line_id}")
+        all_comment_text = "\n".join(c for _, c in comments)
+        for marker in stale:
+            if marker in all_comment_text:
+                raise AssertionError(f"Stale bilan marker {marker!r} in {line_id}")
+        m = maxima.loc[line_id]
+        expected = bilan_text(m)
+        if bilans[0][1].count(expected) != 1:
+            raise AssertionError(f"BILAN mismatch for {line_id}: expected {expected!r}, got {bilans[0][1]!r}")
 
 
 def main() -> int:
@@ -92,7 +135,7 @@ def main() -> int:
     parser.add_argument("--manifest", type=Path, default=Path("DATA/core_v1_1_candidate_manifest.csv"))
     parser.add_argument("--summary", type=Path, default=Path("DATA/v1_1_candidate_engine_summary.json"))
     args = parser.parse_args()
-    append_bilan_comments(args.pgn, args.audit, args.pgn)
+    regenerate_bilan_comments(args.pgn, args.audit, args.pgn)
     summary = write_summary(args.audit, args.manifest, args.summary)
     verify_bilans(args.pgn, args.audit)
     print(f"finalized bilans; gate={summary['candidate_gate']} review={summary['black_moves_review']} reject={summary['black_moves_reject']}")
