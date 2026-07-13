@@ -250,9 +250,10 @@ def classify(manifest: pd.DataFrame, key: pd.DataFrame, failures: pd.DataFrame, 
         else:
             decision = "KEEP_CORE" if line_max <= 50 else "SIDELINE_ONLY"
             reason = "Coup-clé sain et pas de défaut moteur critique dans la ligne principale."
+        original_engine_gate = loss_gate(line_max)
         rows.append({
             "line_id": line_id,
-            "original_engine_gate": rec.get("stockfish_v1_status", rec.get("legacy_engine_grade", "")),
+            "original_engine_gate": original_engine_gate,
             "key_move_gate": key_gate,
             "failure_type": failure_type,
             "maia_status": maia,
@@ -372,17 +373,24 @@ def write_report(manifest: pd.DataFrame, key: pd.DataFrame, failures: pd.DataFra
     for g in ["PASS", "REVIEW", "REJECT"]:
         lines.append(f"- {g} : {gate_counts.get(g,0)}\n")
     lines.append("\n## Audit des 16 lignes précédemment PASS\n")
-    pass_like = decisions[decisions["original_engine_gate"].astype(str).str.contains("A|PASS", regex=True, na=False)].head(16)
+    pass_like = decisions[decisions["original_engine_gate"] == "PASS"]
     for row in pass_like.to_dict("records"):
-        lines.append(f"- {row['line_id']} : {row['decision']} — {row['decision_reason']}\n")
+        role = "reste dans le core" if row["line_id"] in set(cand["source_line_id"]) else "devient sideline (rareté/redondance)"
+        lines.append(f"- {row['line_id']} : {row['decision']} — {role}. {row['decision_reason']}\n")
     lines.append("\n## Audit des 10 lignes REVIEW\n")
-    for row in key[key["key_move_gate"] == "REVIEW"].head(10).to_dict("records"):
+    for row in decisions[decisions["original_engine_gate"] == "REVIEW"].to_dict("records"):
+        k = key[key["line_id"] == row["line_id"]].iloc[0]
         fail = failures[failures["line_id"] == row["line_id"]].iloc[0]
-        lines.append(f"- {row['line_id']} : coup-clé perte {row['key_move_loss_cp']} cp ; premier défaut {fail['failure_type']} ; décision {decisions[decisions['line_id']==row['line_id']].iloc[0]['decision']}.\n")
+        repair = repairs[repairs["line_id"] == row["line_id"]].head(1)
+        repair_text = "aucune réparation simple retenue" if repair.empty else f"réparation proposée: {repair.iloc[0]['replacement_move_san']} ({repair.iloc[0]['technical_recommendation']})"
+        lines.append(f"- {row['line_id']} : coup-clé sain ({k['key_move_gate']}, {k['key_move_loss_cp']} cp) ; première imprécision {fail['failure_type']} ; {repair_text} ; décision {row['decision']}.\n")
     lines.append("\n## Audit des 14 lignes REJECT\n")
-    for row in key[key["key_move_gate"] == "REJECT"].head(14).to_dict("records"):
-        dec = decisions[decisions["line_id"] == row["line_id"]].iloc[0]
-        lines.append(f"- {row['line_id']} : coup-clé réellement mauvais si perte >50 cp ({row['key_move_loss_cp']} cp). Concept {'récupérable' if dec['decision']=='REPLACE_KEY_MOVE' else 'à abandonner ou sideline'} ; décision {dec['decision']}.\n")
+    for row in decisions[decisions["original_engine_gate"] == "REJECT"].to_dict("records"):
+        k = key[key["line_id"] == row["line_id"]].iloc[0]
+        fail = failures[failures["line_id"] == row["line_id"]].iloc[0]
+        cause = "coup-clé réellement mauvais" if k["key_move_gate"] == "REJECT" else "coup-clé sain mais continuation ultérieure mauvaise"
+        recover = "concept récupérable en sideline/réparation" if row["line_id"] in set(repairs.get("line_id", [])) else "concept à abandonner dans le cœur"
+        lines.append(f"- {row['line_id']} : {cause} ; premier défaut {fail['failure_type']} ; {recover} ; décision {row['decision']}.\n")
     lines.append("\n## Noyau V1.1 proposé\n")
     for row in cand.to_dict("records"):
         lines.append(f"{row['core_order']}. {row['line_id_v1_1']} ← {row['source_line_id']} — {row['title']} ({row['editorial_decision']}, {row['concept_family_id']})\n")

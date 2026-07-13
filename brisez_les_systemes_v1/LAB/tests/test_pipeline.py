@@ -139,6 +139,69 @@ class ScorecardGateTests(unittest.TestCase):
         self.assertFalse((rejected["editorial_recommendation"] == "EDITORIAL_REVIEW_READY").any())
 
 
+class EditorialV11Tests(unittest.TestCase):
+    def test_editorial_v11_artifacts_are_consistent(self):
+        key_path = COURSE / "DATA/key_move_audit_v1_1.csv"
+        failure_path = COURSE / "DATA/continuation_failure_audit_v1_1.csv"
+        repairs_path = COURSE / "DATA/continuation_repair_candidates_v1_1.csv"
+        decisions_path = COURSE / "DATA/editorial_line_decisions_v1_1.csv"
+        candidate_manifest_path = COURSE / "DATA/core_v1_1_candidate_manifest.csv"
+        candidate_pgn_path = COURSE / "PGN/99_cours_v1_1_candidate.pgn"
+        for path in [key_path, failure_path, repairs_path, decisions_path, candidate_manifest_path, candidate_pgn_path, COURSE / "PRODUCTION/RAPPORT_REFONTE_EDITORIALE_V1_1.md"]:
+            self.assertTrue(path.exists(), path)
+
+        key = pd.read_csv(key_path)
+        self.assertEqual(len(key), 40)
+        self.assertFalse(key["key_move_san"].isna().any())
+        self.assertTrue(set(key["key_move_gate"]) <= {"PASS", "REVIEW", "REJECT"})
+        for row in key.to_dict("records"):
+            loss = int(row["key_move_loss_cp"])
+            expected = "PASS" if loss <= 25 else "REVIEW" if loss <= 50 else "REJECT"
+            self.assertEqual(row["key_move_gate"], expected, row["line_id"])
+
+        failures = pd.read_csv(failure_path)
+        self.assertEqual(len(failures), 40)
+        self.assertTrue(set(failures["failure_type"]) <= {"NO_ENGINE_FAILURE", "KEY_MOVE_FAILURE", "LATER_CONTINUATION_REVIEW", "LATER_CONTINUATION_REJECT"})
+        for row in failures.to_dict("records"):
+            if row["failure_type"] == "KEY_MOVE_FAILURE":
+                self.assertIn(row["key_move_gate"], {"REVIEW", "REJECT"})
+            if row["failure_type"] == "LATER_CONTINUATION_REJECT":
+                self.assertGreater(int(row["first_black_loss_over_50"]), 50)
+
+        repairs = pd.read_csv(repairs_path)
+        self.assertTrue(set(repairs.get("concept_preserved", pd.Series(dtype=str)).dropna()) <= {"YES", "PARTIAL", "NO"})
+        self.assertTrue(set(repairs.get("repair_complexity", pd.Series(dtype=str)).dropna()) <= {"SIMPLE", "MODERATE", "COMPLEX"})
+
+        decisions = pd.read_csv(decisions_path)
+        self.assertEqual(len(decisions), 40)
+        self.assertFalse(((decisions["decision"] == "KEEP_CORE") & (decisions["key_move_gate"] == "REJECT")).any())
+
+        cand = pd.read_csv(candidate_manifest_path)
+        self.assertGreaterEqual(len(cand), 20)
+        self.assertLessEqual(len(cand), 24)
+        self.assertEqual(len(cand["line_id_v1_1"]), len(set(cand["line_id_v1_1"])))
+        games = list(parse_pgn_games(candidate_pgn_path))
+        self.assertEqual(len(games), len(cand))
+        manifest_ids = set(cand["line_id_v1_1"])
+        pgn_ids = {game.headers.get("Round") for game in games}
+        self.assertEqual(pgn_ids, manifest_ids)
+        for game in games:
+            self.assertFalse(game.errors, game.headers.get("Round"))
+            board = game.board()
+            black_rejects = []
+            line_id = game.headers.get("SourceLineID")
+            sf = pd.read_csv(COURSE / "DATA/stockfish_v1_500k.csv")
+            sf_line = sf[sf["line_id"] == line_id]
+            for node in game.mainline():
+                self.assertIn(node.move, board.legal_moves, game.headers.get("Round"))
+                if board.turn == chess.BLACK:
+                    match = sf_line[(sf_line["fen_before"].map(fen4) == fen4(board)) & (sf_line["move_uci"] == node.move.uci())]
+                    if not match.empty and int(match.iloc[0]["loss_for_black_cp"]) > 50:
+                        black_rejects.append((node.ply(), node.move.uci()))
+                board.push(node.move)
+            self.assertFalse(black_rejects, (game.headers.get("Round"), black_rejects))
+
+
 class CourseTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
