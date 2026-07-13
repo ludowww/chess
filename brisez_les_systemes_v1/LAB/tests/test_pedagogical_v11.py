@@ -58,7 +58,7 @@ class PedagogicalV11Tests(unittest.TestCase):
             self.assertEqual(len(player_moves) % 2, 0, source)
             self.assertEqual(len(player_moves), int(by_source.loc[source, "trainer_stop_ply"]), source)
 
-    def test_headers_manifest_titles_moves_and_comments_align(self):
+    def test_headers_manifest_titles_moves_and_distributed_pedagogy_align(self):
         by_source = self.manifest.set_index("source_line_id")
         comments_seen = set()
         for game in self.player:
@@ -70,20 +70,36 @@ class PedagogicalV11Tests(unittest.TestCase):
             self.assertEqual(game.headers.get("OpeningFamily"), row["opening_family"])
             self.assertEqual(game.headers.get("Tier"), row["tier"])
             self.assertEqual(game.headers.get("LessonMove"), row["lesson_move_san"])
+
+            nodes = list(game.mainline())
+            lesson_nodes = [node for node in nodes if node.move.uci() == row["lesson_move_uci"]]
+            self.assertEqual(len(lesson_nodes), 1, source)
+            lesson_node = lesson_nodes[0]
+            lesson_index = nodes.index(lesson_node)
+            self.assertGreater(lesson_index, 0, source)
+            self.assertTrue((game.comment or "").startswith("Repère :"), source)
+            self.assertTrue((nodes[lesson_index - 1].comment or "").startswith("Déclencheur :"), source)
+            self.assertTrue((lesson_node.comment or "").startswith("Le coup :"), source)
+
+            comments = ([game.comment] if game.comment else []) + [node.comment for node in nodes if node.comment]
+            self.assertGreaterEqual(len(comments), 3, source)
+            self.assertLessEqual(len(comments), 4, source)
+            commentary = " ".join(comments)
+            for label in ["Repère :", "Déclencheur :", "Le coup :", "À retenir :", "Erreur à éviter :"]:
+                self.assertIn(label, commentary, source)
+            if lesson_node is not nodes[-1]:
+                self.assertTrue((nodes[-1].comment or "").startswith("Plan :"), source)
+
             san_token = re.sub(r"[+#]$", "", str(row["lesson_move_san"]))
-            coherence = " ".join([str(row["player_title"]), str(row["lesson_goal"])])
-            lesson_comments = []
-            for node in game.mainline():
-                if node.move.uci() == row["lesson_move_uci"]:
-                    lesson_comments.append(node.comment)
-            self.assertEqual(len(lesson_comments), 1, source)
-            comment = lesson_comments[0]
-            self.assertIn(san_token, coherence + " " + comment, source)
-            for label in ["Idée :", "Pourquoi :", "Suite :", "Mémo :"]:
-                self.assertIn(label, comment, source)
-            self.assertLessEqual(len(comment.split()), 90, source)
-            self.assertNotIn(comment, comments_seen, source)
-            comments_seen.add(comment)
+            coherence = " ".join([str(row["player_title"]), str(row["lesson_goal"]), commentary])
+            self.assertIn(san_token, coherence, source)
+            total_words = len(commentary.split())
+            self.assertGreaterEqual(total_words, 80, source)
+            self.assertLessEqual(total_words, 160, source)
+            for comment in comments:
+                self.assertLessEqual(len(comment.split()), 75, source)
+                self.assertNotIn(comment, comments_seen, source)
+                comments_seen.add(comment)
 
     def test_no_laboratory_language_and_pst04_fact_is_correct(self):
         text = self.player_path.read_text(encoding="utf-8")
@@ -94,7 +110,7 @@ class PedagogicalV11Tests(unittest.TestCase):
         for term in forbidden:
             self.assertNotIn(term, text)
         pst = next(g for g in self.player if g.headers.get("SourceLineID") == "PST-04")
-        comments = "\n".join(node.comment for node in pst.mainline() if node.comment)
+        comments = "\n".join(([pst.comment] if pst.comment else []) + [node.comment for node in pst.mainline() if node.comment])
         self.assertNotIn("deux pions", comments.lower())
         self.assertIn("un pion ne vaut pas un fou", comments.lower())
 
@@ -105,6 +121,9 @@ class PedagogicalV11Tests(unittest.TestCase):
         self.assertIn("LON-09", report)
         self.assertIn("LON-05", report)
         self.assertIn("Tester `BDG-01`", report)
+        self.assertIn("73 interventions pédagogiques", report)
+        self.assertIn("Repère", report)
+        self.assertIn("Déclencheur", report)
         self.assertNotEqual(self.player_path.read_text(encoding="utf-8"), self.tech_path.read_text(encoding="utf-8"))
 
 
