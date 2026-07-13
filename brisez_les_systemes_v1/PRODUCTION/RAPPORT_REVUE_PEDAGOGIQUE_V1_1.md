@@ -74,11 +74,25 @@ Chaque titre nomme désormais la décision réellement entraînée. Les correcti
 
 `LON-03`, `LON-12`
 
-## Nettoyage éditorial
+## Commentaires pédagogiques
 
-Le parcours joueur retire toutes les traces de fabrication : réparation, gate, centipions, moteur, FEN et bilan d’audit. Chaque ligne porte un commentaire unique structuré en quatre éléments courts : idée, raison, suite et mémo.
+Le parcours contient désormais **73 interventions pédagogiques** réparties dans les 20 leçons :
 
-La formulation de `PST-04` est corrigée : un seul pion a été capturé avant `...Rxh6`. Le mémo joueur est désormais : « Un pion ne vaut pas un fou ; la tour h6 peut revenir. »
+- 20 **Repères** présentent la structure et l’idée adverse avant la séquence ;
+- 20 **Déclencheurs** expliquent pourquoi le dernier coup blanc autorise la réponse noire ;
+- 20 commentaires **Le coup** donnent la fonction exacte du coup entraîné ;
+- 13 commentaires **Plan** accompagnent les lignes qui montrent une décision noire supplémentaire.
+
+Chaque leçon contient trois ou quatre commentaires positionnels, pour un total de 96 à 139 mots. Aucun commentaire isolé ne dépasse 75 mots. Le texte est distribué au moment où l’information devient utile : reconnaître la position, choisir le coup, comprendre sa fonction, puis savoir quoi faire ensuite.
+
+Chaque leçon inclut également :
+
+- une règle **À retenir** ;
+- une **Erreur à éviter** propre à la position ;
+- un plan conditionnel plutôt qu’une simple liste de coups ;
+- une explication de ce que le coup ne cherche pas à accomplir lorsque le risque de mauvaise interprétation est important.
+
+Les formulations génériques et les traces de fabrication ont été retirées. Les commentaires ne parlent ni de réparation, ni de gate, ni de moteur, ni de centipions. La formulation de `PST-04` est corrigée : un seul pion a été capturé avant `...Rxh6`, et le mémo est « Un pion ne vaut pas un fou ; la tour h6 peut revenir. »
 
 ## B6 gap review
 
@@ -97,5 +111,10 @@ Tester `BDG-01` dans une passe séparée, face à `LON-09`. Ne pas modifier les 
 - 20 parties et mêmes `SourceLineID` que le candidat technique.
 - Chaque partie joueur est un préfixe exact de sa partie technique.
 - Toutes les lignes se terminent après un coup noir.
-- Le commentaire principal est placé sur le coup enseigné et reste sous 90 mots.
-- Aucun texte interne de laboratoire n’apparaît dans le parcours.
+- Trois ou quatre commentaires pédagogiques par leçon.
+- Le commentaire précédent le coup entraîné commence par `Déclencheur :`.
+- Le commentaire du coup entraîné commence par `Le coup :`.
+- Chaque leçon contient `À retenir :` et `Erreur à éviter :`.
+- Entre 80 et 160 mots pédagogiques par leçon.
+- Aucun commentaire isolé au-dessus de 75 mots.
+- Aucun texte interne de laboratoire dans le parcours.
