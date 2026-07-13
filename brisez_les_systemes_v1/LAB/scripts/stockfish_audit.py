@@ -58,20 +58,27 @@ def audit(
                 )
                 if isinstance(best_infos, dict):
                     best_infos = [best_infos]
-                candidate_info = engine.analyse(
-                    before,
-                    chess.engine.Limit(nodes=nodes),
-                    root_moves=[move],
-                )
-                best_cp = score_cp(best_infos[0], chess.WHITE)
-                candidate_cp = score_cp(candidate_info, chess.WHITE)
-                loss = max(0, candidate_cp - best_cp)
+                best_infos = sorted(best_infos, key=lambda x: x.get("multipv", 1))
+                best_info = best_infos[0]
+                best_mover_cp = score_cp(best_info, before.turn)
+                candidate_info = None
                 rank = None
                 for idx, info in enumerate(best_infos, start=1):
                     pv = info.get("pv") or []
                     if pv and pv[0] == move:
                         rank = idx
+                        candidate_info = info
                         break
+                if candidate_info is None:
+                    candidate_info = engine.analyse(
+                        before,
+                        chess.engine.Limit(nodes=nodes),
+                        root_moves=[move],
+                    )
+                candidate_mover_cp = score_cp(candidate_info, before.turn)
+                loss = max(0, best_mover_cp - candidate_mover_cp)
+                best_cp = score_cp(best_info, chess.WHITE)
+                candidate_cp = score_cp(candidate_info, chess.WHITE)
                 rows.append({
                     "line_id": line_id,
                     "ply": ply,

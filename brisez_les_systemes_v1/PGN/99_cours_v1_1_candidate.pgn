@@ -1,0 +1,529 @@
+[Event "V1.1 candidat / Londres — ordres de coups / 2.Bf4 : ...c5 puis le clouage ...Bg4"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-01-ORD-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — ordres de coups"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B1"]
+[HumanBias "Pilotage automatique"]
+[SourceLineID "ORD-01"]
+
+1. d4 d5 2. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+3. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 4. Nf3
+Bg4
+{ Développement avec question concrète : clouage, contrôle de e2/d1 et frein au plan e4. POSITION-CLÉ — Frapper le centre puis développer avec un clouage avant de sortir la dame. Pourquoi c’est inconfortable : Sans c3, la dame noire n’a pas besoin de sortir tôt ; le clouage ralentit le développement naturel. Plan pratique : Après Be2, choisir entre ...Bxe2 et ...e6 ; après h3, décider Bh5 ou Bf5. À retenir : Sans c3, développe d’abord ; avec c3, ...Qb6 devient plus fort. }
+5. c3 cxd4 6. exd4 e6 7. Qb3 Qd7 8. Nbd2 f6
+{ Réparation V1.1 : f6 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+9. Be2 g5 10. Bg3 Bf5 11. O-O
+{ BILAN V1.1 — Coup noir maximal : 2 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — ordres de coups / 2.Bf4 et 3.c3 : revenir au plan ...Nc6"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-02-ORD-02"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — ordres de coups"]
+[Tier "Essentiel"]
+[LineType "structure"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B1"]
+[HumanBias "Pilotage automatique"]
+[SourceLineID "ORD-02"]
+
+1. d4 d5 2. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+3. c3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 4. e3
+Nf6 5. Nf3 Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. POSITION-CLÉ — Retrouver le noyau du répertoire par transposition. Pourquoi c’est inconfortable : c3 semble sécuriser d4 mais retire la meilleure case au cavalier b1. Plan pratique : Attaquer b2 et d4 ; utiliser ...Bf5 si la dame recule. À retenir : c3 protège d4 une fois et affaiblit b2 pour longtemps. }
+6. Qc2 Nh5 7. Be5 f6 8. dxc5 Qxc5
+{ BILAN V1.1 — Coup noir maximal : 6 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Colle et Zukertort / 3.e3 : sortir le fou avec ...Bf5"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-03-COL-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Colle et Zukertort"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B1"]
+[HumanBias "Pilotage automatique"]
+[SourceLineID "COL-01"]
+
+1. d4 d5 2. Nf3 Nf6 3. e3 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. }
+4. Bd3 e6
+{ POSITION-CLÉ — Développer le fou c8 avant de fermer sa diagonale. Pourquoi c’est inconfortable : Le Colle compte sur un Noir qui joue automatiquement ...e6 puis subit e4. Plan pratique : Après Bxf5 exf5, utiliser la colonne e et contrôler e4. À retenir : Contre le Colle, le fou c8 sort avant le pion e. }
+5. Bxf5 exf5 6. Qd3 Qc8 7. b3 Be7
+{ BILAN V1.1 — Coup noir maximal : 12 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Colle et Zukertort / Zukertort : frapper par ...c5"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-04-COL-10"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Colle et Zukertort"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B1"]
+[HumanBias "Pilotage automatique"]
+[SourceLineID "COL-10"]
+
+1. d4 d5 2. Nf3 Nf6 3. e3 e6 4. b3 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+5. Bb2 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. POSITION-CLÉ — Occuper l’espace avant que Bb2 et Bd3 ne construisent une attaque. Pourquoi c’est inconfortable : Le plan blanc est lent et suppose une position fermée. Plan pratique : Jouer ...Bd6, ...O-O et parfois ...cxd4 pour isoler d4. À retenir : Le Zukertort aime le temps : enlève-lui du temps avec ...c5. }
+6. Bd3 cxd4 7. exd4 Bd6 8. O-O O-O 9. Ne5 Qc7
+{ Réparation V1.1 : Qc7 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+10. Re1 Nb4 11. Ba3 Rd8 12. c3
+{ BILAN V1.1 — Coup noir maximal : 6 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Veresov et pseudo-Trompowsky / 3...c5 : attaquer d4 immédiatement"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-05-VER-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B1"]
+[HumanBias "Pilotage automatique"]
+[SourceLineID "VER-01"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bg5 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 e6
+{ POSITION-CLÉ — Refuser une position fermée et préparer ...Nc6. Pourquoi c’est inconfortable : Le Veresov veut e4 sans rencontrer de tension centrale. Plan pratique : Développer ...Nc6, ...Be7 et décider entre ...cxd4 et ...Be7. À retenir : Contre Nc3+Bg5, la réponse est ...c5 avant e4. }
+5. Nf3 Be7 6. dxc5 O-O 7. Bd3 h6 8. Bf4 Bxc5
+{ BILAN V1.1 — Coup noir maximal : 7 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / La dame recule en c2 : ...Bf5"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-06-LON-02"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Club"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B2"]
+[HumanBias "Double cible et surcharge"]
+[SourceLineID "LON-02"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qb3 c4
+{ Coup d’espace et de tempo : la structure blanche perd sa fluidité et une pièce doit se redéfinir. }
+7. Qc2 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. POSITION-CLÉ — Développer avec tempo sur la dame et obtenir une version améliorée du développement noir. Pourquoi c’est inconfortable : Le recul Qc2 paraît naturel mais autorise un second gain de temps. Plan pratique : Après ...Bf5, développer ...e6, ...Be7 et choisir entre ...Nh5 et ...e5. À retenir : Une dame déplacée deux fois doit être interrogée une troisième fois. }
+8. Qc1 Nh5 9. Bg3 Nxg3 10. hxg3 g6 11. Nbd2 Bg7 12. Be2 O-O 13. Nh4 Bd7
+{ BILAN V1.1 — Coup noir maximal : 8 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / Qc1 et reprise par le pion e"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-07-LON-04"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B2"]
+[HumanBias "Double cible et surcharge"]
+[SourceLineID "LON-04"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qc1 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+7. exd4 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. POSITION-CLÉ — Clarifier le centre puis développer le fou avant ...e6. Pourquoi c’est inconfortable : Qc1 défend b2 mais enferme la tour a1 et laisse les Noirs gagner l’initiative de développement. Plan pratique : Mettre le fou en f5, jouer ...e6 et exploiter la colonne c semi-ouverte. À retenir : Quand la dame retourne en c1, ouvre la colonne c avant qu’elle ne ressorte. }
+8. Be2 h6 9. h3 g5 10. Bh2 Rc8
+{ Réparation V1.1 : Rc8 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+11. Nbd2 h5 12. Nb3 g4 13. Nh4
+{ BILAN V1.1 — Coup noir maximal : 8 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / b3 protège b2 : développer avec ...Bg4"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-08-LON-09"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "structure"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B2"]
+[HumanBias "Double cible et surcharge"]
+[SourceLineID "LON-09"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. b3 Bg4
+{ Développement avec question concrète : clouage, contrôle de e2/d1 et frein au plan e4. POSITION-CLÉ — Répondre à une concession de case sombre par un développement actif. Pourquoi c’est inconfortable : b3 règle un problème immédiat mais affaiblit c3 et ralentit le développement du cavalier b1. Plan pratique : Mettre la pression sur f3, jouer ...e6 et échanger en d4 au bon moment. À retenir : Quand b2 est sauvé par b3, change de cible : f3 et d4. }
+7. h3 Bxf3 8. Qxf3 g6 9. dxc5 Qxc5 10. b4 Qb6 11. a4 Bg7
+{ BILAN V1.1 — Coup noir maximal : 7 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / La dame blanche s’échange : ...c4!"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-09-LON-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+[SourceLineID "LON-01"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qb3 c4
+{ Coup d’espace et de tempo : la structure blanche perd sa fluidité et une pièce doit se redéfinir. }
+7. Qxb6 axb6
+{ POSITION-CLÉ — Fermer le centre avec gain de temps et accepter les pions doublés pour ouvrir la colonne a. Pourquoi c’est inconfortable : Le joueur du Londres pense neutraliser la pression par un échange de dames ; il sous-estime la structure active des Noirs. Plan pratique : Jouer ...b5, ...Bf5 et utiliser la colonne a ; le fou f4 manque souvent de bonnes cases. À retenir : Qb3 ? Répondre c4 ; après l’échange, la colonne a paie les pions doublés. }
+8. Be2 Bf5 9. Nbd2 b5 10. Nh4 Bc2 11. Rc1 Be4 12. a3 h6 13. Nxe4 Nxe4
+{ BILAN V1.1 — Coup noir maximal : 8 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / La finale asymétrique : le plan ...b5"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-10-LON-03"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Avancé"]
+[LineType "structure"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+[SourceLineID "LON-03"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qb3 c4
+{ Coup d’espace et de tempo : la structure blanche perd sa fluidité et une pièce doit se redéfinir. }
+7. Qxb6 axb6 8. Nbd2 b5
+{ POSITION-CLÉ — Transformer une faiblesse statique apparente en majorité d’espace et colonne ouverte. Pourquoi c’est inconfortable : Les Blancs évaluent souvent les pions b6-b7 comme faibles sans voir la poussée ...b5-b4. Plan pratique : Fixer l’aile-dame, développer le fou c8 en f5 et doubler les tours sur la colonne a. À retenir : Les pions doublés ne sont faibles que s’ils ne bougent pas et si la colonne ouverte ne sert à rien. }
+9. Be2 h6 10. Ne5 g5 11. Bg3 h5 12. h4 g4 13. O-O Bf5
+{ Réparation V1.1 : Bf5 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+14. a4 bxa4 15. Nxc6 bxc6 16. Ra2
+{ BILAN V1.1 — Coup noir maximal : 20 cp. Gate : PASS. Maximum au ply 18 sur ...h6. }
+*
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / Qc1 et reprise par le pion c"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-11-LON-05"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Club"]
+[LineType "structure"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B3"]
+[HumanBias "Simplification trompeuse"]
+[SourceLineID "LON-05"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qc1 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+7. cxd4 Bf5
+{ Le fou c8 sort avant ...e6 : c’est le principe central contre Colle et plusieurs structures fermées. POSITION-CLÉ — Forcer une structure de Carlsbad inversée où les Noirs ont déjà développé activement. Pourquoi c’est inconfortable : La reprise cxd4 paraît saine mais laisse c3 vide et facilite ...Nb4. Plan pratique : Développer ...e6, viser b4 et mettre une tour en c8. À retenir : Après cxd4, la case b4 devient une vraie destination. }
+8. Nc3 e6 9. Be2 Be7 10. O-O O-O 11. Na4 Qa5 12. Nc5 Rfc8 13. Nxb7 Qb6
+{ BILAN V1.1 — Coup noir maximal : 15 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Jobava / 4.a3 : un tempo décoratif"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-12-JOB-09"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B7"]
+[HumanBias "Attaque d’aile avant le centre"]
+[SourceLineID "JOB-09"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. a3 cxd4
+{ Clarification utile : les Noirs ouvrent une colonne et transforment le centre en cibles concrètes. }
+5. Qxd4 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. POSITION-CLÉ — Ouvrir le centre avant que le coup utile e3 n’arrive. Pourquoi c’est inconfortable : a3 prépare b4 mais ne répond pas à la tension sur d4. Plan pratique : Développer avec tempo et viser e5. À retenir : Un coup d’aile sans menace offre un tempo au centre. }
+6. Qa4 Bd7 7. e3 e5 8. Bg5 Nd4 9. Nb5 Ne6 10. Bxf6 gxf6 11. Qh4 d4
+{ Réparation V1.1 : d4 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+12. O-O-O a6 13. Nxd4 exd4 14. Nf3
+{ BILAN V1.1 — Coup noir maximal : 4 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Veresov et pseudo-Trompowsky / 3.Bxh6? : accepter le sacrifice"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-13-PST-04"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+[SourceLineID "PST-04"]
+
+1. d4 d5 2. Bg5 h6 3. Bxh6 Rxh6
+{ Le sacrifice est accepté : la tour peut revenir, tandis que les Blancs ont cédé une pièce pour trop peu de matériel. POSITION-CLÉ — Reconnaître un sacrifice visuellement tentant mais insuffisant. Pourquoi c’est inconfortable : Le joueur pense empêcher le roque et gagner deux pions pour le fou. Plan pratique : Développer ...Nf6, ...c5 et utiliser la tour active h6. À retenir : Deux pions ne valent pas un fou ; la tour h6 peut rentrer par h8. }
+4. Nf3 c5 5. dxc5 Nc6 6. Nbd2 Nf6
+{ BILAN V1.1 — Coup noir maximal : 14 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / Bd3 oublie b2"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-14-LON-12"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B4"]
+[HumanBias "Le pion prétendument gratuit"]
+[SourceLineID "LON-12"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Bd3 Qxb2
+{ La prise est calculée, non gourmande : la dame dispose d’une route de sortie et le développement blanc est retardé. }
+7. Nbd2 Qxc3
+{ Case d’évacuation tactique : la dame gagne un second pion tout en échappant à Rb1. POSITION-CLÉ — Punir un développement automatique qui ne répond pas à la menace immédiate. Pourquoi c’est inconfortable : Bd3 est le coup “du système”, mais la position exige d’abord de traiter b2. Plan pratique : Après le gain de pion, neutraliser e4 et finir le développement sans précipitation. À retenir : Un coup normal peut être une gaffe s’il ignore une question concrète. }
+8. Bb5 e6 9. O-O Bd7 10. Rb1 a6 11. Bxc6 Bxc6 12. Ne5 Bb5 13. Re1 c4
+{ BILAN V1.1 — Coup noir maximal : 24 cp. Gate : PASS. Maximum au ply 26 sur ...c4. }
+*
+
+[Event "V1.1 candidat / Torre / 4.Bh4 : le coup machine ...h5!"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-15-TOR-02"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+[SourceLineID "TOR-02"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. Bh4 h5
+{ Coup de restriction : l’objectif est de réduire les cases du fou, pas de lancer une attaque prématurée. POSITION-CLÉ — Restreindre le fou et préparer ...f6-g5 sans craindre une attaque de roi immédiate. Pourquoi c’est inconfortable : Bh4 applique une règle de conservation du fou mais lui retire ses cases. Plan pratique : Après e3, jouer ...f6 ; si Nfd2, échanger ou gagner de l’espace. À retenir : Le but de ...h5 n’est pas d’attaquer : c’est de fermer la porte h2. }
+5. h3 c5 6. e3 Qb6 7. Nc3 Qa5 8. Bb5+ Nc6 9. O-O Nxc3 10. Bxc6+ bxc6 11. bxc3
+Qxc3 12. Bg3
+{ BILAN V1.1 — Coup noir maximal : 17 cp. Gate : PASS. Maximum au ply 10 sur ...c5. }
+*
+
+[Event "V1.1 candidat / Veresov et pseudo-Trompowsky / 2.Bg5 : demander au fou avec ...h6"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-16-PST-01"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Veresov et pseudo-Trompowsky"]
+[Tier "Essentiel"]
+[LineType "critique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+[SourceLineID "PST-01"]
+
+1. d4 d5 2. Bg5 h6 3. Bh4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. POSITION-CLÉ — Obtenir un tempo utile avant de frapper le centre. Pourquoi c’est inconfortable : Le pseudo-Trompowsky mise sur un Noir qui développe Nf6 automatiquement. Plan pratique : Jouer ...cxd4, ...Nc6 et ...Qb6. À retenir : Avant de jouer ...Nf6, demande au fou où il veut vivre. }
+4. e3 cxd4 5. exd4 Bf5 6. c3 a6 7. Nd2 Nf6 8. Be2 Nc6 9. Ngf3
+{ BILAN V1.1 — Coup noir maximal : 13 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Londres — noyau ...Qb6 / Le fou se cache en g5 : ...h6 et ...g5"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-17-LON-07"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Londres — noyau ...Qb6"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+[SourceLineID "LON-07"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. e3 Nc6
+{ Développement avec pression supplémentaire sur d4 et contrôle de e5. } 5. c3
+Qb6
+{ La dame pose une double question à d4 et b2. Les Blancs ne peuvent plus jouer uniquement par automatisme. }
+6. Qc2 Nh5
+{ Le fou “du système” doit prendre une décision. La menace vaut surtout par la perte de temps qu’elle impose. }
+7. Bg5 h6 8. Bh4 g5
+{ POSITION-CLÉ — Gagner de l’espace sur l’aile-roi sans mettre son roi en danger, car le centre est contrôlé. Pourquoi c’est inconfortable : Le fou blanc suit un automatisme de conservation et finit par manquer de cases. Plan pratique : Poursuivre par ...g4 si le cavalier f3 est mal placé, sinon consolider avec ...Bg7. À retenir : Ne pousse pas les pions pour attaquer le roi : pousse-les pour emprisonner le fou. }
+9. Bg3 cxd4 10. cxd4 Bf5
+{ Réparation V1.1 : Bf5 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+11. Qe2 a6 12. a3 g4 13. Nh4
+{ BILAN V1.1 — Coup noir maximal : 11 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Torre / 4.Nbd2 : prendre le fou"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-18-TOR-06"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+[SourceLineID "TOR-06"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. Nbd2 Nxg5 5. Nxg5 e5
+{ POSITION-CLÉ — Échanger la pièce active puis gagner le centre avec tempo. Pourquoi c’est inconfortable : Nbd2 suppose que le cavalier e4 doit reculer ; il oublie l’échange favorable. Plan pratique : Après ...e5, développer ...Nc6 et viser d4. À retenir : Quand le cavalier d2 reprend en g5, le centre e5 devient libre. }
+6. Ngf3 e4 7. Ng1 c5 8. c3 cxd4 9. cxd4 Nc6 10. e3 Bd6
+{ Réparation V1.1 : Bd6 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+11. Ne2 Bg4 12. a3 O-O 13. Rc1
+{ BILAN V1.1 — Coup noir maximal : 15 cp. Gate : PASS. } *
+
+[Event "V1.1 candidat / Torre / 4.h4 : ignorer l’intimidation"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-19-TOR-05"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Torre"]
+[Tier "Club"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B5"]
+[HumanBias "Peur et sur-réaction"]
+[SourceLineID "TOR-05"]
+
+1. d4 d5 2. Nf3 Nf6 3. Bg5 Ne4
+{ Avant-poste anti-système : le cavalier occupe la case que le développement blanc a insuffisamment contrôlée. }
+4. h4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. POSITION-CLÉ — Répondre sur le centre plutôt que copier une poussée d’aile. Pourquoi c’est inconfortable : h4 cherche à punir ...Nxg5 ou ...f6, mais le roi blanc n’est pas développé. Plan pratique : Jouer ...Qb6, ...Nc6 et laisser les Blancs justifier h4. À retenir : Contre h4, ne joue pas h5 par réflexe : joue ...c5. }
+5. e3 Nc6 6. Nbd2 Qb6
+{ Réparation V1.1 : Qb6 remplace la continuation initiale au même FEN. Plan sobre : développement, roi sûr, concept conservé. }
+7. Nxe4 dxe4 8. Nd2 cxd4 9. exd4
+{ BILAN V1.1 — Coup noir maximal : 18 cp. Gate : PASS. Maximum au ply 10 sur ...Nc6. }
+*
+
+[Event "V1.1 candidat / Jobava / 4.Nb5 : l’échec qui casse le schéma"]
+[Site "Cours Chessable francophone — brouillon de publication"]
+[Date "2026.07.12"]
+[Round "V11-20-JOB-04"]
+[White "Réponse système"]
+[Black "Répertoire anti-systèmes"]
+[Result "*"]
+[Chapter "Jobava"]
+[Tier "Essentiel"]
+[LineType "pratique"]
+[Version "1.1-candidate"]
+[CourseRole "CORE_V1_1_CANDIDATE"]
+[BiasCode "B8"]
+[HumanBias "Géométrie tactique machine-humanisée"]
+[SourceLineID "JOB-04"]
+
+1. d4 d5 2. Nc3 Nf6 3. Bf4 c5
+{ Rupture directrice : les Noirs attaquent d4 avant que le système blanc ne soit stabilisé. }
+4. Nb5 Qa5+
+{ POSITION-CLÉ — Exploiter immédiatement le cavalier éloigné et le roi au centre. Pourquoi c’est inconfortable : Le joueur connaît la menace Nc7+ mais oublie que son cavalier c3 ne peut plus bloquer Qa5+. Plan pratique : Après Nc3, prendre d4 ou jouer ...Na6 selon la tactique. À retenir : Nb5 sans c3 disponible appelle ...Qa5+. }
+5. Nc3 cxd4 6. Qxd4 Nc6 7. Qa4 Qxa4 8. Nxa4 e5 9. Bd2 Nb4 10. Bxb4 Bxb4+ 11. c3
+Bd6 { BILAN V1.1 — Coup noir maximal : 8 cp. Gate : PASS. } *
+
